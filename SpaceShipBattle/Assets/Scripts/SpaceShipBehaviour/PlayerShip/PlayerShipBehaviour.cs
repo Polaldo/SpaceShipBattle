@@ -10,7 +10,6 @@ public class PlayerShipBehaviour : SpaceShipBehaviour
     [SerializeField] GameObject _engineShip;
     [SerializeField] GameObject _primaryWeaponShip;
     [SerializeField] float speed;
-    Vector2 _position;
 
     protected override void Start()
     {
@@ -32,7 +31,6 @@ public class PlayerShipBehaviour : SpaceShipBehaviour
     }
     private void MoveShip()
     {
-        _position = InputManager.Instance.GetInputMovePlayer();
-        rb.MovePosition(rb.position + _position.normalized * speed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + InputManager.Instance.GetInputMovePlayer().normalized * speed * Time.fixedDeltaTime);
     }
 }
