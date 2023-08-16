@@ -1,22 +1,21 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ScreenLimtBounds : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float offSetLimtX;
+    [SerializeField] private float offSetLimtY;
+    private Vector3 offSetLimt;
+
+    private void Start()
     {
-       
+        offSetLimt = new Vector3(offSetLimtX, offSetLimtY, 0);
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
         pos.x = Mathf.Clamp01(pos.x);
         pos.y = Mathf.Clamp01(pos.y);
-        transform.position = Camera.main.ViewportToWorldPoint(pos);
+        transform.position = Camera.main.ViewportToWorldPoint(pos) ;
     }
 }
