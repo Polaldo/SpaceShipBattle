@@ -23,4 +23,9 @@ public class InputManager : MonoBehaviour
     {
         return inputs.Ship.Move.ReadValue<Vector2>();
     }
+
+    public bool GetInputShoot()
+    {
+        return inputs.Ship.Shoot.IsPressed();
+    }
 }

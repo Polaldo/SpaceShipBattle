@@ -6,7 +6,5 @@ public interface IWeapon
 {
     void Shoot();
 
-    bool ApplyFireRate();
-
-    void ReloadWepapon();
+    bool ApplyFireRate(); //TODO: change name of this method
 }

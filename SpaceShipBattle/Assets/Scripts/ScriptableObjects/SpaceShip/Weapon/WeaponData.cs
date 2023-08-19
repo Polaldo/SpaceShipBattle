@@ -6,9 +6,9 @@ using UnityEngine;
 public class WeaponData : ScriptableObject
 {
     [Header("Weapon")]
-    public SpriteRenderer weaponSprite;
+    public Sprite weaponSprite;
     public float fireRate;
-    public float damage;
+    public int damage;
     [Header("Bullet")]
     public float bulletDistance;
     public float bulletSpeed;
