@@ -4,10 +4,9 @@ using UnityEngine;
 
 public abstract class WeaponBehaviour<T>: MonoBehaviour, IWeapon where T : WeaponData 
 {
-    private T weaponData;
-    protected float time;
+    public T weaponData;
 
-    public T WeaponData {get;}
+    protected float time;
 
     public abstract bool ApplyFireRate();
 

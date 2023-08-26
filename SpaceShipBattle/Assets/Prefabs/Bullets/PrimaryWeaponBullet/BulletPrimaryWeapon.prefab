@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5825352200676521910}
   - component: {fileID: 5825352200676521911}
   - component: {fileID: 5825352200676521908}
-  - component: {fileID: 5825352200676521034}
+  - component: {fileID: 4131676951322024659}
   m_Layer: 0
   m_Name: BulletPrimaryWeapon
   m_TagString: Untagged
@@ -103,7 +103,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -155,7 +155,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &5825352200676521034
+--- !u!114 &4131676951322024659
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,6 +164,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5825352200676521032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fae6c0f4d0b51b44b9fd4e5b56bb638, type: 3}
+  m_Script: {fileID: 11500000, guid: a056873329334cc4bb0b9ece82f7e630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

@@ -7,7 +7,7 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
     public Transform[] spawnsBullets;
     private void Start()
     {
-        this.GetComponent<SpriteRenderer>().sprite = WeaponData.weaponSprite;
+        this.GetComponent<SpriteRenderer>().sprite = weaponData.weaponSprite;
     }
     private void Update()
     {
@@ -21,14 +21,14 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
 
     public override bool ApplyFireRate()
     {
-       return time > WeaponData.fireRate;
+       return time > weaponData.fireRate;
     }
 
     public override void Shoot()
     {
         for (int i = 0; i < spawnsBullets.Length; i++)
         {
-            GameObject tempBullet = Instantiate(WeaponData.bullet,
+            GameObject tempBullet = Instantiate(weaponData.bullet,
             spawnsBullets[i].position, transform.rotation);
 
             SetBulletData(tempBullet);
@@ -38,11 +38,11 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
     public void SetBulletData(GameObject tempBullet)
     {
         Rigidbody2D tempRigidBodyBullet = tempBullet.GetComponent<Rigidbody2D>();
-        tempRigidBodyBullet.velocity = Vector2.up * WeaponData.bulletSpeed;
+        tempRigidBodyBullet.velocity = Vector2.up * weaponData.bulletSpeed;
 
-        DefaultWeaponBulletBehaviour behaviour = tempBullet.GetComponent<DefaultWeaponBulletBehaviour>();
+        PrimaryBulletBehaviour behaviour = tempBullet.GetComponent<PrimaryBulletBehaviour>();
         behaviour.InitialPosition = transform.position;
-        behaviour.BulletDistance = WeaponData.bulletDistance;
-        behaviour.Damage = WeaponData.damage;
+        behaviour.BulletDistance = weaponData.bulletDistance;
+        behaviour.Damage = weaponData.damage;
     }
 }
