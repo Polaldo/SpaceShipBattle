@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PrimaryWeaponData
   m_EditorClassIdentifier: 
   weaponSprite: {fileID: -1395490415, guid: 12282ba0913510146beeb93b9ee8517d, type: 3}
-  fireRate: 0.3
+  fireRate: 0.1
   damage: 10
   bulletDistance: 10
   bulletSpeed: 10
