@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Burst;
 using UnityEngine;
 
-public class WeaponData : ScriptableObject
+public class WeaponData : ComponentShipData
 {
     [Header("Weapon")]
     public Sprite weaponSprite;
