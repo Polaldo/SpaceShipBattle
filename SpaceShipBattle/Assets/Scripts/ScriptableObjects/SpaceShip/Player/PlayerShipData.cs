@@ -9,8 +9,8 @@ public class PlayerShipData : SpaceShipData
 
     [Header("Sprites")]
     public Sprite baseShip;
-    public Sprite engineShip;
-    public Sprite weaponPrimary;
 
-    public Dictionary<ComponentShipData, Sprite> componentShipData = new();
+    [Header("ComponentShip")]
+    public PrimaryWeaponData primaryWeaponData;
+    public EngineData engineData;
 }

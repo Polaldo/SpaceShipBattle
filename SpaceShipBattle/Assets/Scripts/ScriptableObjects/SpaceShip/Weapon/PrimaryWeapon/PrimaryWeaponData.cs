@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PrimaryWeaponData", menuName = "ScriptableObjects/WeaponData/PrimaryWeaponData", order = 2)]
 public class PrimaryWeaponData : WeaponData
 {
-    // no camps specifics yet
+    public Sprite primaryWeaponSprite;
 }

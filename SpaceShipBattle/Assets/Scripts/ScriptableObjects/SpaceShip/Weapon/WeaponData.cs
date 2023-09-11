@@ -6,12 +6,9 @@ using UnityEngine;
 public class WeaponData : ComponentShipData
 {
     [Header("Weapon")]
-    public Sprite weaponSprite;
     public float fireRate;
-    public int damage;
     [Header("Bullet")]
     public float bulletDistance;
     public float bulletSpeed;
     public GameObject bullet;
-
 }

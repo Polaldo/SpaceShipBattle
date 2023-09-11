@@ -11,23 +11,15 @@ public class PlayerShipBehaviour : SpaceShipBehaviour
     [SerializeField] GameObject _baseShip;
     [SerializeField] GameObject _engineShip;
     [SerializeField] GameObject _primaryWeaponShip;  
-    [SerializeField] Animator _engineAnimation;
+    [SerializeField] Animator _engineAnimator;
     [SerializeField] float speed;
-    float targetSpeed;
     Vector2 moveDir;
 
     protected override void Start()
     {
        base.Start();
        _playerShipData = PlayerManager.Instance.shipData;
-        //SpriteRenderer u = _baseShip.GetComponent<SpriteRenderer>();
-         //  u.sprite = _playerShipData.baseShip;
        speed = _playerShipData.speed;
-    }
-
-    void Update()
-    {
-        
     }
 
     private void FixedUpdate()
@@ -38,14 +30,13 @@ public class PlayerShipBehaviour : SpaceShipBehaviour
 
     private void MoveShip()
     {
-        
         moveDir = InputManager.Instance.GetInputMovePlayer().normalized;   
         rb.MovePosition(rb.position + moveDir * speed * Time.fixedDeltaTime);
     }
 
     private void SetValuesAnimation()
     {
-        _engineAnimation.SetFloat("Moving", moveDir.magnitude);
+        _engineAnimator.SetFloat("Moving", moveDir.magnitude);
     }
     
 }

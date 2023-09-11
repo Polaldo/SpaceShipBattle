@@ -7,7 +7,7 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
     public Transform[] spawnsBullets;
     private void Start()
     {
-        this.GetComponent<SpriteRenderer>().sprite = weaponData.weaponSprite;
+        this.GetComponent<SpriteRenderer>().sprite = weaponData.primaryWeaponSprite;
     }
     private void Update()
     {
