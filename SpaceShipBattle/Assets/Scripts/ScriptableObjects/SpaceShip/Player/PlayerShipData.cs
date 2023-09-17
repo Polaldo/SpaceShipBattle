@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PlayerShipData", menuName = "ScriptableObjects/PlayerShipData", order = 1)]
+[CreateAssetMenu(fileName = "PlayerShipData", menuName = "ScriptableObjects/SpaceShip/PlayerShipData", order = 1)]
 public class PlayerShipData : SpaceShipData
 {
     public Sprite avatar;
@@ -11,6 +11,7 @@ public class PlayerShipData : SpaceShipData
     public Sprite baseShip;
 
     [Header("ComponentShip")]
+    public BaseShipData baseShipData;
     public PrimaryWeaponData primaryWeaponData;
     public EngineData engineData;
 }

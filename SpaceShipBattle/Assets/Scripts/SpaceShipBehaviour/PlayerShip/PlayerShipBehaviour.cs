@@ -8,9 +8,6 @@ using Vector2 = UnityEngine.Vector2;
 public class PlayerShipBehaviour : SpaceShipBehaviour
 {
     private PlayerShipData _playerShipData;
-    [SerializeField] GameObject _baseShip;
-    [SerializeField] GameObject _engineShip;
-    [SerializeField] GameObject _primaryWeaponShip;  
     [SerializeField] Animator _engineAnimator;
     [SerializeField] float speed;
     Vector2 moveDir;

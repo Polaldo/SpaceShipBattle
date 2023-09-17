@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "EngineData", menuName = "ScriptableObjects/engineData", order = 3)]
+[CreateAssetMenu(fileName = "EngineData", menuName = "ScriptableObjects/ComponentShip/engineData", order = 3)]
 public class EngineData : ComponentShipData
 {
     public Sprite spriteEngine;
