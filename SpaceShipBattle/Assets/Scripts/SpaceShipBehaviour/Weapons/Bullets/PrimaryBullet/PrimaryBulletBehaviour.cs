@@ -15,7 +15,7 @@ public class PrimaryBulletBehaviour : BulletBehaviour
         currentDistance = Vector3.Distance(InitialPosition, transform.position);
         if (currentDistance >= BulletDistance)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

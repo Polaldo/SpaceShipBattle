@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
 {
@@ -26,13 +27,15 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
 
     public override void Shoot()
     {
-        for (int i = 0; i < spawnsBullets.Length; i++)
-        {
-            GameObject tempBullet = Instantiate(weaponData.bullet,
-            spawnsBullets[i].position, transform.rotation);
+            GameObject tempBullet = ObjectPool.SharedInstance.GetPooledObject();
+            if (tempBullet != null)
+            {
+                tempBullet.transform.position = spawnsBullets[0].transform.position;
+                tempBullet.transform.rotation = spawnsBullets[0].transform.rotation;
+                tempBullet.SetActive(true);
+            }
 
-            SetBulletData(tempBullet);
-        }      
+            SetBulletData(tempBullet);    
     }
 
     public void SetBulletData(GameObject tempBullet)
