@@ -12,17 +12,7 @@ public abstract class BulletBehaviour : MonoBehaviour, IBullet
     public Vector3 InitialPosition { get; set; }
     public int Damage { get; set; }
 
-    protected void Start()
-    {
-        DestroyBulletPassedTime();
-    }
-
     public abstract void DistanceBullet();
-
-    public void DestroyBulletPassedTime()
-    {
-        Destroy(gameObject,5);
-    }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,7 +20,9 @@ public abstract class BulletBehaviour : MonoBehaviour, IBullet
         if (damageble != null)
         {
             damageble.ApplyDamage(damage);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
+        //gameObject.SetActive(false);
     }
 }
+

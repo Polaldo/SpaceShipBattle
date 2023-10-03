@@ -5,6 +5,4 @@ using UnityEngine;
 public interface IBullet 
 {
     void DistanceBullet();
-
-    void DestroyBulletPassedTime();
 }
