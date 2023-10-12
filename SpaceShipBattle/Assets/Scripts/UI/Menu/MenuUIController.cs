@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class MenuUIController : MonoBehaviour
 {
-    private GameObject NewGamePannel;
-    private GameObject ContinuePannel;
-    private GameObject OptionsPannel;
-    private GameObject MessagePannel;
+    [SerializeField] private GameObject startMenuPannel;
+    [SerializeField] private GameObject NewGamePannel;
+    [SerializeField] private GameObject ContinuePannel;
+    [SerializeField] private GameObject OptionsPannel;
+    [SerializeField] private GameObject MessagePannel;
 
     public void InactiveThisGO()
     {
-        this.gameObject.SetActive(false);
+        startMenuPannel.gameObject.SetActive(false);
     }
     
     public void ActiveThisGO()
     {
-        this.gameObject.SetActive(true);
+        startMenuPannel.gameObject.SetActive(true);
     }
 
     public void OnClickNewGame()

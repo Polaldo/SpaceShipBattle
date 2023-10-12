@@ -750,8 +750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -124.09999}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -162.9}
+  m_SizeDelta: {x: 189.8726, y: 45.8222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &286700310
 MonoBehaviour:
@@ -905,7 +905,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: No
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1703,8 +1703,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 174.7, y: 0}
-  m_SizeDelta: {x: 222.5607, y: 208.4819}
+  m_AnchoredPosition: {x: -99.8, y: -0.0000076294}
+  m_SizeDelta: {x: 156.3029, y: 130.6675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &877264912
 MonoBehaviour:
@@ -1801,7 +1801,7 @@ GameObject:
   - component: {fileID: 880173136}
   - component: {fileID: 880173135}
   m_Layer: 5
-  m_Name: DeclineButton
+  m_Name: ConfirmButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1825,8 +1825,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -99.2, y: -28.1}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -65.3, y: -27.050003}
+  m_SizeDelta: {x: 107.8266, y: 27.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880173135
 MonoBehaviour:
@@ -1968,7 +1968,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2163,6 +2163,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe7424d0fcc9c74c907fd0f36eb1cf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startMenuPannel: {fileID: 126390289}
+  NewGamePannel: {fileID: 1950089367}
+  ContinuePannel: {fileID: 318112325}
+  OptionsPannel: {fileID: 318112325}
+  MessagePannel: {fileID: 1721045960}
 --- !u!1 &1024857755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2773,7 +2778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1551212304
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2872,8 +2877,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -71.799995}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -91.7}
+  m_SizeDelta: {x: 189.8726, y: 45.8222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1567021702
 MonoBehaviour:
@@ -3145,7 +3150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Yes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3307,8 +3312,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3393,10 +3398,10 @@ RectTransform:
   m_Father: {fileID: 1005290744}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -395.2501, y: -331.238}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0000019073, y: 0.0000021458}
+  m_SizeDelta: {x: 320.9101, y: 128.1394}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1721045962
 MonoBehaviour:
@@ -3977,8 +3982,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -22.899996}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -22}
+  m_SizeDelta: {x: 189.8726, y: 45.8222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952655973
 MonoBehaviour:
@@ -4111,8 +4116,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 26.1}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -0.000002861, y: 50}
+  m_SizeDelta: {x: 189.8726, y: 45.8222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2011883217
 MonoBehaviour:
@@ -4245,8 +4250,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -165.6, y: -1.84}
-  m_SizeDelta: {x: 222.5607, y: 208.4819}
+  m_AnchoredPosition: {x: 99.8, y: -0.0000038147}
+  m_SizeDelta: {x: 156.3029, y: 130.6675}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2037138779
 MonoBehaviour:
@@ -4343,7 +4348,7 @@ GameObject:
   - component: {fileID: 2055133883}
   - component: {fileID: 2055133882}
   m_Layer: 5
-  m_Name: ConfirmButton
+  m_Name: DeclineButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4367,8 +4372,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 111.1, y: -30.2}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 63.6, y: -27.05}
+  m_SizeDelta: {x: 107.8266, y: 27.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2055133882
 MonoBehaviour:
