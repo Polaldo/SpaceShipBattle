@@ -4,51 +4,30 @@ using UnityEngine;
 
 public class MenuUIController : MonoBehaviour
 {
-    [SerializeField] private GameObject startMenuPannel;
-    [SerializeField] private GameObject NewGamePannel;
-    [SerializeField] private GameObject ContinuePannel;
-    [SerializeField] private GameObject OptionsPannel;
-    [SerializeField] private GameObject MessagePannel;
+    public List<GameObject> pannel;
+    private UiUtils uiUtils;
 
-    public void InactiveThisGO()
+    private void Start()
     {
-        startMenuPannel.gameObject.SetActive(false);
-    }
-    
-    public void ActiveThisGO()
-    {
-        startMenuPannel.gameObject.SetActive(true);
+        //StartPannel();
     }
 
-    public void OnClickNewGame()
+    public void StartPannel()
     {
-        InactiveThisGO();
-        NewGamePannel.SetActive(true);
+        pannel.Find(p => p.gameObject.name == UiUtils.homePannelName).SetActive(true);
     }
 
-    public void OnClickContinueGame()
+    public void DesactivatePannel()
     {
-        InactiveThisGO();
-        ContinuePannel.SetActive(true);
+        //GameObject g = pannel.Find(match: p => p.activeSelf);
+        // Debug.Log(g);
+        //uiUtils.DesactivatePannel(g);
+        pannel.Find(match: p => p.activeSelf).SetActive(false);
     }
 
-    public void OnClickOptions()
+    public void ChangePannel(GameObject pannelActivate)
     {
-        InactiveThisGO();
-        OptionsPannel.SetActive(true);
+        DesactivatePannel();
+        pannelActivate.SetActive(true);
     }
-
-    public void OnClickExit()
-    {
-        MessagePannel.SetActive(true);
-        //TODO: active method rettur true or false
-        Application.Quit();
-    }
-
-    public void BackButton(GameObject GO)
-    {
-        GO.SetActive(false);
-        ActiveThisGO();
-    }
-
 }
