@@ -16,7 +16,7 @@ MonoBehaviour:
   damage: 10
   defense: 10
   speed: 1
-  fireRate: 0.5
+  fireRate: 2
   bulletDistance: 10
   bulletSpeed: 10
   bullet: {fileID: 5825352200676521032, guid: b4a3132721a764b42b8a14784e8f1275, type: 3}
