@@ -6,4 +6,5 @@ using UnityEngine;
 public class PrimaryWeaponData : WeaponData
 {
     public Sprite primaryWeaponSprite;
+    public float fireRate;
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ComponentShipData : ScriptableObject
 {
     [Header("Stats")]
-    public int healthPoints;
+    public int health;
     public int damage;
     public int defense;
     public float speed;

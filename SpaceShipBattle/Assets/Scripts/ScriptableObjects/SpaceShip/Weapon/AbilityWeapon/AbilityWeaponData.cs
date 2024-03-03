@@ -5,6 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AbilityWeaponData", menuName = "ScriptableObjects/WeaponData/AbilityWeaponData", order = 1)]
 public class AbilityWeaponData : WeaponData
 {
-    public float timeRecharge;
-    public int numberOfBullets;
+    public float cooldown;
+   
 }

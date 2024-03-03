@@ -7,8 +7,8 @@ public class SpaceShipData : ScriptableObject
     public string description;
 
     [Header("Ships Stats")]
-    public int healthPoints;
-    public int attack;
+    public int health;
+    public int damage;
     public int defense;
     public float speed;
 
