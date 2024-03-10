@@ -10,11 +10,16 @@ public class HealthBarUI : MonoBehaviour
     public void SetMaxHealt(int health)
     {
         healthBar.maxValue = health;
-        healthBar.value = health;
+        SetHealth(health);
     }
 
     public void SetHealth(int health)
     {
         healthBar.value = health;
+    }
+
+    public float GetHealth()
+    {
+        return healthBar.value;
     }
 }
