@@ -5,10 +5,12 @@ using UnityEngine;
 public abstract class HealthController : MonoBehaviour, IDamageble
 {
     public SpaceShipData spaceShipData;
-    private int currentHealth;
+    protected Animator animator;
+    protected int currentHealth;
 
     protected virtual void Start()
     {
+        animator = GetComponent<Animator>();
         currentHealth = spaceShipData.health;
     }
 
@@ -19,7 +21,7 @@ public abstract class HealthController : MonoBehaviour, IDamageble
 
     protected virtual void Kill()
     {
-        // implement kill object
+        animator.SetTrigger("Death");
         Destroy(gameObject);
     }
 

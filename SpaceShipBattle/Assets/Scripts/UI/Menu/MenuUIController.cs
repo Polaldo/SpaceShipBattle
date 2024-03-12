@@ -5,7 +5,6 @@ using UnityEngine;
 public class MenuUIController : MonoBehaviour
 {
     public List<GameObject> pannel;
-    private UiUtils uiUtils;
 
     private void Start()
     {

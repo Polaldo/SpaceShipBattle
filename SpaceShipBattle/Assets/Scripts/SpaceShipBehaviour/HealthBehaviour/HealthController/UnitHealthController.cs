@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class UnitHealthController : HealthController
 {
+    public HealthBarUI healthBarUI;
+
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        
+        base.Start();
+        healthBarUI.SetMaxHealt(currentHealth);
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void SetCurrentHealth(int damage)
     {
-        
+        base.SetCurrentHealth(damage);
+        healthBarUI.SetHealth(currentHealth);
     }
 }
