@@ -11,8 +11,7 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
     private int resetIndex = 1; //because getComponentsInChildren also gets the parent tranform
     private int index;
 
-
-    private void Start()
+    protected override void Start()
     {
         this.GetComponent<SpriteRenderer>().sprite = weaponData.primaryWeaponSprite;
         spawnsBullets = gameObject.GetComponentsInChildren<Transform>();
@@ -20,7 +19,7 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
     }
     private void Update()
     {
-        if (InputManager.Instance.GetInputShoot() && ApplyFireRate())
+        if (ApplyFireRate())
         {
             time = 0;
             Shoot();

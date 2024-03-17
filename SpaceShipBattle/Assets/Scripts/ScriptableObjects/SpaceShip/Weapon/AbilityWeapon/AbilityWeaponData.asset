@@ -9,16 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12436469c5549394b917cd38addd3f2e, type: 3}
-  m_Name: PrimaryWeaponData
+  m_Script: {fileID: 11500000, guid: ca4c5facf05433f48b6954daa0e90884, type: 3}
+  m_Name: AbilityWeaponData
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  sprite: {fileID: 1673167152, guid: bdbd27950c3b2be478f12ed4c10be9c0, type: 3}
   health: 10
-  damage: 10
-  defense: 10
-  speed: 1
+  damage: 40
+  defense: 1
+  speed: 0
   bulletDistance: 10
-  bulletSpeed: 10
+  bulletSpeed: 3
   bullet: {fileID: 5825352200676521032, guid: b4a3132721a764b42b8a14784e8f1275, type: 3}
-  primaryWeaponSprite: {fileID: -1395490415, guid: 12282ba0913510146beeb93b9ee8517d, type: 3}
-  fireRate: 0.1
+  cooldown: 5

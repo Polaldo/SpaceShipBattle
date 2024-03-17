@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "AbilityWeaponData", menuName = "ScriptableObjects/WeaponData/AbilityWeaponData", order = 1)]
+[CreateAssetMenu(fileName = "AbilityWeaponData", menuName = "ScriptableObjects/ComponentShip/WeaponData/AbilityWeaponData", order = 2)]
 public class AbilityWeaponData : WeaponData
 {
     public float cooldown;
