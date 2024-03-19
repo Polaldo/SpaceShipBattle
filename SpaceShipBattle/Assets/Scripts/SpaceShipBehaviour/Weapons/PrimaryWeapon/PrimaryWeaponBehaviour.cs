@@ -19,7 +19,7 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
     }
     private void Update()
     {
-        if (ApplyFireRate())
+        if (ApplyFireRate() && InputManager.Instance.GetInputMovePlayer().normalized != Vector2.zero)
         {
             time = 0;
             Shoot();
