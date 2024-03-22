@@ -22,4 +22,9 @@ public class UiManager : MonoBehaviour
     {
         GameObject.Find(UiUtils.deathPannelName).SetActive(true); 
     }
+
+    public GameObject GetAbilityButtonUI()
+    {
+        return GameObject.Find("ImageAbilityCooldown");
+    }
 }

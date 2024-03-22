@@ -48,7 +48,6 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
     {
         bulletTransform.position = spawnsBullets[index].position;
         index = index >= spawnsBullets.Length -1 ? resetIndex : ++index;
-        Debug.Log(index);
     }
 
     public void SetBulletData(GameObject tempBullet)

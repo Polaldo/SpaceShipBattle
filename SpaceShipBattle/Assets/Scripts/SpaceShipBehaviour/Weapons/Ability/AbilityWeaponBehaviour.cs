@@ -5,7 +5,10 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
 {
     public class AbilityWeaponBehaviour: WeaponBehaviour<AbilityWeaponData>, ICooldown
     {
-       
+
+        public delegate void CooldownUi(float cooldown);
+        public static event CooldownUi cooldownUi;
+
         protected override void Start()
         {
             base.Start();
@@ -18,7 +21,8 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
             if (InputManager.Instance.GetInputShoot() && ApplyCooldown())
             {
                 time = 0;
-                Shoot();
+                Shoot();    
+                if (cooldownUi != null) cooldownUi(weaponData.cooldown);
             }
             time += Time.deltaTime;
         }

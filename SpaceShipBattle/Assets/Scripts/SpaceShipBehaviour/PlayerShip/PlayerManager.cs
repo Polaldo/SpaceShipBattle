@@ -21,9 +21,19 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    public GameObject GetPlayer()
+    {
+        return GameObject.Find("Player");
+    }
+
+    public GameObject GetPlayerWeaponAbility()
+    {
+        return GameObject.Find("WeaponAbility");
+    }
+
     private void Start()
     {
-        CalculateAllStats();
+        CalculateAllStats();//TODO: change this 
     }
 
     public void CalculateAllStats()
