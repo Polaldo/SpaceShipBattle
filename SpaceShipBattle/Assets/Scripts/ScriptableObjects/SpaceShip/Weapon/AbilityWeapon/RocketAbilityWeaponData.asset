@@ -19,5 +19,5 @@ MonoBehaviour:
   speed: 0
   bulletDistance: 10
   bulletSpeed: 3
-  bullet: {fileID: 5825352200676521032, guid: b4a3132721a764b42b8a14784e8f1275, type: 3}
+  bullet: {fileID: 5825352200676521032, guid: 0ebb8cd1deba0a148b66a969285039f8, type: 3}
   cooldown: 5
