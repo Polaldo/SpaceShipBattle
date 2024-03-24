@@ -13,7 +13,7 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
         {
             base.Start();
             weaponData = PlayerManager.Instance.shipData.abilityWeaponData;
-            setSpriteWeapon(weaponData.sprite);
+            setSpriteWeapon();
         }
 
         private void Update()
@@ -52,9 +52,9 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
 
         }
 
-        public void setSpriteWeapon(Sprite sprite)
+        public void setSpriteWeapon()
         {
-            spriteRenderer.sprite = sprite;
+            spriteRenderer.sprite = weaponData.sprite;
         }
 
     }
