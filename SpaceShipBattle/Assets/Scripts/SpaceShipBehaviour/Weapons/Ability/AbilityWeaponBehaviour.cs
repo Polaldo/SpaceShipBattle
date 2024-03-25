@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.SpaceShipBehaviour.Ability
 {
-    public class AbilityWeaponBehaviour: WeaponBehaviour<AbilityWeaponData>, ICooldown
+    public class AbilityWeaponBehaviour: WeaponBehaviour<AbilityWeaponData>, IAbility
     {
 
         public delegate void CooldownUi(float cooldown);
@@ -16,7 +16,7 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
             setSpriteWeapon();
         }
 
-        private void Update()
+      /*  private void Update()
         {
             if (InputManager.Instance.GetInputShoot() && ApplyCooldown())
             {
@@ -25,12 +25,12 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
                 if (cooldownUi != null) cooldownUi(weaponData.cooldown);
             }
             time += Time.deltaTime;
-        }
+        }*/
 
-        public bool ApplyCooldown()
+       /* public bool ApplyCooldown()
         {
             return time > weaponData.cooldown;
-        }
+        }*/
 
         public override void Shoot()
         {
@@ -57,5 +57,9 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
             spriteRenderer.sprite = weaponData.sprite;
         }
 
+        public void Use()
+        {
+            Shoot();
+        }
     }
 }
