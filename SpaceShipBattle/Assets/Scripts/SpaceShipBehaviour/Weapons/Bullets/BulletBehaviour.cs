@@ -14,10 +14,10 @@ public abstract class BulletBehaviour : MonoBehaviour, IBullet
 
     public abstract void DistanceBullet();
 
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         IDamageble damageble = collision.gameObject.GetComponent<IDamageble>();
-        if (damageble != null)
+        if (damageble != null && !collision.gameObject.CompareTag("Player"))
         {
             damageble.ApplyDamage(damage);
             gameObject.SetActive(false);

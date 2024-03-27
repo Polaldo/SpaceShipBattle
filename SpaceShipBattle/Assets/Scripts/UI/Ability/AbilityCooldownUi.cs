@@ -17,7 +17,7 @@ public class AbilityCooldownUi : MonoBehaviour
 
     void Start()
     {
-        AbilityWeaponBehaviour.cooldownUi += StartCooldownUi;
+        AbilityRunner.cooldownUi += StartCooldownUi;
     }
 
     void Update()
@@ -46,6 +46,6 @@ public class AbilityCooldownUi : MonoBehaviour
 
     private void OnDisable()
     {
-        AbilityWeaponBehaviour.cooldownUi -= StartCooldownUi;
+        AbilityRunner.cooldownUi -= StartCooldownUi;
     }
 }

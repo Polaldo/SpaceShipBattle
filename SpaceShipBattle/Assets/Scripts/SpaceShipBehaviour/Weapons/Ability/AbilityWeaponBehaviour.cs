@@ -5,10 +5,6 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
 {
     public class AbilityWeaponBehaviour: WeaponBehaviour<AbilityWeaponData>, IAbility
     {
-
-        public delegate void CooldownUi(float cooldown);
-        public static event CooldownUi cooldownUi;
-
         protected override void Start()
         {
             base.Start();
@@ -16,21 +12,15 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
             setSpriteWeapon();
         }
 
-      /*  private void Update()
+        public void setSpriteWeapon()
         {
-            if (InputManager.Instance.GetInputShoot() && ApplyCooldown())
-            {
-                time = 0;
-                Shoot();    
-                if (cooldownUi != null) cooldownUi(weaponData.cooldown);
-            }
-            time += Time.deltaTime;
-        }*/
+            spriteRenderer.sprite = weaponData.sprite;
+        }
 
-       /* public bool ApplyCooldown()
+        public void Use()
         {
-            return time > weaponData.cooldown;
-        }*/
+            Shoot();
+        }
 
         public override void Shoot()
         {
@@ -50,16 +40,6 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
             behaviour.BulletDistance = weaponData.bulletDistance;
             behaviour.Damage = weaponData.damage;
 
-        }
-
-        public void setSpriteWeapon()
-        {
-            spriteRenderer.sprite = weaponData.sprite;
-        }
-
-        public void Use()
-        {
-            Shoot();
         }
     }
 }
