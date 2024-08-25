@@ -9,8 +9,5 @@ namespace Assets.Scripts.BehaviourTree
         RUNNING,
         SUCCESS,
         FAILURE,
-        MOVE,
-        ATTACK,
-        DEATH
     }
 }
