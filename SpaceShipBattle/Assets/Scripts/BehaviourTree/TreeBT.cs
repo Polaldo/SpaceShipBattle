@@ -5,9 +5,9 @@ using UnityEngine;
 
 namespace Assets.Scripts.BehaviourTree.Tree
 {
-    public abstract class Tree<T> : MonoBehaviour where T : SpaceShipData
+    public abstract class TreeBT<T> : MonoBehaviour where T : SpaceShipData
     {
-        public static T shipData;
+        public T shipData;
 
         private Node _root = null;
 

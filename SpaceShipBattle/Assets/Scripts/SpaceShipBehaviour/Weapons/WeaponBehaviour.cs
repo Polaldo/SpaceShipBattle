@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,4 +17,9 @@ public abstract class WeaponBehaviour<T>: MonoBehaviour, IShoot where T : Weapon
     }
 
     public abstract void Shoot();
+
+    public virtual bool ApplyFireRate()
+    {
+       throw new NotImplementedException();
+    }
 }

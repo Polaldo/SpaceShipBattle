@@ -9,17 +9,19 @@ namespace Assets.Scripts.BehaviourTree.Tasks
     {
         private Transform _transform;
         private Rigidbody2D _rb;
+        private float _speed;
 
-        public TaskMove(Transform transform, Rigidbody2D rb)
+        public TaskMove(Transform transform, Rigidbody2D rb, float speed)
         {
             _transform = transform;
             _rb = rb;
+            _speed = speed;
         }
 
         public override NodeState Evaluate()
         {
 
-            _rb.velocity += Vector2.down * Zeta3BT.shipData.speed * Time.deltaTime;
+            _rb.velocity += Vector2.down * _speed * Time.deltaTime;
             state = NodeState.SUCCESS;
             return state;
         }

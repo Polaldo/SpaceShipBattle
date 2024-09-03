@@ -27,7 +27,7 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
         time += Time.deltaTime;
     }
 
-    public bool ApplyFireRate()
+    public override bool ApplyFireRate()
     {
        return time > weaponData.fireRate;
     }
