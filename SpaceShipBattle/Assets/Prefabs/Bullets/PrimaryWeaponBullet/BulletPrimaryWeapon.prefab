@@ -167,3 +167,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a056873329334cc4bb0b9ece82f7e630, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagNotToCollide: Player

@@ -7,6 +7,7 @@ public abstract class BulletBehaviour : MonoBehaviour, IBullet
     private int damage;
     private Vector3 initialPosition;
     protected float currentDistance;
+    public string tagNotToCollide;
 
     public float BulletDistance { get; set; }
     public Vector3 InitialPosition { get; set; }
@@ -17,12 +18,11 @@ public abstract class BulletBehaviour : MonoBehaviour, IBullet
     protected void OnTriggerEnter2D(Collider2D collision)
     {
         IDamageble damageble = collision.gameObject.GetComponent<IDamageble>();
-        if (damageble != null && !collision.gameObject.CompareTag("Player"))
+        if (damageble != null && !collision.gameObject.CompareTag(tagNotToCollide))
         {
             damageble.ApplyDamage(damage);
             gameObject.SetActive(false);
         }
-        //gameObject.SetActive(false);
     }
 }
 

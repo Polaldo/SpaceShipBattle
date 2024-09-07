@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PrimaryBulletBehaviour : BulletBehaviour
 {
-
     private void Update()
     {
         DistanceBullet();
