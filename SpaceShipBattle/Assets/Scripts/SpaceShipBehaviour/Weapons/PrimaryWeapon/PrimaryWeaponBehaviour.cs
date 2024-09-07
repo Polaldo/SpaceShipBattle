@@ -58,6 +58,6 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
         PrimaryBulletBehaviour behaviour = tempBullet.GetComponent<PrimaryBulletBehaviour>();
         behaviour.InitialPosition = transform.position;
         behaviour.BulletDistance = weaponData.bulletDistance;
-        behaviour.Damage = weaponData.damage;
+        behaviour.damage = weaponData.damage;
     }
 }

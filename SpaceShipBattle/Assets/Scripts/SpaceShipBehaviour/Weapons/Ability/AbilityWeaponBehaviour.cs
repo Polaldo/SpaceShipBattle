@@ -38,7 +38,7 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
             PrimaryBulletBehaviour behaviour = tempBullet.GetComponent<PrimaryBulletBehaviour>();
             behaviour.InitialPosition = transform.position;
             behaviour.BulletDistance = weaponData.bulletDistance;
-            behaviour.Damage = weaponData.damage;
+            behaviour.damage = weaponData.damage;
 
         }
     }

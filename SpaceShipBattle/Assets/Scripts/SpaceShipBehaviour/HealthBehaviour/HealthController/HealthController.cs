@@ -10,6 +10,7 @@ public abstract class HealthController : MonoBehaviour, IDamageble
 
     protected virtual void Start()
     {
+        Debug.Log("dins START virtual");
         animator = GetComponent<Animator>();
         currentHealth = spaceShipData.health;
     }
@@ -21,7 +22,7 @@ public abstract class HealthController : MonoBehaviour, IDamageble
 
     protected virtual void Kill()
     {
-        animator.SetTrigger("Death");
+        //animator.SetTrigger("Death");
         Destroy(gameObject);
     }
 
@@ -36,6 +37,6 @@ public abstract class HealthController : MonoBehaviour, IDamageble
 
     protected virtual void SetCurrentHealth(int damage)
     {
-        currentHealth -= damage;
+        currentHealth = currentHealth - damage;
     }
 }

@@ -34,9 +34,9 @@ public class EnemyWeaponBehaviour : WeaponBehaviour<WeaponData>
         Rigidbody2D tempRigidBodyBullet = tempBullet.GetComponent<Rigidbody2D>();
         tempRigidBodyBullet.velocity = Vector2.down * weaponData.bulletSpeed;
 
-        PrimaryBulletBehaviour behaviour = tempBullet.GetComponent<PrimaryBulletBehaviour>();
+        EnemyBulletBehaviour behaviour = tempBullet.GetComponent<EnemyBulletBehaviour>();
         behaviour.InitialPosition = transform.position;
         behaviour.BulletDistance = weaponData.bulletDistance;
-        behaviour.Damage = weaponData.damage;
+        behaviour.damage = weaponData.damage;
     }
 }
