@@ -7,8 +7,7 @@ public class EnemyHealthController : HealthController
 {
     protected override void Start()
     {
-        Debug.Log(GetComponent<TreeBT<EnemyData>>());
-        spaceShipData = GetComponent<TreeBT<EnemyData>>().shipData;
+        spaceShipData = GetComponent<EnemyBT>().shipData;
         
         base.Start();
     }
