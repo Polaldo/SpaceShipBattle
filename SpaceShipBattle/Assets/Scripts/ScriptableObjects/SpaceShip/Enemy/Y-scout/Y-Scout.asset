@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 183d18104317f67478a5f23cf34e9f33, type: 3}
-  m_Name: Zeta-3
+  m_Name: Y-Scout
   m_EditorClassIdentifier: 
   name: 
   description: 
-  health: 0
+  health: 5
   damage: 10
-  defense: 0
-  speed: 2
+  defense: 3
+  speed: 4

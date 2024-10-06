@@ -1614,7 +1614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &866419125
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2747,7 +2747,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1211206120
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3070,7 +3070,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1445551956
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4344,9 +4344,12 @@ GameObject:
   - component: {fileID: 1982513435}
   - component: {fileID: 1982513434}
   - component: {fileID: 1982513433}
-  m_Layer: 0
+  - component: {fileID: 1982513439}
+  - component: {fileID: 1982513438}
+  - component: {fileID: 1982513440}
+  m_Layer: 6
   m_Name: Y-scout
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4381,7 +4384,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.008768797, y: -0.07892132}
@@ -4412,7 +4415,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -4478,13 +4481,52 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982513432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.82, y: 3.08, z: 0}
+  m_LocalPosition: {x: -5.58, y: 3.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1982513438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982513432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294782ea7d99cfe49b228f641dfa5c6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spaceShipData: {fileID: 11400000, guid: 9bff4797a26a5244aa292cd3f818904b, type: 2}
+--- !u!114 &1982513439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982513432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2209d2d1fda3a8247b2b315c15f7b71c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipData: {fileID: 11400000, guid: 9bff4797a26a5244aa292cd3f818904b, type: 2}
+--- !u!114 &1982513440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982513432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40093261c841c2c42beaf1891e6e597a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: 7a7935dec2b628d4abab3a4eb837858d, type: 2}
 --- !u!1 &1989178229
 GameObject:
   m_ObjectHideFlags: 0
@@ -5210,6 +5252,10 @@ PrefabInstance:
     - target: {fileID: 8838671160490565831, guid: 09ee5049d9ddc69409495724395278c3, type: 3}
       propertyPath: m_Name
       value: Zeta-3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838671160490565831, guid: 09ee5049d9ddc69409495724395278c3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09ee5049d9ddc69409495724395278c3, type: 3}

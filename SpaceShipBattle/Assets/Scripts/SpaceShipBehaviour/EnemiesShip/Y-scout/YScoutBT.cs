@@ -11,7 +11,7 @@ public class YScoutBT : EnemyBT
         Node root = new Selector(new List<Node>
         {
             new Sequence (new List<Node> {
-                new TaskMove(this.GetComponent<Transform>(), _rb, shipData.speed),
+                new TaskMoveDiagonal(_rb, shipData.speed),
                 new TaskShoot(_enemyWeaponBehaviour),
             }),
         });
