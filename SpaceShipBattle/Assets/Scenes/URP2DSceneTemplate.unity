@@ -4973,6 +4973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hakaisha
       objectReference: {fileID: 0}
+    - target: {fileID: 2227902102372291455, guid: c6f0655b90209434fb35e9d6139da86a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f0655b90209434fb35e9d6139da86a, type: 3}
 --- !u!1001 &2805233667174932858

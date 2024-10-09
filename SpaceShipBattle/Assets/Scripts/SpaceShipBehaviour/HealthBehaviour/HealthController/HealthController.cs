@@ -10,7 +10,6 @@ public abstract class HealthController : MonoBehaviour, IDamageble
 
     protected virtual void Start()
     {
-        Debug.Log("dins START virtual");
         animator = GetComponent<Animator>();
         currentHealth = spaceShipData.health;
     }
