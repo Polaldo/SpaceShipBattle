@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class WeaponBehaviour<T>: MonoBehaviour, IShoot where T : WeaponData 
+public abstract class WeaponBehaviour<T>: MonoBehaviour where T : WeaponData 
 {
     public T weaponData;
 
@@ -15,8 +15,6 @@ public abstract class WeaponBehaviour<T>: MonoBehaviour, IShoot where T : Weapon
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
-
-    public abstract void Shoot();
 
     public virtual bool ApplyFireRate()
     {

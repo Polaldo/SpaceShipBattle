@@ -22,7 +22,7 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
             Shoot();
         }
 
-        public override void Shoot()
+        public void Shoot()
         {
             GameObject tempBullet = Instantiate(weaponData.bullet,
             new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);

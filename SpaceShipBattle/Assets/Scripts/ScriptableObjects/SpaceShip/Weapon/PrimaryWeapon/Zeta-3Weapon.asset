@@ -21,4 +21,4 @@ MonoBehaviour:
   bulletSpeed: 5
   bullet: {fileID: 6172858993866792337, guid: 9878f8ddea87b6b4dae768fa7e05d383, type: 3}
   primaryWeaponSprite: {fileID: 0}
-  fireRate: 0
+  fireRate: 0.5

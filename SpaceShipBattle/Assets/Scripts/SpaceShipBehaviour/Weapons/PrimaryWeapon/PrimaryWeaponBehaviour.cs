@@ -32,7 +32,7 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
        return time > weaponData.fireRate;
     }
 
-    public override void Shoot()
+    public void Shoot()
     {
         GameObject tempBullet = ObjectPool.SharedInstance.GetPooledObject();
         if (tempBullet != null)

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12436469c5549394b917cd38addd3f2e, type: 3}
-  m_Name: Y-Scout
+  m_Name: Hakaisha
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  health: 100
-  damage: 30
+  health: 0
+  damage: 0
   defense: 0
   speed: 0
   bulletDistance: 10
-  bulletSpeed: 7
+  bulletSpeed: 13
   bullet: {fileID: 6172858993866792337, guid: 9878f8ddea87b6b4dae768fa7e05d383, type: 3}
   primaryWeaponSprite: {fileID: 0}
   fireRate: 0.3

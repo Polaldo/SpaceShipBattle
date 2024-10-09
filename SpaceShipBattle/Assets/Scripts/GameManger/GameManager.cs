@@ -17,4 +17,9 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
     }
+
+    public Vector2 GetPlayerPosition()
+    {
+        return GameObject.Find("Player").transform.position;
+    }
 }
