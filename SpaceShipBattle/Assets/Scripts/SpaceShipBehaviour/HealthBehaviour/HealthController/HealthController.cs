@@ -21,8 +21,7 @@ public abstract class HealthController : MonoBehaviour, IDamageble
 
     protected virtual void Kill()
     {
-        //animator.SetTrigger("Death");
-        Destroy(gameObject);
+        animator.SetTrigger("Death");
     }
 
     public void ApplyDamage(int damage)
@@ -37,5 +36,10 @@ public abstract class HealthController : MonoBehaviour, IDamageble
     protected virtual void SetCurrentHealth(int damage)
     {
         currentHealth = currentHealth - damage;
+    }
+
+    public virtual void DestroyObject()
+    {
+        Destroy(gameObject);
     }
 }
