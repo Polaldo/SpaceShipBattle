@@ -11,12 +11,12 @@ namespace Assets.Scripts.BehaviourTree.Tree
 
         private Node _root = null;
 
-        protected void Start()
+        protected virtual void Start()
         {
             _root = SetupTree();
         }
 
-        private void Update()
+        protected virtual void Update()
         {
             if (_root != null)
                 _root.Evaluate();

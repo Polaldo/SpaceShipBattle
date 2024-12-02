@@ -19,5 +19,5 @@ public abstract class WeaponBehaviour<T>: MonoBehaviour where T : WeaponData
     public virtual bool ApplyFireRate()
     {
        throw new NotImplementedException();
-    }
+    } 
 }

@@ -4925,6 +4925,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2227902102372291452, guid: c6f0655b90209434fb35e9d6139da86a, type: 3}
+      propertyPath: cooldownAbility
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2227902102372291453, guid: c6f0655b90209434fb35e9d6139da86a, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -4977,33 +4981,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3383934151266978201, guid: c6f0655b90209434fb35e9d6139da86a, type: 3}
+      propertyPath: weaponData
+      value: 
+      objectReference: {fileID: 11400000, guid: db9c621d0f6978f40985d04cdb74f32a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f0655b90209434fb35e9d6139da86a, type: 3}
---- !u!1 &2227902101556269772 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2227902102372291455, guid: c6f0655b90209434fb35e9d6139da86a, type: 3}
-  m_PrefabInstance: {fileID: 2227902101556269771}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2227902101556269773
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2227902101556269772}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3f6d678174b9caa4b90dcab3e5341d88, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &2805233667174932858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5017,7 +5000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2805233666400673890, guid: c3408833ad13db5469d944703e12158b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2805233666400673895, guid: c3408833ad13db5469d944703e12158b, type: 3}
       propertyPath: m_RootOrder
@@ -5122,7 +5105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8838671160490565831, guid: 09ee5049d9ddc69409495724395278c3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8838671160490565837, guid: 09ee5049d9ddc69409495724395278c3, type: 3}
       propertyPath: m_Simulated

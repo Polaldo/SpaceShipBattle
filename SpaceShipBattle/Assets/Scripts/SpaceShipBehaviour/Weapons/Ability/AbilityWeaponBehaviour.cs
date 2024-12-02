@@ -20,6 +20,7 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
         public void Use()
         {
             Shoot();
+            Debug.Log("used ability");
         }
 
         public void Shoot()
@@ -30,7 +31,7 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
             SetBulletData(tempBullet);
         }
 
-        public void SetBulletData(GameObject tempBullet)
+        public virtual void SetBulletData(GameObject tempBullet)
         {
             Rigidbody2D tempRigidBodyBullet = tempBullet.GetComponent<Rigidbody2D>();
             tempRigidBodyBullet.velocity = Vector2.up * weaponData.bulletSpeed;
@@ -39,7 +40,6 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
             behaviour.InitialPosition = transform.position;
             behaviour.BulletDistance = weaponData.bulletDistance;
             behaviour.damage = weaponData.damage;
-
         }
     }
 }

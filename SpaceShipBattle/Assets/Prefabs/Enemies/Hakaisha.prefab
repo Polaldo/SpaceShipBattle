@@ -112,6 +112,8 @@ GameObject:
   - component: {fileID: 2227902102372291452}
   - component: {fileID: 2227902102372291440}
   - component: {fileID: 2227902102372291447}
+  - component: {fileID: 3383934151266978201}
+  - component: {fileID: 1051062342394537145}
   m_Layer: 6
   m_Name: Hakaisha
   m_TagString: Enemy
@@ -247,6 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipData: {fileID: 11400000, guid: b8d0837a26e111946983dc145eb8e42e, type: 2}
+  cooldownAbility: 0
 --- !u!114 &2227902102372291440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +281,39 @@ MonoBehaviour:
   - {fileID: 2227902102339278514}
   - {fileID: 2227902102378116669}
   - {fileID: 2227902102400278534}
+--- !u!114 &3383934151266978201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2227902102372291455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 520c745ef140e26498339a96f5d1afab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponData: {fileID: 0}
+--- !u!95 &1051062342394537145
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2227902102372291455}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3f6d678174b9caa4b90dcab3e5341d88, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &2227902102378116670
 GameObject:
   m_ObjectHideFlags: 0
