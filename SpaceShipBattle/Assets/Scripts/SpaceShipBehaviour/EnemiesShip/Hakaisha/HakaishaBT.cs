@@ -8,7 +8,7 @@ public class HakaishaBT : EnemyBT
 {
     IAbility ability;
     public float cooldownAbility;
-    float time;
+    float nextAbilityTime = 0;
 
     protected override void Start()
     {
@@ -16,18 +16,12 @@ public class HakaishaBT : EnemyBT
         base.Start();        
     }
 
-    protected override void Update()
-    {
-        time += Time.deltaTime;
-        base.Update();
-    }
-
     protected override Node SetupTree()
     {
         Node root = new Selector(new List<Node>
         {
             new Sequence (new List<Node> {
-                new TaskUseAbility(ability, cooldownAbility, ref time),
+                new TaskUseAbility(ability, cooldownAbility, ref nextAbilityTime),
                 //new TaskShoot(_enemyWeaponBehaviour),          
             }),     
         });

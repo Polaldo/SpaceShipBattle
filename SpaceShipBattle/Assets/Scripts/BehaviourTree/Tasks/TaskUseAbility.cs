@@ -1,34 +1,31 @@
 using Assets.Scripts.BehaviourTree;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TaskUseAbility : Node
 {
     public IAbility ability;
     public float cooldownAbility;
-    float time;
+    private float nextAbilityTime;
 
-    public TaskUseAbility(IAbility ability, float cooldownAbility, ref float time)
+    public TaskUseAbility(IAbility ability, float cooldownAbility, ref float nextAbilityTime)
     {
-        if (ability == null)
-        {
-            Debug.LogError("TaskAbility received a null reference!");
-        }
         this.ability = ability;
-        //this.cooldownAbility = cooldownAbility;
-        this.time = time;
+        this.cooldownAbility = cooldownAbility;
+        this.nextAbilityTime = nextAbilityTime;
     }
 
     public override NodeState Evaluate()
     {
-        Debug.Log("evalute task ability" );
-        if (time >= cooldownAbility)
+        Debug.Log("evalute task ability");
+        if (Time.time >= cooldownAbility)
         {
             Debug.Log("inside if");
             ability.Use();
             Debug.Log("used ability");
-            time = 0;
+            nextAbilityTime = Time.time + cooldownAbility;
             return NodeState.SUCCESS;
         }
         
