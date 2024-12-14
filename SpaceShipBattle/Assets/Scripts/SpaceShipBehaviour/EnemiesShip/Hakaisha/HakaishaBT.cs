@@ -4,11 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HakaishaBT : EnemyBT
+public class HakaishaBT : EnemyBT<EnemyData>
 {
     IAbility ability;
-    public float cooldownAbility;
-    float nextAbilityTime = 0;
+    public static float cooldownAbility = 10;
 
     protected override void Start()
     {
@@ -21,7 +20,7 @@ public class HakaishaBT : EnemyBT
         Node root = new Selector(new List<Node>
         {
             new Sequence (new List<Node> {
-                new TaskUseAbility(ability, cooldownAbility, ref nextAbilityTime),
+                new TaskUseAbility(ability),
                 //new TaskShoot(_enemyWeaponBehaviour),          
             }),     
         });

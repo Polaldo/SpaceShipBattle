@@ -4,8 +4,9 @@ using UnityEngine;
 using Assets.Scripts.BehaviourTree.Tree;
 using Assets.Scripts.BehaviourTree;
 
-public class EnemyBT : TreeBT<EnemyData>
+public class EnemyBT<T> : TreeBT where T : EnemyData
 {
+    public T shipData;
     protected Rigidbody2D _rb;
     protected EnemyWeaponBehaviour _enemyWeaponBehaviour;
 

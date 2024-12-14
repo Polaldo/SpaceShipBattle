@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class YScoutBT : EnemyBT
+public class YScoutBT : EnemyBT<EnemyData>
 {
     protected override Node SetupTree()
     {

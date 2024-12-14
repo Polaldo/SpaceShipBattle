@@ -5,9 +5,8 @@ using Assets.Scripts.BehaviourTree.Tree;
 using Assets.Scripts.BehaviourTree.Tasks;
 using UnityEngine;
 
-public class Zeta3BT : EnemyBT
+public class Zeta3BT : EnemyBT<EnemyData>
 {
-
     protected override Node SetupTree()
     {
         Node root = new Selector( new List<Node>
