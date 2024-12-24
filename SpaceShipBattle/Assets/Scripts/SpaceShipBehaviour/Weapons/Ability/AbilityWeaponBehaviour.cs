@@ -20,7 +20,6 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
         public void Use()
         {
             Shoot();
-            Debug.Log("used ability");
         }
 
         public void Shoot()
