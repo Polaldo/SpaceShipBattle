@@ -2498,7 +2498,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1016220164}
   - component: {fileID: 1016220165}
-  - component: {fileID: 1016220166}
   m_Layer: 0
   m_Name: Blue_Nebula_05-1024x1024
   m_TagString: Untagged
@@ -2575,20 +2574,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1016220166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016220163}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8ae46c51e91edb4786cd70a82cd8b59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyCamera: {fileID: 1759335843}
-  ParallaxEffect: 0.6
 --- !u!1 &1043923091
 GameObject:
   m_ObjectHideFlags: 0
@@ -3095,7 +3080,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1307669902}
   - component: {fileID: 1307669903}
-  - component: {fileID: 1307669904}
   m_Layer: 0
   m_Name: Blue_Nebula_08-1024x1024
   m_TagString: Untagged
@@ -3172,20 +3156,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1307669904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1307669901}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8ae46c51e91edb4786cd70a82cd8b59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyCamera: {fileID: 1759335843}
-  ParallaxEffect: 0.3
 --- !u!1 &1467382842
 GameObject:
   m_ObjectHideFlags: 0
@@ -4742,7 +4712,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2104329660}
   - component: {fileID: 2104329661}
-  - component: {fileID: 2104329662}
   m_Layer: 0
   m_Name: Blue_Nebula_01-1024x1024
   m_TagString: Untagged
@@ -4819,17 +4788,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2104329662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2104329659}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8ae46c51e91edb4786cd70a82cd8b59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyCamera: {fileID: 1759335843}
-  ParallaxEffect: 0.8

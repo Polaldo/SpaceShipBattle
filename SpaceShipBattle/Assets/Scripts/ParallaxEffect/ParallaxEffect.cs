@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,27 +22,38 @@ public class ParallaxEffect : MonoBehaviour
         {
             layer.startPos = transform.position.y;
             layer.length = layer.layer.gameObject.GetComponent<SpriteRenderer>().bounds.size.y;
+            Debug.Log(layer.startPos + "start");
+            Debug.Log(layer.length + "lenght");
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         foreach (ParallaxLayer layer in layers)
         {
             if (layer.layer != null)
             {
-                float temp = layer.layer.position.y * (1f - layer.speed.y);
                 Vector3 newPos = layer.layer.position;
-                newPos.y += layer.speed.y * Time.deltaTime; // Move Y
-
+                newPos.y -= layer.speed.y * Time.deltaTime;
                 layer.layer.position = newPos;
 
-                if (temp > layer.startPos + layer.length)
-                    layer.startPos += layer.length;
-                else if (temp < layer.startPos - layer.length)
-                    layer.startPos -= layer.length;
+                checkLayerBounds(layer, newPos);
 
             }
+        }
+    }
+
+    private static void checkLayerBounds(ParallaxLayer layer, Vector3 newPos)
+    {
+        if (newPos.y <= layer.startPos - layer.length)
+        {
+            newPos.y += layer.length;
+            layer.layer.position = newPos;
+        }
+        else if (newPos.y >= layer.startPos + layer.length)
+        {
+            newPos.y -= layer.length;
+            layer.layer.position = newPos;
         }
     }
 }
