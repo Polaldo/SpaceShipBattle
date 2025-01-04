@@ -22,8 +22,6 @@ public class ParallaxEffect : MonoBehaviour
         {
             layer.startPos = transform.position.y;
             layer.length = layer.layer.gameObject.GetComponent<SpriteRenderer>().bounds.size.y;
-            Debug.Log(layer.startPos + "start");
-            Debug.Log(layer.length + "lenght");
         }
     }
 
