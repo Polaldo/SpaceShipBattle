@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "LevelData", menuName = "ScriptableObjects/level")]
 public class LevelData : ScriptableObject
 {
+    public string levelName;
     public int levelNumber;
 
     public int highScore;
@@ -20,5 +21,5 @@ public class LevelData : ScriptableObject
     public bool hasBossBattle;
     public GameObject bossEnemy;
 
-    public Dictionary<GameObject, int> AmountOfEachEnemyToSpawn;
+    public List<SpawnWave> enemies;
 }

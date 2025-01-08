@@ -13,14 +13,12 @@ namespace Assets.Scripts.BehaviourTree.Tasks
 
         public TaskMove(Transform transform, Rigidbody2D rb, float speed)
         {
-            _transform = transform;
             _rb = rb;
             _speed = speed;
         }
 
         public override NodeState Evaluate()
         {
-
             _rb.velocity += Vector2.down * _speed * Time.deltaTime;
             state = NodeState.SUCCESS;
             return state;

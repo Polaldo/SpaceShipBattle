@@ -8,11 +8,11 @@ using UnityEngine;
 public class Zeta3BT : EnemyBT<EnemyData>
 {
     protected override Node SetupTree()
-    {
+    {      
         Node root = new Selector( new List<Node>
         {
             new Sequence (new List<Node> {
-                new TaskMove(this.GetComponent<Transform>(), _rb, shipData.speed),
+                new TaskMove(null, _rb, shipData.speed),
                 new TaskShoot(_enemyWeaponBehaviour),
             }),        
         });
