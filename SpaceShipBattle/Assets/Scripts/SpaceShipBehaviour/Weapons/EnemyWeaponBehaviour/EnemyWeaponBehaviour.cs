@@ -30,7 +30,7 @@ public class EnemyWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
     public void SetBulletData(GameObject tempBullet, Vector2 target, Vector2 postionToSpawn)
     {
         tempBullet.transform.position = postionToSpawn;
-        tempBullet.transform.rotation = Quaternion.LookRotation(target);
+        tempBullet.transform.rotation = Quaternion.identity;
 
         Rigidbody2D tempRigidBodyBullet = tempBullet.GetComponent<Rigidbody2D>();
         tempRigidBodyBullet.velocity = target.normalized * weaponData.bulletSpeed;

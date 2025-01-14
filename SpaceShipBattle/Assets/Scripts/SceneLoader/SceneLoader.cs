@@ -14,13 +14,11 @@ public class SceneLoader : MonoBehaviour
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
 
-        // Wait until the scene is fully loaded
         while (!asyncLoad.isDone)
         {
             yield return null;
         }
 
-        // Now the scene is loaded, find the Spawner
         GameObject spawner = GameObject.Find("Spawner");
         if (spawner != null)
         {

@@ -1727,11 +1727,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bf9861e545de254cb80e55f2dcbb41c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesToSpwan:
-  - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
-  - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
-  - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
-  - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
+  bossPrefab: {fileID: 0}
+  enemiesToSpwan: []
 --- !u!4 &738528486
 Transform:
   m_ObjectHideFlags: 0
@@ -4686,7 +4683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9610066b57d3b04fae3b49ce839f243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actualLevel: {fileID: 0}
+  actualLevel: {fileID: 11400000, guid: d6df3267f450fb74da6ba7d3d8880462, type: 2}
   actualScore: 0
   sceneLoader: {fileID: 0}
 --- !u!4 &2012008204

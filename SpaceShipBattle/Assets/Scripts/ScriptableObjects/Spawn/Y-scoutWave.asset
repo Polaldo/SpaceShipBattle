@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcf93770b8241d6418da0755e8b6e670, type: 3}
-  m_Name: ZetaWave
+  m_Name: Y-scoutWave
   m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 8838671160490565831, guid: 09ee5049d9ddc69409495724395278c3, type: 3}
-  SpawnPosition: {x: 0, y: 6}
-  SpawnTime: 5
-  offSet: {x: 0.5, y: 0}
+  EnemyPrefab: {fileID: 2805233666400673890, guid: c3408833ad13db5469d944703e12158b, type: 3}
+  SpawnPosition: {x: -4, y: 6}
+  SpawnTime: 10
+  offSet: {x: -0.5, y: 0}
   amountOfEnemiesWave: 5
