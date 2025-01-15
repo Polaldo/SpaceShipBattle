@@ -18,11 +18,5 @@ public class SceneLoader : MonoBehaviour
         {
             yield return null;
         }
-
-        GameObject spawner = GameObject.Find("Spawner");
-        if (spawner != null)
-        {
-            spawner.GetComponent<Spawner>().StartSpawning();
-        }
     }
 }

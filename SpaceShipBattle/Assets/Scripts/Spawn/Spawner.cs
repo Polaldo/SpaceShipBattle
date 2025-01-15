@@ -12,10 +12,6 @@ public class Spawner : MonoBehaviour
     {
         enemiesToSpwan = LevelManager.Instance.actualLevel.enemies;
         bossPrefab = LevelManager.Instance.actualLevel.bossEnemy;
-    }
-
-    public void StartSpawning()
-    {
         StartCoroutine(SpawnWaveRoutine());
     }
 

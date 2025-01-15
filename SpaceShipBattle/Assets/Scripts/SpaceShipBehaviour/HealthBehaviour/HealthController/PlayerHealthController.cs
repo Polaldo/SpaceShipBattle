@@ -10,7 +10,6 @@ public class PlayerHealthController : UnitHealthController
 
     protected override void Kill()
     {
-        UiManager.Instance.OpenGameOverPannel();
-        //TODO: open death menu
+        LevelManager.Instance.GameOver();
     }
 }

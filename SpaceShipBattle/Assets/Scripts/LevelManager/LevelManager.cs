@@ -32,4 +32,21 @@ public class LevelManager : MonoBehaviour
         actualScore = 0;
         sceneLoader.LoadLevel(levelData.levelName);
     }
+
+    public void CompleteLevel()
+    {
+        //Set active complete level screen and calculate the stars and points of the actual level
+    }
+
+    public void GameOver()
+    {
+        //Set active game over screen
+    }
+
+    public void AddPoints(int pointsEarned)
+    {
+        actualScore += pointsEarned;
+    }
+
+    
 }
