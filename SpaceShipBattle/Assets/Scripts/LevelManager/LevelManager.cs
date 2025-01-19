@@ -36,12 +36,13 @@ public class LevelManager : MonoBehaviour
 
     public void CompleteLevel()
     {
-        //Set active complete level screen and calculate the stars and points of the actual level
+        //TODO calculate the stars and points of the actual level
+        GameObject.Find("ResultsPannel").SetActive(true);
     }
 
     public void GameOver()
     {
-        //Set active game over screen
+        GameObject.Find("Pannels").GetComponent<LevelPanelManagement>().ActiveGameOverPanel();
     }
 
     public void AddPoints(int pointsEarned)

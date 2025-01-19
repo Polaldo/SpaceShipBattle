@@ -18,8 +18,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public Vector2 GetPlayerPosition()
+    public void StopTime()
     {
-        return GameObject.Find("Player").transform.position;
+        Time.timeScale = 0;
+    }
+
+    public void ResumeTime()
+    {
+        Time.timeScale = 1f;
     }
 }
