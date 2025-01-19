@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class HealthController : MonoBehaviour, IDamageble
+public abstract class HealthController<T> : MonoBehaviour, IDamageble where T : SpaceShipData
 {
-    public SpaceShipData spaceShipData;
+    public T spaceShipData;
     protected Animator animator;
     protected int currentHealth;
 

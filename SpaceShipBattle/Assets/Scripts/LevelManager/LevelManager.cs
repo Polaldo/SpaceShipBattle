@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -46,6 +47,7 @@ public class LevelManager : MonoBehaviour
     public void AddPoints(int pointsEarned)
     {
         actualScore += pointsEarned;
+        GameObject.Find("ActualScoreValueText").GetComponent<TextMeshProUGUI>().text = actualScore.ToString();
     }
 
     

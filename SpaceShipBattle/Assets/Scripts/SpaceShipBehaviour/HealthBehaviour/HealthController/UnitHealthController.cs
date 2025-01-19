@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnitHealthController : HealthController
+public class UnitHealthController : HealthController<PlayerShipData>
 {
     public HealthBarUI healthBarUI;
 

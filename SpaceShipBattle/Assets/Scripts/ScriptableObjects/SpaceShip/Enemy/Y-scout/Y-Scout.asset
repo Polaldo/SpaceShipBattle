@@ -18,3 +18,4 @@ MonoBehaviour:
   damage: 10
   defense: 3
   speed: 4
+  points: 50

@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyShipData", menuName = "ScriptableObjects/SpaceShip/EnemyShipData", order = 1)]
 public class EnemyData : SpaceShipData
 {
-    //No fields added yet
+    public int points;
 }
