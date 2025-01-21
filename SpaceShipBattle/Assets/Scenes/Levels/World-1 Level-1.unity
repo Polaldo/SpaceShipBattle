@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 142210445}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 849101020}
+        m_TargetAssemblyTypeName: LevelPanelManagement, Assembly-CSharp
+        m_MethodName: RetryLevelButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &142210445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2527,6 +2539,7 @@ MonoBehaviour:
   resultsPanel: {fileID: 1236715034}
   pausePanel: {fileID: 1345626176}
   pauseButton: {fileID: 1855494672}
+  scoreValuePauseText: {fileID: 939385837}
 --- !u!1001 &870945329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2679,7 +2692,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 884534722}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 849101020}
+        m_TargetAssemblyTypeName: LevelPanelManagement, Assembly-CSharp
+        m_MethodName: ExitButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &884534722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2801,7 +2826,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 896516124}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 849101020}
+        m_TargetAssemblyTypeName: LevelPanelManagement, Assembly-CSharp
+        m_MethodName: ExitButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &896516124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5955,7 +5992,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1893614140}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 849101020}
+        m_TargetAssemblyTypeName: LevelPanelManagement, Assembly-CSharp
+        m_MethodName: RetryLevelButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1893614140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6222,7 +6271,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1958772936}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 849101020}
+        m_TargetAssemblyTypeName: LevelPanelManagement, Assembly-CSharp
+        m_MethodName: RetryLevelButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1958772936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6555,7 +6616,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1977110129}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 849101020}
+        m_TargetAssemblyTypeName: LevelPanelManagement, Assembly-CSharp
+        m_MethodName: ExitButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1977110129
 MonoBehaviour:
   m_ObjectHideFlags: 0

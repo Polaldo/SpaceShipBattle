@@ -31,13 +31,19 @@ public class LevelManager : MonoBehaviour
     {
         this.actualLevel = levelData;
         actualScore = 0;
-        sceneLoader.LoadLevel(levelData.levelName);
+        sceneLoader.LoadAsyncScene(levelData.levelName);
+    }
+
+    public void ResetLevel()
+    {
+        actualScore = 0;
+        sceneLoader.LoadAsyncScene(SceneManager.GetActiveScene().name);
     }
 
     public void CompleteLevel()
     {
         //TODO calculate the stars and points of the actual level
-        GameObject.Find("ResultsPannel").SetActive(true);
+        GameObject.Find("Pannels").GetComponent<LevelPanelManagement>().ActiveResultsPanel();
     }
 
     public void GameOver()
@@ -51,5 +57,8 @@ public class LevelManager : MonoBehaviour
         GameObject.Find("ActualScoreValueText").GetComponent<TextMeshProUGUI>().text = actualScore.ToString();
     }
 
-    
+    public void ExitLevel()
+    {
+        sceneLoader.LoadAsyncScene("MenuScene");
+    }
 }

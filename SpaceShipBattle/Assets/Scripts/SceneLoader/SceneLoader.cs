@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    public void LoadLevel(string sceneName)
+    public void LoadAsyncScene(string sceneName)
     {
         StartCoroutine(LoadSceneAndStartSpawning(sceneName));
     }

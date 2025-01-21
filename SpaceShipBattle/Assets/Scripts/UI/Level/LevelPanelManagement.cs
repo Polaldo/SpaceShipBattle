@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ public class LevelPanelManagement : MonoBehaviour
     public GameObject pausePanel;
 
     public Button pauseButton;
+    public TextMeshProUGUI scoreValuePauseText;
 
     public void ActiveGameOverPanel()
     {
@@ -26,6 +28,7 @@ public class LevelPanelManagement : MonoBehaviour
     public void PauseGame()
     {
         GameManager.Instance.StopTime();
+        scoreValuePauseText.text = LevelManager.Instance.actualScore.ToString();
         pausePanel.SetActive(true);
         pauseButton.enabled = false;
     }
@@ -37,4 +40,15 @@ public class LevelPanelManagement : MonoBehaviour
         GameManager.Instance.ResumeTime();
     }
 
+    public void RetryLevelButton()
+    {
+        LevelManager.Instance.ResetLevel();
+        GameManager.Instance.ResumeTime();
+    }
+
+    public void ExitButton()
+    {
+        LevelManager.Instance.ExitLevel();
+        GameManager.Instance.ResumeTime();
+    }
 }
