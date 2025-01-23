@@ -9,10 +9,38 @@ public abstract class BulletBehaviour : MonoBehaviour, IBullet
     protected float currentDistance;
     public string tagNotToCollide;
 
+    protected Camera _camera;
+
     public float BulletDistance { get; set; }
     public Vector3 InitialPosition { get; set; }
 
     public abstract void DistanceBullet();
+
+    protected virtual void Start()
+    {
+        _camera = Camera.main;
+    }
+
+    protected virtual void Update()
+    {
+        DestroyBulletIsOffScreenLimits();
+        DistanceBullet();
+    }
+
+    public void DestroyBulletIsOffScreenLimits()
+    {
+        Vector2 screenPosition = _camera.WorldToScreenPoint(transform.position);
+
+        if (CheckBulletOffScreenLimits(screenPosition))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public bool CheckBulletOffScreenLimits(Vector2 screenPosition)
+    {
+        return (screenPosition.x < 0 || screenPosition.x > _camera.pixelWidth || screenPosition.y < 0 || screenPosition.y > _camera.pixelHeight);
+    }
 
     protected void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,7 +48,7 @@ public abstract class BulletBehaviour : MonoBehaviour, IBullet
         if (damageble != null && !collision.gameObject.CompareTag(tagNotToCollide))
         {
             damageble.ApplyDamage(damage);
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

@@ -28,13 +28,13 @@ namespace Assets.Scripts.SpaceShipBehaviour.Weapons.Bullets.GuideRocketBullet
             GetComponent<SpriteRenderer>().flipY = true;
         }
 
-        private void Start()
+        protected override void Start()
         {
-            playerTransform = PlayerManager.Instance.GetPlayer().transform;
-            
+            base.Start();
+            playerTransform = PlayerManager.Instance.GetPlayer().transform; 
         }
 
-        private void Update()
+        protected override void Update()
         {
             if (!isTurning && !headingToPlayer)
             {
@@ -46,6 +46,7 @@ namespace Assets.Scripts.SpaceShipBehaviour.Weapons.Bullets.GuideRocketBullet
             }
             else if (headingToPlayer)
             {
+                DestroyBulletIsOffScreenLimits();
                 DistanceBullet();
                 MoveTowardsPlayer(); 
             }
