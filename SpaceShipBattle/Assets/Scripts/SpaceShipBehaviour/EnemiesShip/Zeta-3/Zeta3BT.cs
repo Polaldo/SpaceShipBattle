@@ -14,7 +14,8 @@ public class Zeta3BT : EnemyBT<EnemyData>
             new Sequence (new List<Node> {
                 new TaskMove(null, _rb, shipData.speed),
                 new TaskShoot(_enemyWeaponBehaviour),
-            }),        
+                new CheckOutOffBounds(gameObject, healthController)
+            }),
         });
         
         return root;

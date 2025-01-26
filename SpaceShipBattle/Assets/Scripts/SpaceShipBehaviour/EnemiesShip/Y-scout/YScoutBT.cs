@@ -14,6 +14,7 @@ public class YScoutBT : EnemyBT<EnemyData>
                 new TaskMoveDiagonal(_rb, shipData.speed),
                 new TaskShoot(_enemyWeaponBehaviour),
             }),
+            new CheckOutOffBounds(gameObject, healthController),
         });
 
         return root;

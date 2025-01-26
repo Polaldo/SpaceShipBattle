@@ -175,4 +175,3 @@ MonoBehaviour:
   turnSpeed: 5
   finalSpeed: 5
   radius: 1
-  center: {x: 0, y: 0, z: 0}
