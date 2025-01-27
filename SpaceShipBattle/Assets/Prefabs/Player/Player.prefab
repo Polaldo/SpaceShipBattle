@@ -123,7 +123,6 @@ GameObject:
   - component: {fileID: 2278963721007211969}
   - component: {fileID: 2278963721007211974}
   - component: {fileID: 2278963721007211971}
-  - component: {fileID: 2278963721007211970}
   - component: {fileID: 2278963721007211965}
   m_Layer: 7
   m_Name: Player
@@ -185,6 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _engineAnimator: {fileID: 2278963722863791201}
   speed: 0
+  _offSet: 100
 --- !u!61 &2278963721007211971
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -211,20 +211,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.204803, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2278963721007211970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2278963721007211972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2b58490ad768b4fa6babdff28226a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offSetLimtX: 0.1
-  offSetLimtY: 0.1
 --- !u!114 &2278963721007211965
 MonoBehaviour:
   m_ObjectHideFlags: 0

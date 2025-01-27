@@ -37,6 +37,7 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
         GameObject tempBullet = ObjectPool.SharedInstance.GetPooledObject();
         if (tempBullet != null)
         {
+            
             SetTransformTempBullet(tempBullet.transform);
             tempBullet.SetActive(true);
 

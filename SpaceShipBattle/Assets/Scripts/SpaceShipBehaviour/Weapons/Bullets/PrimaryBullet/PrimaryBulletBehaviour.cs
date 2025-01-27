@@ -26,7 +26,7 @@ public class PrimaryBulletBehaviour : BulletBehaviour
         if (damageble != null && !collision.gameObject.CompareTag(tagNotToCollide))
         {
             damageble.ApplyDamage(damage);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 

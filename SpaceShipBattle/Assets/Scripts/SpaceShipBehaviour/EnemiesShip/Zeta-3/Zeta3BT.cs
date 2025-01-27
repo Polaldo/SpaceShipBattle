@@ -12,7 +12,7 @@ public class Zeta3BT : EnemyBT<EnemyData>
         Node root = new Selector( new List<Node>
         {
             new Sequence (new List<Node> {
-                new TaskMove(null, _rb, shipData.speed),
+                new TaskMove(transform, _rb, shipData.speed),
                 new TaskShoot(_enemyWeaponBehaviour),
                 new CheckOutOffBounds(gameObject, healthController)
             }),
