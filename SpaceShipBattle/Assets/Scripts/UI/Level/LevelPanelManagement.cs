@@ -9,6 +9,7 @@ public class LevelPanelManagement : MonoBehaviour
     public GameObject deathPanel;
     public GameObject resultsPanel;
     public GameObject pausePanel;
+    public GameObject scorePanel;
 
     public Button pauseButton;
     public TextMeshProUGUI scoreValuePauseText;
@@ -16,19 +17,24 @@ public class LevelPanelManagement : MonoBehaviour
     public void ActiveGameOverPanel()
     {
         GameManager.Instance.StopTime();
+        scoreValuePauseText.text = LevelManager.Instance.actualScore.ToString();
         pauseButton.enabled = false;
+        scorePanel.SetActive(true);
         deathPanel.SetActive(true);
     }
 
     public void ActiveResultsPanel()
     {
+        scoreValuePauseText.text = LevelManager.Instance.actualScore.ToString();
         resultsPanel.SetActive(true);
+        scorePanel.SetActive(true);       
     }
 
     public void PauseGame()
     {
         GameManager.Instance.StopTime();
         scoreValuePauseText.text = LevelManager.Instance.actualScore.ToString();
+        resultsPanel.SetActive(true);
         pausePanel.SetActive(true);
         pauseButton.enabled = false;
     }
@@ -37,6 +43,7 @@ public class LevelPanelManagement : MonoBehaviour
     {
         pauseButton.enabled = true;
         pausePanel.SetActive(false);
+        resultsPanel.SetActive(false);
         GameManager.Instance.ResumeTime();
     }
 

@@ -6,7 +6,7 @@ public abstract class HealthController<T> : MonoBehaviour, IDamageble where T : 
 {
     public T spaceShipData;
     protected Animator animator;
-    protected int currentHealth;
+    public int currentHealth;
 
     protected virtual void Start()
     {

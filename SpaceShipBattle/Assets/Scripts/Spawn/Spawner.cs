@@ -7,9 +7,11 @@ public class Spawner : MonoBehaviour
 {
     public GameObject bossPrefab;
     public List<SpawnWave> enemiesToSpwan;
+    public LevelData levelData;
 
     private void Start()
     {
+        levelData = LevelManager.Instance.actualLevel;
         enemiesToSpwan = LevelManager.Instance.actualLevel.enemies;
         bossPrefab = LevelManager.Instance.actualLevel.bossEnemy;
         StartCoroutine(SpawnWaveRoutine());
@@ -30,6 +32,20 @@ public class Spawner : MonoBehaviour
             }
             yield return new WaitForSeconds(wave.SpawnTime);
         }
+
+        if (levelData.hasBossBattle)
+        {
+            GameObject gO = Instantiate(levelData.bossEnemy, Vector3.zero, Quaternion.identity);
+            EnemyHealthController healthBoss = gO.GetComponent<EnemyHealthController>();
+
+            while (healthBoss.currentHealth > 0)
+            {
+                yield return null;
+            }
+
+        }
+        yield return new WaitForSeconds(10);
+        LevelManager.Instance.CompleteLevel();           
     }
 
     Vector3 GetObjectSize(GameObject obj)
