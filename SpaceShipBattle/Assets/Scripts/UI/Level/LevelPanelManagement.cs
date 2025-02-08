@@ -13,6 +13,7 @@ public class LevelPanelManagement : MonoBehaviour
 
     public Button pauseButton;
     public TextMeshProUGUI scoreValuePauseText;
+    public Image[] stars;
 
     public void ActiveGameOverPanel()
     {
@@ -23,8 +24,12 @@ public class LevelPanelManagement : MonoBehaviour
         deathPanel.SetActive(true);
     }
 
-    public void ActiveResultsPanel()
+    public void ActiveResultsPanel(int totalStars)
     {
+        for (int i = 0; i < totalStars - 1; i++)
+        {
+            stars[i].color = Color.yellow;
+        }
         scoreValuePauseText.text = LevelManager.Instance.actualScore.ToString();
         resultsPanel.SetActive(true);
         scorePanel.SetActive(true);       

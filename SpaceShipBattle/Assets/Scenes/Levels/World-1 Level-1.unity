@@ -1940,6 +1940,10 @@ MonoBehaviour:
   scorePanel: {fileID: 339843196}
   pauseButton: {fileID: 1855494672}
   scoreValuePauseText: {fileID: 939385837}
+  stars:
+  - {fileID: 1050364080}
+  - {fileID: 340709645}
+  - {fileID: 1962909584}
 --- !u!1001 &870945329
 PrefabInstance:
   m_ObjectHideFlags: 0
