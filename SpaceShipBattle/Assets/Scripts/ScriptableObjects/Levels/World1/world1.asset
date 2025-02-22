@@ -13,15 +13,8 @@ MonoBehaviour:
   m_Name: world1
   m_EditorClassIdentifier: 
   worldName: 
-  worldNumber: 0
+  worldNumber: 1
   levelsList:
-  - {fileID: 11400000, guid: d6df3267f450fb74da6ba7d3d8880462, type: 2}
-  - {fileID: 11400000, guid: d6df3267f450fb74da6ba7d3d8880462, type: 2}
-  - {fileID: 11400000, guid: d6df3267f450fb74da6ba7d3d8880462, type: 2}
-  - {fileID: 11400000, guid: d6df3267f450fb74da6ba7d3d8880462, type: 2}
-  - {fileID: 11400000, guid: d6df3267f450fb74da6ba7d3d8880462, type: 2}
-  - {fileID: 11400000, guid: d6df3267f450fb74da6ba7d3d8880462, type: 2}
-  - {fileID: 11400000, guid: d6df3267f450fb74da6ba7d3d8880462, type: 2}
   - {fileID: 11400000, guid: d6df3267f450fb74da6ba7d3d8880462, type: 2}
   - {fileID: 11400000, guid: d6df3267f450fb74da6ba7d3d8880462, type: 2}
   - {fileID: 11400000, guid: d6df3267f450fb74da6ba7d3d8880462, type: 2}

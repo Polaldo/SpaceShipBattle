@@ -10,4 +10,5 @@ public class SpawnWave : ScriptableObject
     public float SpawnTime;
     public Vector2 offSet;
     public int amountOfEnemiesWave;
+    public SpawnPattern spawnPattern;
 }

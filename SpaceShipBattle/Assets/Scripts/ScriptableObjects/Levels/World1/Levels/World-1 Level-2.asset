@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7a44bc8a7024f4c97bef5407e88915, type: 3}
+  m_Name: World-1 Level-2
+  m_EditorClassIdentifier: 
+  levelName: World-1 Level-1
+  levelNumber: 1
+  highScore: 0
+  scoreForOneStar: 100
+  scoreForTwoStar: 500
+  scoreForThreeStar: 1000
+  oneStar: 0
+  twoStar: 0
+  threeStar: 0
+  hasBossBattle: 1
+  bossEnemy: {fileID: 2227902102372291455, guid: c6f0655b90209434fb35e9d6139da86a, type: 3}
+  enemies:
+  - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
+  - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
+  - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
+  - {fileID: 11400000, guid: 69166166cd97524448b0b19fceef6a98, type: 2}
+  - {fileID: 11400000, guid: 69166166cd97524448b0b19fceef6a98, type: 2}
+  - {fileID: 11400000, guid: 69166166cd97524448b0b19fceef6a98, type: 2}
+  - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
+  - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
+  - {fileID: 11400000, guid: 69166166cd97524448b0b19fceef6a98, type: 2}
+  - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}

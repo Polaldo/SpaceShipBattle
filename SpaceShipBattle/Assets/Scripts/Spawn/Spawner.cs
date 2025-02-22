@@ -8,12 +8,17 @@ public class Spawner : MonoBehaviour
     public GameObject bossPrefab;
     public List<SpawnWave> enemiesToSpwan;
     public LevelData levelData;
+    public float separation = 2f; // Separation between enemies
+    public float spawnHeightOffset = 1f; // Distance above the screen
+
+    protected Camera mainCamera;
 
     private void Start()
     {
         levelData = LevelManager.Instance.actualLevel;
         enemiesToSpwan = LevelManager.Instance.actualLevel.enemies;
         bossPrefab = LevelManager.Instance.actualLevel.bossEnemy;
+        mainCamera = Camera.main;
         StartCoroutine(SpawnWaveRoutine());
     }
 
@@ -21,16 +26,8 @@ public class Spawner : MonoBehaviour
     {
         foreach (var wave in enemiesToSpwan)
         {
-            Vector2 respawnPosition = wave.SpawnPosition;
-            Vector2 size = GetObjectSize(wave.EnemyPrefab);
-            
-            for (int i = 0; i < wave.amountOfEnemiesWave; i++)
-            {
-                
-                 Instantiate(wave.EnemyPrefab, respawnPosition, Quaternion.identity);
-                respawnPosition += respawnPosition.normalized + size.normalized + wave.offSet;
-            }
-            yield return new WaitForSeconds(wave.SpawnTime);
+            definePositionToSpwan(wave.spawnPattern, wave.EnemyPrefab, wave.amountOfEnemiesWave);
+            yield return new WaitForSeconds(5);
         }
 
         if (levelData.hasBossBattle)
@@ -48,20 +45,132 @@ public class Spawner : MonoBehaviour
         LevelManager.Instance.CompleteLevel();           
     }
 
-    Vector3 GetObjectSize(GameObject obj)
+    void definePositionToSpwan(SpawnPattern spawnPattern, GameObject enemy, int amount)
     {
-        Collider collider = obj.GetComponent<Collider>();
-        if (collider != null)
+        switch (spawnPattern)
         {
-            return collider.bounds.size; 
+            case SpawnPattern.StraightLine:
+                SpawnStraightLine(enemy, amount);
+                break;
+            case SpawnPattern.Diagonal:
+                SpawnDiagonal(enemy, amount);
+                break;
+            case SpawnPattern.Scattered:
+                SpawnScattered();
+                break;
+            case SpawnPattern.Circle:
+                SpawnCircle();
+                break;
+            case SpawnPattern.SinusoidalWave:
+                SpawnSinusoidal();
+                break;
+            case SpawnPattern.InvertedV:
+                SpawnVShape();
+                break;
+            case SpawnPattern.FullyRandom:
+                SpawnRandom();
+                break;
+            default:
+                SpawnStraightLine(enemy, amount);
+                break;
         }
-
-        Renderer renderer = obj.GetComponent<Renderer>();
-        if (renderer != null)
+    }
+    void SpawnStraightLine(GameObject enemy, int amount)
+    {
+        float screenWidth = GetScreenWidth();
+        float startX = -screenWidth + separation;
+        
+        for (int i = 0; i < amount; i++)
         {
-            return renderer.bounds.size; 
+            Vector2 spawnPos = new Vector2(startX + (i * separation), mainCamera.transform.position.y + mainCamera.orthographicSize + spawnHeightOffset);
+            Instantiate(enemy, spawnPos, Quaternion.identity);
         }
+    }
 
-        return Vector3.zero;
+    void SpawnDiagonal(GameObject enemy, int amount)
+    {
+        float screenWidth = GetScreenWidth();
+        Vector3 topLeft = mainCamera.ViewportToWorldPoint(new Vector3(0, 1, 0));
+        float startX = -screenWidth -1;
+        float startY = mainCamera.transform.position.y + mainCamera.orthographicSize + spawnHeightOffset;
+
+        for (int i = 0; i < amount; i++)
+        {
+            Vector2 spawnPos = new Vector2(topLeft.x + startX + (i * separation), topLeft.y + startY + spawnHeightOffset - (i * separation));
+            Instantiate(enemy, spawnPos, Quaternion.identity).GetComponent<YScoutBT>().enabled = false;
+        }
+    }
+
+    void SpawnScattered()
+    {
+        //float screenWidth = mainCamera.orthographicSize * mainCamera.aspect;
+        //float stepX = (screenWidth * 2) / enemiesPerWave;
+        //
+        //for (int i = 0; i < enemiesPerWave; i++)
+        //{
+        //    float spawnX = -screenWidth + (i * stepX);
+        //    Vector2 spawnPos = new Vector2(spawnX, mainCamera.transform.position.y + mainCamera.orthographicSize + spawnHeightOffset);
+        //    Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        //}
+    }
+
+    void SpawnCircle()
+    {
+        //float radius = 3f;
+        //Vector2 center = new Vector2(0, mainCamera.transform.position.y + mainCamera.orthographicSize + spawnHeightOffset);
+        //
+        //for (int i = 0; i < enemiesPerWave; i++)
+        //{
+        //    float angle = i * (360f / enemiesPerWave) * Mathf.Deg2Rad;
+        //    Vector2 spawnPos = new Vector2(center.x + Mathf.Cos(angle) * radius, center.y + Mathf.Sin(angle) * radius);
+        //    Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        //}
+    }
+
+    void SpawnSinusoidal()
+    {
+        //float screenWidth = mainCamera.orthographicSize * mainCamera.aspect;
+        //float amplitude = 2f;
+        //
+        //for (int i = 0; i < enemiesPerWave; i++)
+        //{
+        //    float x = -screenWidth + (i * (screenWidth * 2) / enemiesPerWave);
+        //    float y = mainCamera.transform.position.y + mainCamera.orthographicSize + spawnHeightOffset + Mathf.Sin(i * 0.5f) * amplitude;
+        //    Vector2 spawnPos = new Vector2(x, y);
+        //    Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        //}
+    }
+
+    void SpawnVShape()
+    {
+        //float screenWidth = mainCamera.orthographicSize * mainCamera.aspect;
+        //float centerX = 0f;
+        //float startX = mainCamera.transform.position.y + mainCamera.orthographicSize + spawnHeightOffset;
+        //
+        //for (int i = 0; i < enemiesPerWave; i++)
+        //{
+        //    float offsetX = (i - enemiesPerWave / 2) * separation;
+        //    float offsetY = Mathf.Abs(offsetX) * 0.5f;
+        //    Vector2 spawnPos = new Vector2(centerX + offsetX, startX - offsetY);
+        //    Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        //}
+    }
+
+    void SpawnRandom()
+    {
+        //float screenWidth = mainCamera.orthographicSize * mainCamera.aspect;
+        //
+        //for (int i = 0; i < enemiesPerWave; i++)
+        //{
+        //    float randomX = Random.Range(-screenWidth, screenWidth);
+        //    float randomY = mainCamera.transform.position.y + mainCamera.orthographicSize + spawnHeightOffset + Random.Range(-1f, 1f);
+        //    Vector2 spawnPos = new Vector2(randomX, randomY);
+        //    Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+        //}
+    }
+
+    float GetScreenWidth()
+    {
+        return mainCamera.orthographicSize * mainCamera.aspect;
     }
 }

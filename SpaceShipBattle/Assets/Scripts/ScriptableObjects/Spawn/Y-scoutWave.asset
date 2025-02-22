@@ -17,3 +17,4 @@ MonoBehaviour:
   SpawnTime: 10
   offSet: {x: -0.5, y: 0}
   amountOfEnemiesWave: 5
+  spawnPattern: 1
