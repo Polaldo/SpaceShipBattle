@@ -12,25 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7a44bc8a7024f4c97bef5407e88915, type: 3}
   m_Name: World-1 Level-2
   m_EditorClassIdentifier: 
-  levelName: World-1 Level-1
-  levelNumber: 1
+  levelName: World-1 Level-2
+  levelNumber: 2
   highScore: 0
-  scoreForOneStar: 100
-  scoreForTwoStar: 500
-  scoreForThreeStar: 1000
+  scoreForOneStar: 150
+  scoreForTwoStar: 550
+  scoreForThreeStar: 1100
   oneStar: 0
   twoStar: 0
   threeStar: 0
-  hasBossBattle: 1
-  bossEnemy: {fileID: 2227902102372291455, guid: c6f0655b90209434fb35e9d6139da86a, type: 3}
+  hasBossBattle: 0
+  bossEnemy: {fileID: 0}
   enemies:
   - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
-  - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
-  - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
-  - {fileID: 11400000, guid: 69166166cd97524448b0b19fceef6a98, type: 2}
   - {fileID: 11400000, guid: 69166166cd97524448b0b19fceef6a98, type: 2}
   - {fileID: 11400000, guid: 69166166cd97524448b0b19fceef6a98, type: 2}
   - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
   - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
+  - {fileID: 11400000, guid: 69166166cd97524448b0b19fceef6a98, type: 2}
+  - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
+  - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
+  - {fileID: 11400000, guid: 69166166cd97524448b0b19fceef6a98, type: 2}
+  - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
+  - {fileID: 11400000, guid: 69166166cd97524448b0b19fceef6a98, type: 2}
   - {fileID: 11400000, guid: 69166166cd97524448b0b19fceef6a98, type: 2}
   - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}

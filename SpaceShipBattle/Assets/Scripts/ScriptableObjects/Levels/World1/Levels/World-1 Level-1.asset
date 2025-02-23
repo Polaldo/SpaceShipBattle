@@ -21,8 +21,8 @@ MonoBehaviour:
   oneStar: 0
   twoStar: 0
   threeStar: 0
-  hasBossBattle: 1
-  bossEnemy: {fileID: 2227902102372291455, guid: c6f0655b90209434fb35e9d6139da86a, type: 3}
+  hasBossBattle: 0
+  bossEnemy: {fileID: 0}
   enemies:
   - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
   - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}

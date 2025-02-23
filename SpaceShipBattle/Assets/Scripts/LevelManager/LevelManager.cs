@@ -41,18 +41,31 @@ public class LevelManager : MonoBehaviour
     }
 
     public void CompleteLevel()
-    {       
-        GameObject.Find("Pannels").GetComponent<LevelPanelManagement>().ActiveResultsPanel(CalculateStars());
+    {
+        actualLevel.highScore = actualScore;
+        GameObject.Find("Pannels").GetComponent<LevelPanelManagement>().ActiveResultsPanel(CalculateStars());      
     }
 
     public int CalculateStars()
     {
         if (actualScore >= actualLevel.scoreForThreeStar)
+        {
+            actualLevel.oneStar = true;
+            actualLevel.twoStar = true;
+            actualLevel.threeStar = true;
             return 3;
+        }
         if (actualScore >= actualLevel.scoreForTwoStar)
+        {
+            actualLevel.oneStar = true;
+            actualLevel.twoStar = true;
             return 2;
+        }
         if (actualScore >= actualLevel.scoreForOneStar)
+        {
+            actualLevel.oneStar = true;
             return 1;
+        }
         return 0;
     }
 

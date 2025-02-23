@@ -41,7 +41,7 @@ public class Spawner : MonoBehaviour
             }
 
         }
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
         LevelManager.Instance.CompleteLevel();           
     }
 
@@ -97,7 +97,7 @@ public class Spawner : MonoBehaviour
         for (int i = 0; i < amount; i++)
         {
             Vector2 spawnPos = new Vector2(topLeft.x + startX + (i * separation), topLeft.y + startY + spawnHeightOffset - (i * separation));
-            Instantiate(enemy, spawnPos, Quaternion.identity).GetComponent<YScoutBT>().enabled = false;
+            Instantiate(enemy, spawnPos, Quaternion.identity);
         }
     }
 

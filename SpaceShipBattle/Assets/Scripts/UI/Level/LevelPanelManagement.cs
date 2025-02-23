@@ -26,6 +26,7 @@ public class LevelPanelManagement : MonoBehaviour
 
     public void ActiveResultsPanel(int totalStars)
     {
+        GameManager.Instance.StopTime();
         for (int i = 0; i < totalStars - 1; i++)
         {
             stars[i].color = Color.yellow;

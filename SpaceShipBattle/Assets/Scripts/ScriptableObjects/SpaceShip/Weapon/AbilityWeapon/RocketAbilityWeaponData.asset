@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 1673167152, guid: bdbd27950c3b2be478f12ed4c10be9c0, type: 3}
   health: 10
-  damage: 40
+  damage: 100
   defense: 1
   speed: 0
   bulletDistance: 10
