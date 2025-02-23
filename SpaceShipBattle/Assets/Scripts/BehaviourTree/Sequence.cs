@@ -1,8 +1,4 @@
-using Assets.Scripts.BehaviourTree;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using static Unity.VisualScripting.Metadata;
 
 namespace Assets.Scripts.BehaviourTree
 {

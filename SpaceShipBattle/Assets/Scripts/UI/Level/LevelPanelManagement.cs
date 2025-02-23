@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,7 +31,7 @@ public class LevelPanelManagement : MonoBehaviour
         }
         scoreValuePauseText.text = LevelManager.Instance.actualScore.ToString();
         resultsPanel.SetActive(true);
-        scorePanel.SetActive(true);       
+        scorePanel.SetActive(true);
     }
 
     public void PauseGame()

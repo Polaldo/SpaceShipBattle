@@ -1,8 +1,6 @@
-using Assets.Scripts.BehaviourTree.Tasks;
 using Assets.Scripts.BehaviourTree;
-using System.Collections;
+using Assets.Scripts.BehaviourTree.Tasks;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class YScoutBT : EnemyBT<EnemyData>
 {

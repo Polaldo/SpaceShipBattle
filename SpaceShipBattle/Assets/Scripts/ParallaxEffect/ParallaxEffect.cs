@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class ParallaxEffect : MonoBehaviour
 {
@@ -11,14 +7,14 @@ public class ParallaxEffect : MonoBehaviour
     {
         public float length, startPos;
         public Transform layer;
-        public Vector2 speed;   
+        public Vector2 speed;
     }
 
     public ParallaxLayer[] layers;
 
     private void Start()
     {
-        foreach(ParallaxLayer layer in layers)
+        foreach (ParallaxLayer layer in layers)
         {
             layer.startPos = transform.position.y;
             layer.length = layer.layer.gameObject.GetComponent<SpriteRenderer>().bounds.size.y;

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,7 +27,7 @@ public class LevelSelectMenu : MonoBehaviour
                 setDataButton(buttonSelectLevelGO, i, worldData.levelsList[i]);
                 buttonSelectLevelGO.SetActive(true);
             }
-           
+
         }
 
     }
@@ -46,8 +44,8 @@ public class LevelSelectMenu : MonoBehaviour
         Transform starContainer = buttonSelectLevelGO.transform.GetChild(1);
         bool[] starStatus = { lvlData.oneStar, lvlData.twoStar, lvlData.threeStar };
         for (int i = 0; i < buttonSelectLevelGO.transform.GetChild(1).childCount; i++)
-        { 
-             starContainer.GetChild(i).GetComponent<Image>().color = starStatus[i] ? yesStar : noStar; 
+        {
+            starContainer.GetChild(i).GetComponent<Image>().color = starStatus[i] ? yesStar : noStar;
         }
     }
 }

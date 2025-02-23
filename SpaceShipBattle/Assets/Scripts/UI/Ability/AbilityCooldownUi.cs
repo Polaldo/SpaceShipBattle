@@ -1,13 +1,9 @@
-using Assets.Scripts.SpaceShipBehaviour.Ability;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class AbilityCooldownUi : MonoBehaviour
 {
-    [SerializeField]  Image cooldownUI;
+    [SerializeField] Image cooldownUI;
 
     [SerializeField] Button abilityButton;
 
@@ -26,13 +22,13 @@ public class AbilityCooldownUi : MonoBehaviour
 
         if (cooldownTimer >= 0.0f)
         {
-            
+
             cooldownUI.fillAmount = cooldownTimer / timeCooldown;
         }
         else
         {
             cooldownUI.fillAmount = 0.0f;
-           abilityButton.interactable = true;
+            abilityButton.interactable = true;
         }
     }
 

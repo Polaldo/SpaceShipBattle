@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
-using UnityEngine.UIElements;
 using Vector2 = UnityEngine.Vector2;
 
 public class PlayerShipBehaviour : SpaceShipBehaviour
@@ -16,10 +12,10 @@ public class PlayerShipBehaviour : SpaceShipBehaviour
 
     protected override void Start()
     {
-       base.Start();
-       _playerShipData = PlayerManager.Instance.shipData;
-       speed = _playerShipData.speed;
-       _camera = Camera.main;
+        base.Start();
+        _playerShipData = PlayerManager.Instance.shipData;
+        speed = _playerShipData.speed;
+        _camera = Camera.main;
     }
 
     private void FixedUpdate()
@@ -56,5 +52,5 @@ public class PlayerShipBehaviour : SpaceShipBehaviour
             rb.velocity = new Vector2(rb.velocity.x, 0);
         }
     }
-    
+
 }

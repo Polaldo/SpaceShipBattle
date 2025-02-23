@@ -1,9 +1,8 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.SpaceShipBehaviour.Ability
 {
-    public class AbilityWeaponBehaviour: WeaponBehaviour<AbilityWeaponData>, IAbility
+    public class AbilityWeaponBehaviour : WeaponBehaviour<AbilityWeaponData>, IAbility
     {
         protected override void Start()
         {
@@ -26,7 +25,7 @@ namespace Assets.Scripts.SpaceShipBehaviour.Ability
         {
             GameObject tempBullet = Instantiate(weaponData.bullet,
             new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
-           
+
             SetBulletData(tempBullet);
         }
 

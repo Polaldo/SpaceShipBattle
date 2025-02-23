@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.BehaviourTree.Tasks
 {
@@ -24,7 +19,7 @@ namespace Assets.Scripts.BehaviourTree.Tasks
         public override NodeState Evaluate()
         {
             Vector2 screenPosition = _camera.WorldToScreenPoint(_gameObject.transform.position);
-            if(screenPosition.y < offSetBounds)
+            if (screenPosition.y < offSetBounds)
             {
                 _healthController.DestroyObject();
             }

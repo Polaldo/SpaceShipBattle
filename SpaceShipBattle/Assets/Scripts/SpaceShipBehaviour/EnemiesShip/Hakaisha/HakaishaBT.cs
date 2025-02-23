@@ -1,8 +1,6 @@
-using Assets.Scripts.BehaviourTree.Tasks;
 using Assets.Scripts.BehaviourTree;
-using System.Collections;
+using Assets.Scripts.BehaviourTree.Tasks;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class HakaishaBT : EnemyBT<EnemyData>
 {
@@ -12,7 +10,7 @@ public class HakaishaBT : EnemyBT<EnemyData>
     protected override void Start()
     {
         ability = GetComponent<IAbility>();
-        base.Start();        
+        base.Start();
     }
 
     protected override Node SetupTree()
@@ -24,7 +22,7 @@ public class HakaishaBT : EnemyBT<EnemyData>
             }),
             new Sequence (new List<Node> {
                 new TaskShoot(_enemyWeaponBehaviour),
-            }),           
+            }),
         });
 
         return root;

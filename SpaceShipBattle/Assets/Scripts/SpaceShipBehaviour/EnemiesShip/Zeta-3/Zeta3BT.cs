@@ -1,15 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using Assets.Scripts.BehaviourTree;
-using Assets.Scripts.BehaviourTree.Tree;
 using Assets.Scripts.BehaviourTree.Tasks;
-using UnityEngine;
+using System.Collections.Generic;
 
 public class Zeta3BT : EnemyBT<EnemyData>
 {
     protected override Node SetupTree()
-    {      
-        Node root = new Selector( new List<Node>
+    {
+        Node root = new Selector(new List<Node>
         {
             new Sequence (new List<Node> {
                 new TaskMove(transform, _rb, shipData.speed),
@@ -17,7 +14,7 @@ public class Zeta3BT : EnemyBT<EnemyData>
                 new CheckOutOffBounds(gameObject, healthController)
             }),
         });
-        
+
         return root;
     }
 

@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Unity.Burst.Intrinsics;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
 {
@@ -29,7 +24,7 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
 
     public override bool ApplyFireRate()
     {
-       return time > weaponData.fireRate;
+        return time > weaponData.fireRate;
     }
 
     public void Shoot()
@@ -37,18 +32,18 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
         GameObject tempBullet = ObjectPool.SharedInstance.GetPooledObject();
         if (tempBullet != null)
         {
-            
+
             SetTransformTempBullet(tempBullet.transform);
             tempBullet.SetActive(true);
 
             SetBulletData(tempBullet);
-        }      
+        }
     }
 
     public void SetTransformTempBullet(Transform bulletTransform)
     {
         bulletTransform.position = spawnsBullets[index].position;
-        index = index >= spawnsBullets.Length -1 ? resetIndex : ++index;
+        index = index >= spawnsBullets.Length - 1 ? resetIndex : ++index;
     }
 
     public void SetBulletData(GameObject tempBullet)

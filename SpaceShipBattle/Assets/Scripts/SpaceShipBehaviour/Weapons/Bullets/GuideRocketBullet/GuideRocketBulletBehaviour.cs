@@ -1,26 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Assets.Scripts.SpaceShipBehaviour.Weapons.Bullets.GuideRocketBullet
 {
     public class GuideRocketBulletBehaviour : BulletBehaviour
     {
-        public float forwardDistance;  
-        public float forwardSpeed;     
-        public float turnRadius;       
-        public float turnSpeed;      
-        public float finalSpeed;       
-        private float angle = 0f; 
+        public float forwardDistance;
+        public float forwardSpeed;
+        public float turnRadius;
+        public float turnSpeed;
+        public float finalSpeed;
+        private float angle = 0f;
         private float maxAngle = 3 * Mathf.PI / 2;
         public float radius;
         private Vector3 center;
 
-        private bool isTurning = false;     
-        private bool headingToPlayer = false; 
+        private bool isTurning = false;
+        private bool headingToPlayer = false;
         private Transform playerTransform;
 
         private void Awake()
@@ -31,7 +26,7 @@ namespace Assets.Scripts.SpaceShipBehaviour.Weapons.Bullets.GuideRocketBullet
         protected override void Start()
         {
             base.Start();
-            playerTransform = PlayerManager.Instance.GetPlayer().transform; 
+            playerTransform = PlayerManager.Instance.GetPlayer().transform;
         }
 
         protected override void Update()
@@ -48,7 +43,7 @@ namespace Assets.Scripts.SpaceShipBehaviour.Weapons.Bullets.GuideRocketBullet
             {
                 DestroyBulletIsOffScreenLimits();
                 DistanceBullet();
-                MoveTowardsPlayer(); 
+                MoveTowardsPlayer();
             }
         }
 
@@ -74,7 +69,7 @@ namespace Assets.Scripts.SpaceShipBehaviour.Weapons.Bullets.GuideRocketBullet
 
             if (Mathf.Abs(angle) >= maxAngle)
             {
-                angle = Mathf.Sign(angle) * maxAngle; 
+                angle = Mathf.Sign(angle) * maxAngle;
                 isTurning = false;
                 headingToPlayer = true;
                 InitialPosition = transform.position;

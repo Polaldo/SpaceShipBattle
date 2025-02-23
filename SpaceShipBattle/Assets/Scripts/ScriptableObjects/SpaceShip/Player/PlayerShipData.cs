@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerShipData", menuName = "ScriptableObjects/SpaceShip/PlayerShipData", order = 1)]

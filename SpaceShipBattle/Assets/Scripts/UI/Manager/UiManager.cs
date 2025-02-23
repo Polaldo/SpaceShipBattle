@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UiManager : MonoBehaviour
@@ -20,7 +18,7 @@ public class UiManager : MonoBehaviour
 
     public void OpenGameOverPannel()
     {
-        GameObject.Find(UiUtils.deathPannelName).SetActive(true); 
+        GameObject.Find(UiUtils.deathPannelName).SetActive(true);
     }
 
     public GameObject GetAbilityButtonUI()

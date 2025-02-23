@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StartMenuUIController : MonoBehaviour
@@ -14,7 +12,7 @@ public class StartMenuUIController : MonoBehaviour
     {
         startMenuPannel.gameObject.SetActive(false);
     }
-    
+
     public void ActiveThisGO()
     {
         startMenuPannel.gameObject.SetActive(true);

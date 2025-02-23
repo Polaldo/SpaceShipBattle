@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -43,7 +40,7 @@ public class LevelManager : MonoBehaviour
     public void CompleteLevel()
     {
         actualLevel.highScore = actualScore;
-        GameObject.Find("Pannels").GetComponent<LevelPanelManagement>().ActiveResultsPanel(CalculateStars());      
+        GameObject.Find("Pannels").GetComponent<LevelPanelManagement>().ActiveResultsPanel(CalculateStars());
     }
 
     public int CalculateStars()

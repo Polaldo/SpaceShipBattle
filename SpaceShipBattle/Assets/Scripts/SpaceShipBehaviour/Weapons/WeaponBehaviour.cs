@@ -1,9 +1,7 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class WeaponBehaviour<T>: MonoBehaviour where T : WeaponData 
+public abstract class WeaponBehaviour<T> : MonoBehaviour where T : WeaponData
 {
     public T weaponData;
 
@@ -18,6 +16,6 @@ public abstract class WeaponBehaviour<T>: MonoBehaviour where T : WeaponData
 
     public virtual bool ApplyFireRate()
     {
-       throw new NotImplementedException();
-    } 
+        throw new NotImplementedException();
+    }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.BehaviourTree.Tasks
@@ -17,7 +15,7 @@ namespace Assets.Scripts.BehaviourTree.Tasks
 
         public override NodeState Evaluate()
         {
-            _rb.velocity = new Vector2(1, -1).normalized * _speed; 
+            _rb.velocity = new Vector2(1, -1).normalized * _speed;
             state = NodeState.SUCCESS;
             return state;
         }

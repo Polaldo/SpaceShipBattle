@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Rendering;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -42,7 +41,7 @@ public class Spawner : MonoBehaviour
 
         }
         yield return new WaitForSeconds(5);
-        LevelManager.Instance.CompleteLevel();           
+        LevelManager.Instance.CompleteLevel();
     }
 
     void definePositionToSpwan(SpawnPattern spawnPattern, GameObject enemy, int amount)
@@ -79,7 +78,7 @@ public class Spawner : MonoBehaviour
     {
         float screenWidth = GetScreenWidth();
         float startX = -screenWidth + separation;
-        
+
         for (int i = 0; i < amount; i++)
         {
             Vector2 spawnPos = new Vector2(startX + (i * separation), mainCamera.transform.position.y + mainCamera.orthographicSize + spawnHeightOffset);
@@ -91,7 +90,7 @@ public class Spawner : MonoBehaviour
     {
         float screenWidth = GetScreenWidth();
         Vector3 topLeft = mainCamera.ViewportToWorldPoint(new Vector3(0, 1, 0));
-        float startX = -screenWidth -1;
+        float startX = -screenWidth - 1;
         float startY = mainCamera.transform.position.y + mainCamera.orthographicSize + spawnHeightOffset;
 
         for (int i = 0; i < amount; i++)
