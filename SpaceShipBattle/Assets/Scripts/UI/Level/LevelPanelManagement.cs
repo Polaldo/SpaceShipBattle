@@ -38,7 +38,7 @@ public class LevelPanelManagement : MonoBehaviour
     {
         GameManager.Instance.StopTime();
         scoreValuePauseText.text = LevelManager.Instance.actualScore.ToString();
-        resultsPanel.SetActive(true);
+        scorePanel.SetActive(true);
         pausePanel.SetActive(true);
         pauseButton.enabled = false;
     }
@@ -47,7 +47,7 @@ public class LevelPanelManagement : MonoBehaviour
     {
         pauseButton.enabled = true;
         pausePanel.SetActive(false);
-        resultsPanel.SetActive(false);
+        scorePanel.SetActive(false);
         GameManager.Instance.ResumeTime();
     }
 
