@@ -28,4 +28,9 @@ public class MenuUIController : MonoBehaviour
         DesactivatePannel();
         pannelActivate.SetActive(true);
     }
+
+    public void QuitApplication()
+    {
+        Application.Quit();
+    }
 }
