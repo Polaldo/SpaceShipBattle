@@ -27,7 +27,7 @@ public class LevelSelectMenu : MonoBehaviour
                 GameObject buttonSelectLevelGO = Instantiate(levelButton);
                 buttonSelectLevelGO.transform.SetParent(levelButton.transform.parent, false);
                 buttonSelectLevelGO.transform.localScale = levelButton.transform.localScale;
-                setDataButton(buttonSelectLevelGO, i, worldData.levelsList[i]);
+                SetDataButton(buttonSelectLevelGO, i, worldData.levelsList[i]);
                 buttonSelectLevelGO.SetActive(true);
             }
             
@@ -35,7 +35,7 @@ public class LevelSelectMenu : MonoBehaviour
 
     }
 
-    void setDataButton(GameObject buttonSelectLevelGO, int numLevel, LevelData lvlData)
+    void SetDataButton(GameObject buttonSelectLevelGO, int numLevel, LevelData lvlData)
     {
         buttonSelectLevelGO.GetComponentInChildren<TextMeshProUGUI>().SetText("Level " + (++numLevel));
         SetStars(buttonSelectLevelGO, lvlData.numberOfStars);
@@ -51,24 +51,14 @@ public class LevelSelectMenu : MonoBehaviour
         //    return;
         //}
 
-        switch (numberOfStars)
+        buttonSelectLevelGO.GetComponent<Image>().sprite = numberOfStars switch
         {
-            case 0:
-                buttonSelectLevelGO.GetComponent<Image>().sprite = spriteWithNoStars;
-                break;
-            case 1:
-                buttonSelectLevelGO.GetComponent<Image>().sprite = spriteWithOneStars;
-                break;
-            case 2:
-                buttonSelectLevelGO.GetComponent<Image>().sprite = spriteWithTwoStars;
-                break;
-            case 3:
-                buttonSelectLevelGO.GetComponent<Image>().sprite = spriteWithThreeStars;
-                break;
-            default:
-                buttonSelectLevelGO.GetComponent<Image>().sprite = spriteWithNoStars;
-                break;
-        }
+            0 => spriteWithNoStars,
+            1 => spriteWithOneStars,
+            2 => spriteWithTwoStars,
+            3 => spriteWithThreeStars,
+            _ => spriteWithNoStars,
+        };
     }
 
     void DeleteLevelButtonList()

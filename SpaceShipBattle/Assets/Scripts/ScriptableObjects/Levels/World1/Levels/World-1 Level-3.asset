@@ -18,7 +18,7 @@ MonoBehaviour:
   scoreForOneStar: 300
   scoreForTwoStar: 700
   scoreForThreeStar: 1500
-  numberOfStars: 3
+  numberOfStars: 0
   hasBossBattle: 1
   bossEnemy: {fileID: 2227902102372291455, guid: c6f0655b90209434fb35e9d6139da86a, type: 3}
   enemies:

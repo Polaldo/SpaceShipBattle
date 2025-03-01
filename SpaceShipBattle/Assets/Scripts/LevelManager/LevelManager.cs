@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour
     {
         this.actualLevel = levelData;
         actualScore = 0;
-        sceneLoader.LoadAsyncScene(levelData.levelName);
+        sceneLoader.LoadAsyncScene("World-1");
     }
 
     public void ResetLevel()
