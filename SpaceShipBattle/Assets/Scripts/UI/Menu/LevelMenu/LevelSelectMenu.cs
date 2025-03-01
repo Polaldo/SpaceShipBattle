@@ -27,7 +27,7 @@ public class LevelSelectMenu : MonoBehaviour
                 setDataButton(buttonSelectLevelGO, i, worldData.levelsList[i]);
                 buttonSelectLevelGO.SetActive(true);
             }
-
+            
         }
 
     }
@@ -47,5 +47,17 @@ public class LevelSelectMenu : MonoBehaviour
         {
             starContainer.GetChild(i).GetComponent<Image>().color = starStatus[i] ? yesStar : noStar;
         }
+    }
+
+    void DeleteLevelButtonList()
+    {
+        for (int i = 1; i < levelButton.transform.parent.childCount; i++)
+        {
+            Destroy(levelButton.transform.parent.GetChild(i).gameObject);
+        }
+    }
+    private void OnDisable()
+    {
+        DeleteLevelButtonList();
     }
 }
