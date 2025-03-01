@@ -11691,8 +11691,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelButton: {fileID: 1152004582}
   worldData: {fileID: 11400000, guid: 0f13abfef7e5c914fb7c33bb6a59cbdd, type: 2}
-  noStar: {r: 0, g: 0, b: 0, a: 1}
-  yesStar: {r: 1, g: 0.89839494, b: 0, a: 1}
+  spriteBossLevelStars: {fileID: 21300000, guid: a8def4261b8674d49b8f1b16afc3bbf6, type: 3}
+  spriteWithNoStars: {fileID: 21300000, guid: a8397825166dac54d94a145eeb9f24e6, type: 3}
+  spriteWithOneStars: {fileID: 21300000, guid: a2b8a3cd7791ee04ab73cf4eeb8dd111, type: 3}
+  spriteWithTwoStars: {fileID: 21300000, guid: 45b6798142fc44f40b3bd226ba7f894d, type: 3}
+  spriteWithThreeStars: {fileID: 21300000, guid: 631ec892c5e7b3a4da9ef03c4acf6a41, type: 3}
 --- !u!114 &1678421776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14777,6 +14780,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8303654992678568189, guid: 43054a5c82764684fbdf41f8394a8039, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303654992678568189, guid: 43054a5c82764684fbdf41f8394a8039, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303654992678568189, guid: 43054a5c82764684fbdf41f8394a8039, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8303654992953186494, guid: 43054a5c82764684fbdf41f8394a8039, type: 3}
       propertyPath: m_Name
       value: Star2
@@ -14795,6 +14810,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8303654993147699933, guid: 43054a5c82764684fbdf41f8394a8039, type: 3}
       propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303654993697289164, guid: 43054a5c82764684fbdf41f8394a8039, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

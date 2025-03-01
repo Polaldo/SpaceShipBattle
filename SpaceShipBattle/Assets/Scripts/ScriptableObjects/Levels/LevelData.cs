@@ -13,9 +13,7 @@ public class LevelData : ScriptableObject
     public int scoreForTwoStar;
     public int scoreForThreeStar;
 
-    public bool oneStar;
-    public bool twoStar;
-    public bool threeStar;
+    public int numberOfStars;
 
     public bool hasBossBattle;
     public GameObject bossEnemy;

@@ -6,8 +6,11 @@ public class LevelSelectMenu : MonoBehaviour
 {
     [SerializeField] private GameObject levelButton;
     [SerializeField] private WorldData worldData;
-    [SerializeField] private Color noStar;
-    [SerializeField] private Color yesStar;
+    [SerializeField] private Sprite spriteBossLevelStars;
+    [SerializeField] private Sprite spriteWithNoStars;
+    [SerializeField] private Sprite spriteWithOneStars;
+    [SerializeField] private Sprite spriteWithTwoStars;
+    [SerializeField] private Sprite spriteWithThreeStars;
 
     void OnEnable()
     {
@@ -35,17 +38,36 @@ public class LevelSelectMenu : MonoBehaviour
     void setDataButton(GameObject buttonSelectLevelGO, int numLevel, LevelData lvlData)
     {
         buttonSelectLevelGO.GetComponentInChildren<TextMeshProUGUI>().SetText("Level " + (++numLevel));
-        SetStars(buttonSelectLevelGO, lvlData);
+        SetStars(buttonSelectLevelGO, lvlData.numberOfStars);
         buttonSelectLevelGO.GetComponent<Button>().onClick.AddListener(() => LevelManager.Instance.LoadLevel(lvlData)); ;
     }
 
-    private void SetStars(GameObject buttonSelectLevelGO, LevelData lvlData)
+    private void SetStars(GameObject buttonSelectLevelGO, int numberOfStars)
     {
-        Transform starContainer = buttonSelectLevelGO.transform.GetChild(1);
-        bool[] starStatus = { lvlData.oneStar, lvlData.twoStar, lvlData.threeStar };
-        for (int i = 0; i < buttonSelectLevelGO.transform.GetChild(1).childCount; i++)
+        //Debug.Log(lvlData.hasBossBattle);
+        //if (lvlData.hasBossBattle)
+        //{
+        //    buttonSelectLevelGO.GetComponent<Image>().sprite = spriteBossLevelStars;
+        //    return;
+        //}
+
+        switch (numberOfStars)
         {
-            starContainer.GetChild(i).GetComponent<Image>().color = starStatus[i] ? yesStar : noStar;
+            case 0:
+                buttonSelectLevelGO.GetComponent<Image>().sprite = spriteWithNoStars;
+                break;
+            case 1:
+                buttonSelectLevelGO.GetComponent<Image>().sprite = spriteWithOneStars;
+                break;
+            case 2:
+                buttonSelectLevelGO.GetComponent<Image>().sprite = spriteWithTwoStars;
+                break;
+            case 3:
+                buttonSelectLevelGO.GetComponent<Image>().sprite = spriteWithThreeStars;
+                break;
+            default:
+                buttonSelectLevelGO.GetComponent<Image>().sprite = spriteWithNoStars;
+                break;
         }
     }
 
