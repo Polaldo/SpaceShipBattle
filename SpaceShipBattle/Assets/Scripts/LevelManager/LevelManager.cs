@@ -43,7 +43,7 @@ public class LevelManager : MonoBehaviour
         actualLevel.highScore = actualScore;
         actualLevel.numberOfStars = numberStars;
 
-        GameObject.Find("Pannels").GetComponent<LevelPanelManagement>().ActiveResultsPanel(numberStars);
+        GameObject.Find("HUD").GetComponent<LevelPanelManagement>().ActiveResultsPanel(numberStars);
     }
 
     public int CalculateStars()
