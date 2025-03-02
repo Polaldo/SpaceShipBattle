@@ -8,7 +8,6 @@ public class LevelManager : MonoBehaviour
 
     public LevelData actualLevel;
     public int actualScore;
-    public SceneLoader sceneLoader;
 
     private void Awake()
     {
@@ -21,20 +20,19 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        sceneLoader = gameObject.AddComponent<SceneLoader>();
     }
 
     public void LoadLevel(LevelData levelData)
     {
         this.actualLevel = levelData;
         actualScore = 0;
-        sceneLoader.LoadAsyncScene("World-1");
+        SceneLoader.Instance.LoadAsyncScene("World-1", GameObject.Find("MenuUI"));
     }
 
     public void ResetLevel()
     {
         actualScore = 0;
-        sceneLoader.LoadAsyncScene(SceneManager.GetActiveScene().name);
+        SceneLoader.Instance.LoadAsyncScene(SceneManager.GetActiveScene().name, PlayerManager.Instance.GetPlayer());
     }
 
     public void CompleteLevel()
@@ -67,6 +65,6 @@ public class LevelManager : MonoBehaviour
 
     public void ExitLevel()
     {
-        sceneLoader.LoadAsyncScene("MenuScene");
+        SceneLoader.Instance.LoadAsyncScene("MenuScene", PlayerManager.Instance.GetPlayer());
     }
 }
