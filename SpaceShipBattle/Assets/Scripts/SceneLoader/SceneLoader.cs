@@ -45,6 +45,6 @@ public class SceneLoader : MonoBehaviour
             loadScreen.SetActive(false);
             yield return null;
         }
-        
+
     }
 }

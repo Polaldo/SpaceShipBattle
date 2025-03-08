@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: World-1 Level-1
   levelNumber: 1
-  highScore: 0
+  highScore: 3400
   scoreForOneStar: 100
   scoreForTwoStar: 500
   scoreForThreeStar: 1000

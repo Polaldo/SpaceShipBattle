@@ -30,7 +30,7 @@ public class LevelSelectMenu : MonoBehaviour
                 SetDataButton(buttonSelectLevelGO, i, worldData.levelsList[i]);
                 buttonSelectLevelGO.SetActive(true);
             }
-            
+
         }
 
     }
