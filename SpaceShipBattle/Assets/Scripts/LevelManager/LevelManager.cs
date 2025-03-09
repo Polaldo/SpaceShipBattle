@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
 
     public LevelData actualLevel;
+    public WorldData actualWorld;
     public int actualScore;
 
     private void Awake()
@@ -66,5 +67,21 @@ public class LevelManager : MonoBehaviour
     public void ExitLevel()
     {
         SceneLoader.Instance.LoadAsyncScene("MenuScene", PlayerManager.Instance.GetPlayer());
+    }
+
+    public void LoadNextLevel()
+    {
+        LoadLevel(CheckIsNextLevel());
+    }
+
+    public LevelData CheckIsNextLevel()
+    {
+        int index = actualWorld.levelsList.FindIndex(level => level == actualWorld);
+
+        if (index != -1 && index < actualWorld.levelsList.Count - 1)
+        {
+            return actualWorld.levelsList[index + 1]; 
+        }
+        return null;
     }
 }

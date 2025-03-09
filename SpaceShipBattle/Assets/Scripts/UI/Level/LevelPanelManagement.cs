@@ -11,7 +11,10 @@ public class LevelPanelManagement : MonoBehaviour
 
     public Button pauseButton;
     public TextMeshProUGUI scoreValuePauseText;
+
     public Image[] stars;
+    public Sprite starComplete;
+    public GameObject buttonNetxLevel;
 
     public void ActiveGameOverPanel()
     {
@@ -25,11 +28,14 @@ public class LevelPanelManagement : MonoBehaviour
     public void ActiveResultsPanel(int totalStars)
     {
         GameManager.Instance.StopTime();
+        
         for (int i = 0; i < totalStars; i++)
         {
-            stars[i].color = Color.yellow;
+            stars[i].sprite = starComplete;
         }
         scoreValuePauseText.text = LevelManager.Instance.actualScore.ToString();
+
+        buttonNetxLevel.SetActive(LevelManager.Instance.CheckIsNextLevel() != null);
         resultsPanel.SetActive(true);
         scorePanel.SetActive(true);
     }
@@ -48,6 +54,12 @@ public class LevelPanelManagement : MonoBehaviour
         pauseButton.enabled = true;
         pausePanel.SetActive(false);
         scorePanel.SetActive(false);
+        GameManager.Instance.ResumeTime();
+    }
+
+    public void NetxLevelButton()
+    {
+        LevelManager.Instance.LoadNextLevel();
         GameManager.Instance.ResumeTime();
     }
 
