@@ -14,4 +14,12 @@ public class PlayerShipData : SpaceShipData
     public AbilityWeaponData abilityWeaponData;
     public EngineData engineData;
 
+    [Header("Rank System")]
+    public int rank;
+    public int experienceToRanklUp;
+    public int actualExperience;
+
+    [Header("Economy")]
+    public int galacticalCoins;
+    public int darkShards;
 }

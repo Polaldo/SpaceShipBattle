@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEditor;
+using TMPro;
+using UnityEngine.UI;
+
+namespace Assets.Scripts.UI.Menu.InfoPlayer.RankPlayer
+{
+    public class MenuRankUI : MonoBehaviour
+    {
+
+        [SerializeField] private TextMeshProUGUI rankText;
+        [SerializeField] private TextMeshProUGUI experienceReamingText;
+        [SerializeField] private Slider sliderRank;
+
+        private void Start()
+        {
+            setRankInfo();
+
+        }
+
+        private void setRankInfo()
+        {
+            rankText.text = PlayerManager.Instance.shipData.rank.ToString();
+            experienceReamingText.text = PlayerManager.Instance.shipData.experienceToRanklUp.ToString();
+            sliderRank.maxValue = PlayerManager.Instance.shipData.experienceToRanklUp;
+            sliderRank.value = PlayerManager.Instance.shipData.actualExperience;
+        }
+    }
+}

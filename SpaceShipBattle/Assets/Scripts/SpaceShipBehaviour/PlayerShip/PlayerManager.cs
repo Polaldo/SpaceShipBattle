@@ -58,4 +58,22 @@ public class PlayerManager : MonoBehaviour
         shipData.defense = 0;
         shipData.speed = 0;
     }
+
+    public void addExp(int exp)
+    {
+        shipData.actualExperience += exp;
+        if (checkAbleToRankUp()) RankUp();
+    }
+
+    public bool checkAbleToRankUp()
+    {
+        return shipData.actualExperience > shipData.experienceToRanklUp;
+    }
+
+    public void RankUp()
+    {
+        shipData.rank++;
+        shipData.actualExperience = 0;
+        shipData.experienceToRanklUp = (int)Mathf.Round(400 * Mathf.Log(shipData.rank + 1));
+    }
 }
