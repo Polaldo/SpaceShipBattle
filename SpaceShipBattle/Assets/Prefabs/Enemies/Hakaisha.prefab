@@ -249,7 +249,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipData: {fileID: 11400000, guid: b8d0837a26e111946983dc145eb8e42e, type: 2}
-  cooldownAbility: 0
 --- !u!114 &2227902102372291440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spaceShipData: {fileID: 0}
+  currentHealth: 0
 --- !u!114 &2227902102372291447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 520c745ef140e26498339a96f5d1afab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponData: {fileID: 0}
+  weaponData: {fileID: 11400000, guid: db9c621d0f6978f40985d04cdb74f32a, type: 2}
 --- !u!95 &1051062342394537145
 Animator:
   serializedVersion: 5

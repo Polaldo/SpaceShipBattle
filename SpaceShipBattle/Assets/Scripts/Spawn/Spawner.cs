@@ -32,11 +32,24 @@ public class Spawner : MonoBehaviour
         if (levelData.hasBossBattle)
         {
             GameObject gO = Instantiate(levelData.bossEnemy, Vector3.zero, Quaternion.identity);
-            EnemyHealthController healthBoss = gO.GetComponent<EnemyHealthController>();
+            EnemyHealthController bossHealth = gO.GetComponent<EnemyHealthController>();
 
-            while (healthBoss.currentHealth > 0)
+            if (bossHealth == null)
             {
-                yield return null;
+                Debug.LogError("Boss does not have an EnemyHealthController!");
+            }
+            else
+            {
+                Debug.Log("Boss Spawned. Waiting for it to be defeated...");
+
+                // Wait until the boss is destroyed or its health reaches 0
+                while (bossHealth != null && bossHealth.currentHealth > 0)
+                {
+                    Debug.Log($"Boss Health: {bossHealth.currentHealth}");
+                    yield return null; // Keep waiting
+                }
+
+                Debug.Log("Boss Defeated!");
             }
 
         }

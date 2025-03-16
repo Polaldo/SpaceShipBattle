@@ -3,9 +3,9 @@ public class UnitHealthController : HealthController<PlayerShipData>
     public HealthBarUI healthBarUI;
 
     // Start is called before the first frame update
-    protected override void Start()
+    protected override void Awake()
     {
-        base.Start();
+        base.Awake();
         healthBarUI.SetMaxHealt(currentHealth);
     }
 

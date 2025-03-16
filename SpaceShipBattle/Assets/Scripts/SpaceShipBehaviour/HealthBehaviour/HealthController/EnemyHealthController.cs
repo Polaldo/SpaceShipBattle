@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class EnemyHealthController : HealthController<EnemyData>
 {
-    protected override void Start()
+    protected override void Awake()
     {
         spaceShipData = GetComponent<EnemyBT<EnemyData>>().shipData;
-        base.Start();
+        base.Awake();
     }
 
     protected override void Kill()

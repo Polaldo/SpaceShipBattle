@@ -18,10 +18,8 @@ public class HakaishaBT : EnemyBT<EnemyData>
         Node root = new Selector(new List<Node>
         {
             new Sequence (new List<Node> {
-                new TaskUseAbility(ability),
-            }),
-            new Sequence (new List<Node> {
                 new TaskShoot(_enemyWeaponBehaviour),
+                new TaskUseAbility(ability),
             }),
         });
 

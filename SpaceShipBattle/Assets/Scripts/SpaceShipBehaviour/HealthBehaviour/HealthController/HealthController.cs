@@ -6,7 +6,7 @@ public abstract class HealthController<T> : MonoBehaviour, IDamageble where T : 
     protected Animator animator;
     public int currentHealth;
 
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         animator = GetComponent<Animator>();
         currentHealth = spaceShipData.health;

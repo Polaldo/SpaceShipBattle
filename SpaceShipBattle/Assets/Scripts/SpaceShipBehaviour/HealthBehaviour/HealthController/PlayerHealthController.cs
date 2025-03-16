@@ -1,9 +1,9 @@
 public class PlayerHealthController : UnitHealthController
 {
-    protected override void Start()
+    protected override void Awake()
     {
         spaceShipData = PlayerManager.Instance.shipData;
-        base.Start();
+        base.Awake();
     }
 
     protected override void Kill()
