@@ -78,7 +78,7 @@ public class LevelManager : MonoBehaviour
     {
         int index = actualWorld.levelsList.FindIndex(level => level == actualWorld);
 
-        if (index != -1 && index < actualWorld.levelsList.Count - 1)
+        if (index != -1 && index <= actualWorld.levelsList.Count - 1)
         {
             return actualWorld.levelsList[index + 1]; 
         }

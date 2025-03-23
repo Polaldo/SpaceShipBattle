@@ -101,15 +101,16 @@ public class Spawner : MonoBehaviour
 
     void SpawnDiagonal(GameObject enemy, int amount)
     {
-        float screenWidth = GetScreenWidth();
-        Vector3 topLeft = mainCamera.ViewportToWorldPoint(new Vector3(0, 1, 0));
-        float startX = -screenWidth - 1;
+        int spawnSide = Random.Range(0, 2) == 0 ? -1 : 1;
+        float startX = mainCamera.transform.position.x + (GetScreenWidth() * spawnSide);
         float startY = mainCamera.transform.position.y + mainCamera.orthographicSize + spawnHeightOffset;
+        Vector2 dir = spawnSide == -1 ? new Vector2(1,-1) : new Vector2(-1, -1);
 
         for (int i = 0; i < amount; i++)
         {
-            Vector2 spawnPos = new Vector2(topLeft.x + startX + (i * separation), topLeft.y + startY + spawnHeightOffset - (i * separation));
-            Instantiate(enemy, spawnPos, Quaternion.identity);
+            Vector2 spawnPos = new Vector2(startX + (i * separation * spawnSide),
+                                            startY + (i * separation));
+            Instantiate(enemy, spawnPos, Quaternion.identity).GetComponent<YScoutBT>().direction = dir;
         }
     }
 

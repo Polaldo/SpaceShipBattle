@@ -25,6 +25,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadAsyncScene(string sceneName, GameObject canvasToDesactivate)
     {
+        Debug.Log(canvasToDesactivate);
         canvasToDesactivate.SetActive(false);
         loadScreen.SetActive(true);
         StartCoroutine(AsyncLoadScene(sceneName));
