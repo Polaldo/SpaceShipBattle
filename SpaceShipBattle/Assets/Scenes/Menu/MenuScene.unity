@@ -9768,7 +9768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualLevel: {fileID: 0}
-  actualWorld: {fileID: 0}
+  actualWorld: {fileID: 11400000, guid: 0f13abfef7e5c914fb7c33bb6a59cbdd, type: 2}
   actualScore: 0
 --- !u!4 &1240252654
 Transform:
