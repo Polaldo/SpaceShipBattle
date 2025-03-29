@@ -104,7 +104,7 @@ public class Spawner : MonoBehaviour
         int spawnSide = Random.Range(0, 2) == 0 ? -1 : 1;
         float startX = mainCamera.transform.position.x + (GetScreenWidth() * spawnSide);
         float startY = mainCamera.transform.position.y + mainCamera.orthographicSize + spawnHeightOffset;
-        Vector2 dir = spawnSide == -1 ? new Vector2(1,-1) : new Vector2(-1, -1);
+        Vector2 dir = spawnSide == -1 ? new Vector2(1, -1) : new Vector2(-1, -1);
 
         for (int i = 0; i < amount; i++)
         {

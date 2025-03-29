@@ -47,8 +47,8 @@ public class LevelSelectMenu : MonoBehaviour
         }
         else
         {
-           SetStars(buttonSelectLevelGO, lvlData.numberOfStars);
-           buttonSelectLevelGO.GetComponent<Button>().onClick.AddListener(() => LevelManager.Instance.LoadLevel(lvlData));
+            SetStars(buttonSelectLevelGO, lvlData.numberOfStars);
+            buttonSelectLevelGO.GetComponent<Button>().onClick.AddListener(() => LevelManager.Instance.LoadLevel(lvlData));
         }
 
     }

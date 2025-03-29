@@ -28,7 +28,7 @@ public class LevelPanelManagement : MonoBehaviour
     public void ActiveResultsPanel(int totalStars)
     {
         GameManager.Instance.StopTime();
-        
+
         for (int i = 0; i < totalStars; i++)
         {
             stars[i].sprite = starComplete;
