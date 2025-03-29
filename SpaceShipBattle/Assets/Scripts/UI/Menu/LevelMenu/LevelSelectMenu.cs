@@ -1,3 +1,4 @@
+using Assets.Scripts.States.Level;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ public class LevelSelectMenu : MonoBehaviour
     [SerializeField] private Sprite spriteWithOneStars;
     [SerializeField] private Sprite spriteWithTwoStars;
     [SerializeField] private Sprite spriteWithThreeStars;
+    [SerializeField] private Sprite spriteLevelBlocked;
 
     void OnEnable()
     {
@@ -38,13 +40,21 @@ public class LevelSelectMenu : MonoBehaviour
     void SetDataButton(GameObject buttonSelectLevelGO, int numLevel, LevelData lvlData)
     {
         buttonSelectLevelGO.GetComponentInChildren<TextMeshProUGUI>().SetText("Level " + (++numLevel));
-        SetStars(buttonSelectLevelGO, lvlData.numberOfStars);
-        buttonSelectLevelGO.GetComponent<Button>().onClick.AddListener(() => LevelManager.Instance.LoadLevel(lvlData)); ;
+        if (LevelState.LOCKED.Equals(lvlData.state))
+        {
+            buttonSelectLevelGO.GetComponent<Image>().sprite = spriteLevelBlocked;
+            //TODO add listener to show info of the levels to be completed to unlock the level
+        }
+        else
+        {
+           SetStars(buttonSelectLevelGO, lvlData.numberOfStars);
+           buttonSelectLevelGO.GetComponent<Button>().onClick.AddListener(() => LevelManager.Instance.LoadLevel(lvlData));
+        }
+
     }
 
     private void SetStars(GameObject buttonSelectLevelGO, int numberOfStars)
     {
-        //Debug.Log(lvlData.hasBossBattle);
         //if (lvlData.hasBossBattle)
         //{
         //    buttonSelectLevelGO.GetComponent<Image>().sprite = spriteBossLevelStars;

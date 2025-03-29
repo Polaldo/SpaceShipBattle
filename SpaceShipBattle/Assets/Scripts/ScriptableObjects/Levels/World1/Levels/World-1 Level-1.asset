@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelName: World-1 Level-1
   levelNumber: 1
-  highScore: 3400
+  state: 1
+  highScore: 0
   scoreForOneStar: 100
   scoreForTwoStar: 500
   scoreForThreeStar: 1000
@@ -32,3 +33,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
   - {fileID: 11400000, guid: 69166166cd97524448b0b19fceef6a98, type: 2}
   - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
+  coins: 0
+  Experience: 0
+  levelsNeededToBeCompleted: []

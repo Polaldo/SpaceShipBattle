@@ -1,3 +1,5 @@
+using Assets.Scripts.States.Level;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -36,11 +38,24 @@ public class LevelManager : MonoBehaviour
         SceneLoader.Instance.LoadAsyncScene(SceneManager.GetActiveScene().name, PlayerManager.Instance.GetPlayer());
     }
 
+    //Complete level
     public void CompleteLevel()
     {
         int numberStars = CalculateStars();
-        actualLevel.highScore = actualScore;
-        actualLevel.numberOfStars = numberStars;
+
+        if (actualScore > actualLevel.highScore)
+        {
+            actualLevel.highScore = actualScore;
+            actualLevel.numberOfStars = numberStars;
+        }
+
+        if (actualLevel.state.Equals(LevelState.UNLOCKED) && numberStars > 0)
+        {
+            actualLevel.state = LevelState.COMPLETED;
+            //TODO give rewards to the player x2 bc first time completed 
+        }
+
+        //TODO give rewards to the player 
 
         GameObject.Find("HUD").GetComponent<LevelPanelManagement>().ActiveResultsPanel(numberStars);
     }
@@ -69,19 +84,31 @@ public class LevelManager : MonoBehaviour
         SceneLoader.Instance.LoadAsyncScene("MenuScene", PlayerManager.Instance.GetPlayer());
     }
 
+    //Checks for the button of next level 
     public void LoadNextLevel()
     {
-        LoadLevel(CheckIsNextLevel());
+        LevelData nextLevelData = CheckIsNextLevel();
+
+        if (nextLevelData != null && IsMeetingTheRequirements(nextLevelData))
+        {
+            LoadLevel(nextLevelData);
+        }
     }
 
     public LevelData CheckIsNextLevel()
     {
-        int index = actualWorld.levelsList.FindIndex(level => level == actualWorld);
+        int index = actualWorld.levelsList.IndexOf(actualLevel);
 
-        if (index != -1 && index <= actualWorld.levelsList.Count - 1)
+        if (index >= 0 && index < actualWorld.levelsList.Count - 1)
         {
-            return actualWorld.levelsList[index + 1]; 
+            return actualWorld.levelsList[index + 1];
         }
+
         return null;
+    }
+
+    bool IsMeetingTheRequirements(LevelData lvlData)
+    {
+        return lvlData?.levelsNeededToBeCompleted?.All(data => data.state == LevelState.COMPLETED) ?? false;
     }
 }
