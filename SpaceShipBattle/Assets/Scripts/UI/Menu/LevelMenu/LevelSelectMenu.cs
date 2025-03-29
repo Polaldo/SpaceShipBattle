@@ -1,4 +1,3 @@
-using Assets.Scripts.States.Level;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -40,16 +39,14 @@ public class LevelSelectMenu : MonoBehaviour
     void SetDataButton(GameObject buttonSelectLevelGO, int numLevel, LevelData lvlData)
     {
         buttonSelectLevelGO.GetComponentInChildren<TextMeshProUGUI>().SetText("Level " + (++numLevel));
-        if (LevelState.LOCKED.Equals(lvlData.state))
-        {
-            buttonSelectLevelGO.GetComponent<Image>().sprite = spriteLevelBlocked;
-            //TODO add listener to show info of the levels to be completed to unlock the level
-        }
-        else
-        {
-            SetStars(buttonSelectLevelGO, lvlData.numberOfStars);
-            buttonSelectLevelGO.GetComponent<Button>().onClick.AddListener(() => LevelManager.Instance.LoadLevel(lvlData));
-        }
+        //if (LevelState.LOCKED.Equals(lvlData.state))
+        //{
+        //    buttonSelectLevelGO.GetComponent<Image>().sprite = spriteLevelBlocked;
+        //    //TODO add listener to show info of the levels to be completed to unlock the level
+        //}
+
+        SetStars(buttonSelectLevelGO, lvlData.numberOfStars);
+        buttonSelectLevelGO.GetComponent<Button>().onClick.AddListener(() => LevelManager.Instance.LoadLevel(lvlData));
 
     }
 

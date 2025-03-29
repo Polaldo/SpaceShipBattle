@@ -49,11 +49,13 @@ public class LevelManager : MonoBehaviour
             actualLevel.numberOfStars = numberStars;
         }
 
-        if (actualLevel.state.Equals(LevelState.UNLOCKED) && numberStars > 0)
-        {
-            actualLevel.state = LevelState.COMPLETED;
-            //TODO give rewards to the player x2 bc first time completed 
-        }
+        //if (actualLevel.state.Equals(LevelState.UNLOCKED) && numberStars > 0)
+        //{
+        //    actualLevel.state = LevelState.COMPLETED;
+        //    //TODO give rewards to the player x2 bc first time completed 
+        //    Debug.Log("This " + actualLevel.name + "has been completed " + actualLevel.state);
+        //    UpdateLevelsStates(); //Update all states of the levels that are in the same world
+        //}
 
         //TODO give rewards to the player 
 
@@ -89,7 +91,7 @@ public class LevelManager : MonoBehaviour
     {
         LevelData nextLevelData = CheckIsNextLevel();
 
-        if (nextLevelData != null && IsMeetingTheRequirements(nextLevelData))
+        if (nextLevelData != null)
         {
             LoadLevel(nextLevelData);
         }
@@ -109,6 +111,23 @@ public class LevelManager : MonoBehaviour
 
     bool IsMeetingTheRequirements(LevelData lvlData)
     {
-        return lvlData?.levelsNeededToBeCompleted?.All(data => data.state == LevelState.COMPLETED) ?? false;
+        if (lvlData.levelsNeededToBeCompleted == null)
+        {
+            return false;
+        }
+        return lvlData.levelsNeededToBeCompleted.All(data => data.state == LevelState.COMPLETED);
+    }
+
+    void UpdateLevelsStates()
+    {
+        foreach (LevelData level in actualWorld.levelsList)
+        {
+            if (IsMeetingTheRequirements(level) && !level.state.Equals(LevelState.UNLOCKED))
+            {
+                level.state = LevelState.UNLOCKED;
+
+            }
+            Debug.Log("This level" + level.name + " has this state " + level.state);
+        }
     }
 }
