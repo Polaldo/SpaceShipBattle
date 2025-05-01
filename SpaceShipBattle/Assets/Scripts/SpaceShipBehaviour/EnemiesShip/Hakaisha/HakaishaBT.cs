@@ -21,6 +21,7 @@ public class HakaishaBT : EnemyBT<EnemyData>
                 new TaskShoot(_enemyWeaponBehaviour),
                 new TaskUseAbility(ability),
             }),
+            new TaskShoot(_enemyWeaponBehaviour),
         });
 
         return root;

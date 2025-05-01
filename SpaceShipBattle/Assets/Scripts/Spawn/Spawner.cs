@@ -31,7 +31,7 @@ public class Spawner : MonoBehaviour
 
         if (levelData.hasBossBattle)
         {
-            GameObject gO = Instantiate(levelData.bossEnemy, Vector3.zero, Quaternion.identity);
+            GameObject gO = SpwanBoss();
             EnemyHealthController bossHealth = gO.GetComponent<EnemyHealthController>();
 
             if (bossHealth == null)
@@ -180,6 +180,13 @@ public class Spawner : MonoBehaviour
         //    Vector2 spawnPos = new Vector2(randomX, randomY);
         //    Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
         //}
+    }
+
+    GameObject SpwanBoss()
+    {
+        float screenWidth = GetScreenWidth() / 2;
+        Vector2 spawnPos = new Vector2(screenWidth, mainCamera.transform.position.y + mainCamera.orthographicSize);
+        return Instantiate(levelData.bossEnemy, spawnPos, Quaternion.identity);
     }
 
     float GetScreenWidth()
