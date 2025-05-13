@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Assets.Scripts.BehaviourTree.Tasks
 {
     public class TaskShoot : Node
@@ -12,6 +14,7 @@ namespace Assets.Scripts.BehaviourTree.Tasks
         public override NodeState Evaluate()
         {
             enemyWeapon.Shoot();
+            Debug.Log("Shooting");
             state = NodeState.SUCCESS;
             return state;
         }
