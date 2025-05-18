@@ -60,6 +60,7 @@ public class LevelManager : MonoBehaviour
         //TODO give rewards to the player 
 
         GameObject.Find("HUD").GetComponent<LevelPanelManagement>().ActiveResultsPanel(numberStars);
+        GiveRewards();
     }
 
     public int CalculateStars()
@@ -77,8 +78,8 @@ public class LevelManager : MonoBehaviour
 
     public void GiveRewards()
     {
-        PlayerShipData playerShipData = PlayerManager.Instance.shipData;
-        
+        GameEventsManager.instance.economyEvents.GalacticalCoinsGained(actualLevel.coins);
+        GameEventsManager.instance.rankEvents.ExperiencePointsGained(actualLevel.experience);
     }
 
     public void AddPoints(int pointsEarned)

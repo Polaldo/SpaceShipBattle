@@ -61,19 +61,19 @@ public class PlayerManager : MonoBehaviour
 
     public void addExp(int exp)
     {
-        shipData.actualExperience += exp;
+        shipData.currentExperience += exp;
         if (checkAbleToRankUp()) RankUp();
     }
 
     public bool checkAbleToRankUp()
     {
-        return shipData.actualExperience > shipData.experienceToRanklUp;
+        return shipData.currentExperience > shipData.experienceToRanklUp;
     }
 
     public void RankUp()
     {
-        shipData.rank++;
-        shipData.actualExperience = 0;
-        shipData.experienceToRanklUp = (int)Mathf.Round(400 * Mathf.Log(shipData.rank + 1));
+        shipData.currentRank++;
+        shipData.currentExperience = 0;
+        shipData.experienceToRanklUp = (int)Mathf.Round(400 * Mathf.Log(shipData.currentRank + 1));
     }
 }

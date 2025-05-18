@@ -1,8 +1,14 @@
+using Assets.Scripts.Gold;
+using Assets.Scripts.Rank;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+
+    public GoldManager goldManager;
+    public RankManager rankManager;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -13,6 +19,8 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+        goldManager = new GoldManager();
+        rankManager = new RankManager();
     }
 
     public void StopTime()

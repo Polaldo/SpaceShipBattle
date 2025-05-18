@@ -19,10 +19,10 @@ namespace Assets.Scripts.UI.Menu.InfoPlayer.RankPlayer
 
         private void setRankInfo()
         {
-            rankText.text = PlayerManager.Instance.shipData.rank.ToString();
+            rankText.text = PlayerManager.Instance.shipData.currentRank.ToString();
             experienceReamingText.text = PlayerManager.Instance.shipData.experienceToRanklUp.ToString();
             sliderRank.maxValue = PlayerManager.Instance.shipData.experienceToRanklUp;
-            sliderRank.value = PlayerManager.Instance.shipData.actualExperience;
+            sliderRank.value = PlayerManager.Instance.shipData.currentExperience;
         }
     }
 }

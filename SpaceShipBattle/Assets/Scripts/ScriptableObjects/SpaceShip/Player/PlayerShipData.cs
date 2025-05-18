@@ -15,9 +15,9 @@ public class PlayerShipData : SpaceShipData
     public EngineData engineData;
 
     [Header("Rank System")]
-    public int rank;
+    public int currentRank;
     public int experienceToRanklUp;
-    public int actualExperience;
+    public int currentExperience;
 
     [Header("Economy")]
     public int galacticalCoins;

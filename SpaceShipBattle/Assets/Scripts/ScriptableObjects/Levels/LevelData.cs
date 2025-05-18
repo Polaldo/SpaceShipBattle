@@ -2,7 +2,7 @@ using Assets.Scripts.States.Level;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "LevelData", menuName = "ScriptableObjects/rank")]
+[CreateAssetMenu(fileName = "LevelData", menuName = "ScriptableObjects/currentRank")]
 public class LevelData : ScriptableObject
 {
     [Header("General Info")]
@@ -28,7 +28,7 @@ public class LevelData : ScriptableObject
 
     [Header("Rewards")]
     public int coins;
-    public int Experience;
+    public int experience;
 
     [Header("Requirements")]
     public LevelData[] levelsNeededToBeCompleted;

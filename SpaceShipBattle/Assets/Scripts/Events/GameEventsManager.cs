@@ -1,3 +1,4 @@
+using Assets.Scripts.Events;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class GameEventsManager : MonoBehaviour
     public static GameEventsManager instance { get; private set; }
 
     public EconomyEvents economyEvents;
+    public RankEvents rankEvents;
 
     private void Awake()
     {
@@ -19,6 +21,6 @@ public class GameEventsManager : MonoBehaviour
 
         // initialize all events
         economyEvents = new EconomyEvents();
-        DontDestroyOnLoad(gameObject);
+        rankEvents = new RankEvents();
     }
 }

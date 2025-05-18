@@ -15,6 +15,8 @@ public class LevelPanelManagement : MonoBehaviour
     public Image[] stars;
     public Sprite starComplete;
     public GameObject buttonNetxLevel;
+    public TextMeshProUGUI goldGainedText;
+    public Slider rankSlider;
 
     public void ActiveGameOverPanel()
     {
@@ -73,5 +75,27 @@ public class LevelPanelManagement : MonoBehaviour
     {
         LevelManager.Instance.ExitLevel();
         GameManager.Instance.ResumeTime();
+    }
+
+    private void OnEnable()
+    {
+        GameEventsManager.instance.economyEvents.onGalacticalCoinsGained += SetGoldGainedText;
+        GameEventsManager.instance.rankEvents.onRankUpChange += SetExpirienceGainedsliderValue;
+    }
+
+    private void OnDisable()
+    {
+        GameEventsManager.instance.economyEvents.onGalacticalCoinsGained -= SetGoldGainedText;
+        GameEventsManager.instance.rankEvents.onRankUpChange -= SetExpirienceGainedsliderValue;
+    }
+
+    public void SetGoldGainedText(int gold)
+    {
+        goldGainedText.text = gold.ToString();
+    }
+
+    public void SetExpirienceGainedsliderValue(int expirienceGained)
+    {
+        rankSlider.value = expirienceGained;
     }
 }
