@@ -75,6 +75,12 @@ public class LevelManager : MonoBehaviour
         GameObject.Find("Pannels").GetComponent<LevelPanelManagement>().ActiveGameOverPanel();
     }
 
+    public void GiveRewards()
+    {
+        PlayerShipData playerShipData = PlayerManager.Instance.shipData;
+        
+    }
+
     public void AddPoints(int pointsEarned)
     {
         actualScore += pointsEarned;

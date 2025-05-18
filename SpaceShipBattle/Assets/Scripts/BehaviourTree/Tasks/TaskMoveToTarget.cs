@@ -31,9 +31,7 @@ namespace Assets.Scripts.BehaviourTree.Tasks
 
             if (Mathf.Approximately(_transform.position.y, distanceToBeTravelled) || _transform.position.y <= distanceToBeTravelled)
             {
-                // Snap to the exact target position
                 _transform.position = new Vector3(_transform.position.x, distanceToBeTravelled, _transform.position.z);
-                SetData("hasGetToTarget", true);
                 state = NodeState.SUCCESS;
             }
             else
@@ -45,7 +43,6 @@ namespace Assets.Scripts.BehaviourTree.Tasks
                 previousPosition = newPosition;
 
                 _transform.position = newPosition;
-                SetData("hasGetToTarget", false);
                 state = NodeState.RUNNING;
             }
 

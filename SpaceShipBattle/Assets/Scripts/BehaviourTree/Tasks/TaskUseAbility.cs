@@ -1,28 +1,21 @@
 using Assets.Scripts.BehaviourTree;
 using UnityEngine;
 
-public class TaskUseAbility : Node
+namespace Assets.Scripts.BehaviourTree.Tasks
 {
-    public IAbility ability;
-    private float cooldownAbility;
-    float time;
-
-    public TaskUseAbility(IAbility ability)
+    public class TaskUseAbility : Node
     {
-        this.ability = ability;
-        this.cooldownAbility = HakaishaBT.cooldownAbility;
-    }
+        public IAbility ability;
 
-    public override NodeState Evaluate()
-    {
-        time += Time.deltaTime;
-        if (time >= cooldownAbility)
+        public TaskUseAbility(IAbility ability)
         {
-            ability.Use();
-            time = 0;
-            return NodeState.SUCCESS;
+            this.ability = ability;
         }
 
-        return NodeState.RUNNING;
+        public override NodeState Evaluate()
+        {
+            ability.Use();
+            return NodeState.SUCCESS;
+        }
     }
 }
