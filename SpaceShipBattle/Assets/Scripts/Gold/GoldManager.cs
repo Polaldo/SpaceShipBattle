@@ -6,6 +6,8 @@ namespace Assets.Scripts.Gold
 {
     public class GoldManager : MonoBehaviour
     {
+        public static GoldManager Instance { get; private set;}
+
         [Header("Configuration")]
         [SerializeField] private int startingGold = 5;
 
@@ -14,6 +16,14 @@ namespace Assets.Scripts.Gold
         private void Awake()
         {
             currentGold = startingGold;
+            if (Instance != null && Instance != this)
+            {
+                Destroy(this);
+            }
+            else
+            {
+                Instance = this;
+            }
         }
 
         private void OnDisable()

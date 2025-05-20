@@ -27,5 +27,5 @@ MonoBehaviour:
   currentRank: 0
   experienceToRanklUp: 100
   currentExperience: 0
-  galacticalCoins: 0
+  galacticalCoins: 1000
   darkShards: 0

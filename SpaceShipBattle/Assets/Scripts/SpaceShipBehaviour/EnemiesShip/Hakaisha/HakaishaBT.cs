@@ -12,7 +12,6 @@ public class HakaishaBT : EnemyBT<EnemyData>
     public float speed;
     public Transform targetToGo;
     public bool entranceIsFinished = false;
-    public EnemyHealthController healthController;
 
     protected override void Start()
     {
