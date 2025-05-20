@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace Assets.Scripts.Events
 {
-    public class RankEvents
+    public class RankEvents : MonoBehaviour
     {
         public event Action<int> onExperiencePointsGained;
         public void ExperiencePointsGained(int expPoints)

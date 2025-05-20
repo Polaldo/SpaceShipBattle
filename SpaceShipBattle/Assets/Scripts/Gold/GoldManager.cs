@@ -16,11 +16,6 @@ namespace Assets.Scripts.Gold
             currentGold = startingGold;
         }
 
-        private void OnEnable()
-        {
-            GameEventsManager.instance.economyEvents.onGalacticalCoinsGained += GoldGained;
-        }
-
         private void OnDisable()
         {
             GameEventsManager.instance.economyEvents.onGalacticalCoinsGained -= GoldGained;
@@ -28,6 +23,8 @@ namespace Assets.Scripts.Gold
 
         private void Start()
         {
+            Debug.Log("GoldManager: OnEnable");
+            GameEventsManager.instance.economyEvents.onGalacticalCoinsGained += GoldGained;
             GameEventsManager.instance.economyEvents.GalacticalCoinsChange(currentGold);
         }
 
@@ -35,6 +32,8 @@ namespace Assets.Scripts.Gold
         {
             currentGold += gold;
             PlayerManager.Instance.shipData.galacticalCoins += gold;
+            Debug.Log(PlayerManager.Instance.shipData.galacticalCoins + " gold gained");
+            Debug.Log(currentGold + " current gold");
             GameEventsManager.instance.economyEvents.GalacticalCoinsChange(currentGold);
         }
     }

@@ -19,10 +19,6 @@ namespace Assets.Scripts.Rank
             currentExperience = startingExperience;
         }
 
-        private void OnEnable()
-        {
-            GameEventsManager.instance.rankEvents.onExperiencePointsGained += ExperienceGained;
-        }
 
         private void OnDisable()
         {
@@ -31,6 +27,7 @@ namespace Assets.Scripts.Rank
 
         private void Start()
         {
+            GameEventsManager.instance.rankEvents.onExperiencePointsGained += ExperienceGained;
             GameEventsManager.instance.rankEvents.RankUpChange(currentLevel);
             GameEventsManager.instance.rankEvents.ExperiencePointsChanged(currentExperience);
         }
@@ -39,15 +36,18 @@ namespace Assets.Scripts.Rank
         {
             currentExperience += experience;
             PlayerManager.Instance.shipData.currentExperience += experience;
+            GameEventsManager.instance.rankEvents.ExperiencePointsChanged(currentExperience);
+            Debug.Log(PlayerManager.Instance.shipData.currentExperience + " xp gained");
+            Debug.Log(currentExperience + " current xp");
             // check if we're ready to level up
-            while (currentExperience >= PlayerManager.Instance.shipData.experienceToRanklUp)
+            while (PlayerManager.Instance.shipData.currentExperience >= PlayerManager.Instance.shipData.experienceToRanklUp)
             {
-                currentExperience -= PlayerManager.Instance.shipData.experienceToRanklUp;
+                PlayerManager.Instance.shipData.currentExperience -= PlayerManager.Instance.shipData.experienceToRanklUp;
                 currentLevel++;
                 PlayerManager.Instance.shipData.currentRank++;
                 GameEventsManager.instance.rankEvents.RankUpChange(currentLevel);
             }
-            GameEventsManager.instance.rankEvents.RankUpChange(currentExperience);
+            
         }
     }
 }

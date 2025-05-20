@@ -58,9 +58,9 @@ public class LevelManager : MonoBehaviour
         //}
 
         //TODO give rewards to the player 
-
-        GameObject.Find("HUD").GetComponent<LevelPanelManagement>().ActiveResultsPanel(numberStars);
         GiveRewards();
+        GameObject.Find("HUD").GetComponent<LevelPanelManagement>().ActiveResultsPanel(numberStars);
+        
     }
 
     public int CalculateStars()
