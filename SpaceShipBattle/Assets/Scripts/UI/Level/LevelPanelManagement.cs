@@ -4,19 +4,28 @@ using UnityEngine.UI;
 
 public class LevelPanelManagement : MonoBehaviour
 {
+    [Header("Pannels")]
     public GameObject deathPanel;
     public GameObject resultsPanel;
     public GameObject pausePanel;
     public GameObject scorePanel;
 
+    [Header("Buttons")]
     public Button pauseButton;
+    public GameObject buttonNetxLevel;
+
+    [Header("Score")]
     public TextMeshProUGUI scoreValuePauseText;
 
+    [Header("Stars")]
     public Image[] stars;
     public Sprite starComplete;
-    public GameObject buttonNetxLevel;
+    
+
+    [Header("Rewards text")]
     public TextMeshProUGUI goldGainedText;
     public TextMeshProUGUI xpPointsGainedText;
+    public TextMeshProUGUI rankUpText;
 
     public void ActiveGameOverPanel()
     {
@@ -81,12 +90,14 @@ public class LevelPanelManagement : MonoBehaviour
     {
         GameEventsManager.instance.economyEvents.onGalacticalCoinsGained += SetGoldGainedText;
         GameEventsManager.instance.rankEvents.onExperiencePointsChanged += SetExpirienceGainedsliderValue;
+        GameEventsManager.instance.rankEvents.onRankUpChange += SetRankUpText;
     }
 
     private void OnDisable()
     {
         GameEventsManager.instance.economyEvents.onGalacticalCoinsGained -= SetGoldGainedText;
         GameEventsManager.instance.rankEvents.onExperiencePointsChanged -= SetExpirienceGainedsliderValue;
+        GameEventsManager.instance.rankEvents.onRankUpChange -= SetRankUpText;
     }
 
     public void SetGoldGainedText(int gold)
@@ -105,5 +116,13 @@ public class LevelPanelManagement : MonoBehaviour
             xpPointsGainedText.text = expirienceGained.ToString();
         }
         
+    }
+
+    public void SetRankUpText(int currentLevel)
+    {
+        if (rankUpText != null)
+        {
+            rankUpText.text = GameConstants.rankUpText + currentLevel.ToString();
+        }
     }
 }
