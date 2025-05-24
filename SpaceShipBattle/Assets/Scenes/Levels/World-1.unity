@@ -2669,15 +2669,16 @@ MonoBehaviour:
   pausePanel: {fileID: 1345626176}
   scorePanel: {fileID: 339843196}
   pauseButton: {fileID: 1855494672}
+  buttonNetxLevel: {fileID: 101525634}
   scoreValuePauseText: {fileID: 939385837}
   stars:
   - {fileID: 1050364080}
   - {fileID: 340709645}
   - {fileID: 1962909584}
   starComplete: {fileID: 21300000, guid: 5c8bc11fd890da142b2a83410a06957c, type: 3}
-  buttonNetxLevel: {fileID: 101525634}
   goldGainedText: {fileID: 219017696}
-  xpPointsGainedText: {fileID: 0}
+  xpPointsGainedText: {fileID: 1231531590}
+  rankUpText: {fileID: 1347512081}
 --- !u!1001 &870945329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4571,7 +4572,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
