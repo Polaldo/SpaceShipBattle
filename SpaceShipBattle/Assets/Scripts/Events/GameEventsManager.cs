@@ -9,6 +9,8 @@ public class GameEventsManager : MonoBehaviour
 
     public EconomyEvents economyEvents;
     public RankEvents rankEvents;
+    public LevelEvents levelEvents;
+    public MissionEvents missionEvents;
 
     private void Awake()
     {
@@ -22,5 +24,7 @@ public class GameEventsManager : MonoBehaviour
         // initialize all events
         economyEvents = new EconomyEvents();
         rankEvents = new RankEvents();
+        levelEvents = new LevelEvents();
+        missionEvents = new MissionEvents();
     }
 }
