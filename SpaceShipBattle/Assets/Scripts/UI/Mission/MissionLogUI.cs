@@ -11,8 +11,10 @@ public class MissionLogUI : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private GameObject contentParent;
+    [SerializeField] private GameObject missionInfoPanel;
     [SerializeField] private MissionLogList missionLog;
     [SerializeField] private TextMeshProUGUI missionDisplayNameText;
+    [SerializeField] private TextMeshProUGUI missionDescriptionText;
     [SerializeField] private TextMeshProUGUI missionStatusText;
     [SerializeField] private TextMeshProUGUI coinsRewardsText;
     [SerializeField] private TextMeshProUGUI experienceRewardsText;
@@ -40,6 +42,7 @@ public class MissionLogUI : MonoBehaviour
     private void SetMissionLogInfo(Mission mission)
     {
         missionDisplayNameText.text = mission.missionInfo.displayName;
+        missionDescriptionText.text = mission.missionInfo.description;
 
         levelRequirementsText.text = GameConstants.levelText + mission.missionInfo.rankRequirment;
         missionRequirementsText.text = "";
@@ -57,6 +60,12 @@ public class MissionLogUI : MonoBehaviour
     {
         // add the button to the scrolling list if not already added
         MissionLogButton missionLogButton = missionLog.CreateButtonIfNoExists(mission, () => {
+            if (mission.missionState.Equals(MissionState.CAN_FINISH))
+            {
+                //TODO make a panel to appear the rewards of the mission
+                GameEventsManager.instance.missionEvents.FinishMission(mission.missionInfo.id);
+            }
+            missionInfoPanel.SetActive(true);
             SetMissionLogInfo(mission);
         });
 
@@ -85,14 +94,7 @@ public class MissionLogUI : MonoBehaviour
 
     private void ShowUI()
     {
-        contentParent.SetActive(true);
-       
-        // note - this needs to happen after the content parent is set active,
-        // or else the onSelectAction won't work as expected
-        if (firstButton != null)
-        {
-            firstButton.Select();
-        }
+        contentParent.SetActive(true);   
     }
 
     private void HideUI()

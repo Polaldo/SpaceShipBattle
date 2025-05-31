@@ -11,6 +11,7 @@ namespace Assets.Scripts.ScriptableObjects.MissionInfo
 
         [Header("General")]
         public string displayName;
+        public string description;
 
         [Header("Requirments")]
         public int rankRequirment;

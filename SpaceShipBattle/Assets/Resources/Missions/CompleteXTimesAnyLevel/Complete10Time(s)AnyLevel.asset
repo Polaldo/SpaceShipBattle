@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b88f839ae1d02e41837b4debb124652, type: 3}
-  m_Name: Complete5Time(s)AnyLevel
+  m_Name: Complete10Time(s)AnyLevel
   m_EditorClassIdentifier: 
-  <id>k__BackingField: Complete5Time(s)AnyLevel
-  displayName: Complete 5 Time(s) Any Level
+  <id>k__BackingField: Complete10Time(s)AnyLevel
+  displayName: Complete 10 Time(s) Any Level
   description: 'Complete any level '
-  rankRequirment: 5
+  rankRequirment: 10
   missionRequierment:
-  - {fileID: 11400000, guid: 4d58c4575f5c1044b826c8b4e00ab591, type: 2}
+  - {fileID: 11400000, guid: 437c099c83fadb749be0f84a76dee076, type: 2}
   steps: []
-  galacticalCoins: 333
-  expPoints: 33
+  galacticalCoins: 1000
+  expPoints: 100

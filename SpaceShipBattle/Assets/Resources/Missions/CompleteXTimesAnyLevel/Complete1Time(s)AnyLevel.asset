@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Complete1Time(s)AnyLevel
   m_EditorClassIdentifier: 
   <id>k__BackingField: Complete1Time(s)AnyLevel
-  displayName: Complete1Time(s)AnyLevel
+  displayName: Complete 1 Time(s) Any Level
+  description: 'Complete any level '
   rankRequirment: 1
   missionRequierment: []
   steps: []
