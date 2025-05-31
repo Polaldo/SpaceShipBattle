@@ -10,7 +10,7 @@ namespace Assets.Scripts.ScriptableObjects.MissionInfo
         [field: SerializeField] public string id { get; private set; }
 
         [Header("General")]
-        public string DisplayName;
+        public string displayName;
 
         [Header("Requirments")]
         public int rankRequirment;

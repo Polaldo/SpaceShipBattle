@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Complete5Time(s)AnyLevel
   m_EditorClassIdentifier: 
   <id>k__BackingField: Complete5Time(s)AnyLevel
-  DisplayName: Complete 5 Time Any Level
-  rankRequirment: 0
+  displayName: Complete5Time(s)AnyLevel
+  rankRequirment: 5
   missionRequierment:
   - {fileID: 11400000, guid: 4d58c4575f5c1044b826c8b4e00ab591, type: 2}
   steps: []
-  galacticalCoins: 1000
-  expPoints: 0
+  galacticalCoins: 333
+  expPoints: 33

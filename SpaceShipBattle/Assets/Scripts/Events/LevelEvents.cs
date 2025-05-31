@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Events
 {
-    public class LevelEvents : MonoBehaviour
+    public class LevelEvents
     {
         public event Action<LevelData> onLevelCompleted;
         public void LevelCompleted(LevelData levelCompletedData)

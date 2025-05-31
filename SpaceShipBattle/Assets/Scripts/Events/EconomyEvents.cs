@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EconomyEvents : MonoBehaviour
+public class EconomyEvents
 {
     public event Action<int> onGalacticalCoinsGained;
     public void GalacticalCoinsGained(int gold)

@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Events
 {
-    public class RankEvents : MonoBehaviour
+    public class RankEvents
     {
         public event Action<int> onExperiencePointsGained;
         public void ExperiencePointsGained(int expPoints)

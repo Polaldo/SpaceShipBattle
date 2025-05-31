@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Complete1Time(s)AnyLevel
   m_EditorClassIdentifier: 
   <id>k__BackingField: Complete1Time(s)AnyLevel
-  DisplayName: Complete 1 Time Any Level
+  displayName: Complete1Time(s)AnyLevel
   rankRequirment: 1
   missionRequierment: []
   steps: []
-  galacticalCoins: 1000
-  expPoints: 0
+  galacticalCoins: 100
+  expPoints: 10
