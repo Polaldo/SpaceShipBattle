@@ -23,6 +23,5 @@ public class MissionLogButton : MonoBehaviour, ISelectHandler
         public void OnSelect(BaseEventData eventData)
         {
             onSelectAction();
-            Debug.Log("hahaha im here");
         }
     }

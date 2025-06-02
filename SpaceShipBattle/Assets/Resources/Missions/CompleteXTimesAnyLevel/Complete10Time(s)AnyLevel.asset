@@ -18,6 +18,8 @@ MonoBehaviour:
   rankRequirment: 10
   missionRequierment:
   - {fileID: 11400000, guid: 437c099c83fadb749be0f84a76dee076, type: 2}
-  steps: []
+  steps:
+  - {fileID: 3687396669821012610, guid: 25b47cb6a4cff2a459cc5ed6e10770f7, type: 3}
+  requieredAmountToCopleteStep: 0a000000
   galacticalCoins: 1000
   expPoints: 100

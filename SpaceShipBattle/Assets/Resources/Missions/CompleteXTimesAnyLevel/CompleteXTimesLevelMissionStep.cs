@@ -6,13 +6,12 @@ using UnityEngine;
 
     public class CompleteXTimesLevelMissionStep : MissionStep
     {
-        private int levelsCompleted = 0;
 
-        private int levelsToBeCompleted = 1;
 
         private void Start()
         {
             GameEventsManager.instance.levelEvents.onLevelCompleted += LevelCompleted;
+        UpdateState();
         }
 
         private void OnDisable()
@@ -22,11 +21,28 @@ using UnityEngine;
 
         private void LevelCompleted(LevelData levelData)
         {
-            levelsCompleted++;
-            if (levelsCompleted >= levelsToBeCompleted)
+        if (currentAmount < requiredAmount)
+        {
+            currentAmount++;
+            UpdateState();
+        }
+            
+            if (requiredAmount >= currentAmount)
             {
                 FinishMissionStep();
             }
         }
-    
+    private void UpdateState()
+    {
+        
+        string state = currentAmount.ToString();
+        string status = "Collected " + currentAmount + " / " + requiredAmount + " coins.";
+        ChangeState(state, status);
+    }
+
+    protected override void SetMissionStepState(string state)
+    {
+        this.currentAmount = System.Int32.Parse(state);
+        UpdateState();
+    }
 }

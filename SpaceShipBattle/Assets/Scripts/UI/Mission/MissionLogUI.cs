@@ -43,6 +43,7 @@ public class MissionLogUI : MonoBehaviour
     {
         missionDisplayNameText.text = mission.missionInfo.displayName;
         missionDescriptionText.text = mission.missionInfo.description;
+        missionStatusText.text = mission.GetFullStatusText();
 
         levelRequirementsText.text = GameConstants.levelText + mission.missionInfo.rankRequirment;
         missionRequirementsText.text = "";

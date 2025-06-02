@@ -19,9 +19,12 @@ namespace Assets.Scripts.MissionSystem
 
         private void Start()
         {
+            currentRankPlayer = PlayerManager.Instance.shipData.currentRank;
             GameEventsManager.instance.missionEvents.onStartMission += StartMission;
             GameEventsManager.instance.missionEvents.onAdvancedMission += AdvancedMission;
             GameEventsManager.instance.missionEvents.onFinishMission += FinishMission;
+
+            GameEventsManager.instance.missionEvents.onMissionStepStateChange += MissionStepStateChange;
 
             GameEventsManager.instance.rankEvents.onRankUpChange += PlayerRankChange;
 
@@ -37,8 +40,7 @@ namespace Assets.Scripts.MissionSystem
             {
                 if (mission.missionState == MissionState.REQUIREMENTS_NOT_MET && CheckRequeirmentsMet(mission))
                 {
-                    //ChangeQuestState(mission.missionInfo.id, MissionState.IN_PROGRESS);
-                    StartMission(mission.missionInfo.id);
+                    StartMission(mission.missionInfo.id);                    
                 }
             }
         }
@@ -55,6 +57,8 @@ namespace Assets.Scripts.MissionSystem
             GameEventsManager.instance.missionEvents.onStartMission -= StartMission;
             GameEventsManager.instance.missionEvents.onAdvancedMission -= AdvancedMission;
             GameEventsManager.instance.missionEvents.onFinishMission -= FinishMission;
+
+            GameEventsManager.instance.missionEvents.onMissionStepStateChange -= MissionStepStateChange;
 
             GameEventsManager.instance.rankEvents.onRankUpChange -= PlayerRankChange;
         }
@@ -103,6 +107,7 @@ namespace Assets.Scripts.MissionSystem
         private void StartMission(string id)
         {
             Mission mission = GetMissionById(id);
+            Debug.Log("MissionStarted " + mission.missionInfo.id);
             mission.InstantiateCurrentMissionStep(this.transform);
             ChangeQuestState(mission.missionInfo.id, MissionState.IN_PROGRESS);
         }
@@ -135,6 +140,13 @@ namespace Assets.Scripts.MissionSystem
             GameEventsManager.instance.rankEvents.ExperiencePointsGained(mission.missionInfo.expPoints);
         }
 
+        private void MissionStepStateChange(string id, int stepIndex, MissionStepState missionStepState)
+        {
+            Mission mission = GetMissionById(id);
+            mission.StoreMissionStepState(missionStepState, stepIndex);
+            ChangeQuestState(id, mission.missionState);
+        }
+
         private Mission GetMissionById(string id)
         {
             Mission mission = missionMap[id];
@@ -144,5 +156,7 @@ namespace Assets.Scripts.MissionSystem
             } 
             return mission;
         }
+
+
     }
 }

@@ -33,7 +33,6 @@ namespace Assets.Scripts.Gold
 
         private void Start()
         {
-            Debug.Log("GoldManager: OnEnable");
             GameEventsManager.instance.economyEvents.onGalacticalCoinsGained += GoldGained;
             GameEventsManager.instance.economyEvents.GalacticalCoinsChange(currentGold);
         }

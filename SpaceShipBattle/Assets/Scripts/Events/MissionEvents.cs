@@ -42,4 +42,13 @@ public class MissionEvents
             onMissionStateChange(mission);
         }
     }
+
+    public event Action<string, int, MissionStepState> onMissionStepStateChange;
+    public void MissionStepStateChange(string id, int stepIndex, MissionStepState missionStepState)
+    {
+        if (onMissionStepStateChange != null)
+        {
+            onMissionStepStateChange(id, stepIndex, missionStepState);
+        }
+    }
 }
