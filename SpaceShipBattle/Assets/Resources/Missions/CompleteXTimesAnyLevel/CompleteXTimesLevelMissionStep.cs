@@ -33,11 +33,10 @@ using UnityEngine;
             }
         }
     private void UpdateState()
-    {
-        
+    {     
         string state = currentAmount.ToString();
-        string status = "Collected " + currentAmount + " / " + requiredAmount + " coins.";
-        ChangeState(state, status);
+        string status = "Level completed " + currentAmount + " / " + requiredAmount + ".";
+        ChangeState(state, status, requiredAmount, currentAmount);
     }
 
     protected override void SetMissionStepState(string state)

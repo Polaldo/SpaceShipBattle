@@ -21,7 +21,7 @@ namespace Assets.Scripts.MissionSystem
             this.missionStepStates = new MissionStepState[missionInfo.steps.Length];
             for (int i = 0; i < missionStepStates.Length; i++)
             {
-                missionStepStates[i] = new MissionStepState();
+                missionStepStates[i] = new MissionStepState("", "", missionInfo.requieredAmountToCopleteStep[i],  0);
             }
         }
 
@@ -58,18 +58,33 @@ namespace Assets.Scripts.MissionSystem
             }
             return missionStepPrefab;
         }
+
         public void StoreMissionStepState(MissionStepState missionStepState, int stepIndex)
         {
             if (stepIndex < missionStepStates.Length)
             {
                 missionStepStates[stepIndex].state = missionStepState.state;
                 missionStepStates[stepIndex].status = missionStepState.status;
+                missionStepStates[stepIndex].required = missionStepState.required;
+                missionStepStates[stepIndex].current = missionStepState.current;
             }
             else
             {
                 Debug.LogWarning("Tried to access quest step data, but stepIndex was out of range: "
                     + "Quest Id = " + missionInfo.id + ", Step Index = " + stepIndex);
             }
+        }
+
+        public int GetRequiredStepState()
+        {
+            Debug.Log(missionStepStates[currentStepMissionIndex].required + " mission id" + missionInfo.id);
+            return missionStepStates[currentStepMissionIndex].required;
+        }
+
+        public int GetCurrentStepState()
+        {
+            Debug.Log(missionStepStates[currentStepMissionIndex].current + " mission id" + missionInfo.id);
+            return missionStepStates[currentStepMissionIndex].current;
         }
 
         public string GetFullStatusText()

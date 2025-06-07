@@ -35,7 +35,7 @@ public class MissionLogList : MonoBehaviour
         MissionLogButton missionLogButton = Instantiate(buttonMissionLogPreFab, contentParent.transform).GetComponent<MissionLogButton>();
 
             missionLogButton.gameObject.name = mission.missionInfo.id + "_button";
-        missionLogButton.Initialize(mission.missionInfo.displayName, selectAction);
+        missionLogButton.Initialize(mission.missionInfo.displayName, selectAction, mission.GetRequiredStepState(), mission.GetCurrentStepState());
             idToButtonMap[mission.missionInfo.id] = missionLogButton;
             return missionLogButton;
         }

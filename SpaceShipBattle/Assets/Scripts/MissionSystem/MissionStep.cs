@@ -20,7 +20,8 @@ namespace Assets.Scripts.MissionSystem
             this.missionId = id;
             this.stepIndex = stepIndex;
             this.requiredAmount = requiredToComplete;
-            Debug.Log(requiredAmount);
+            this.currentAmount = 0;
+            Debug.Log(requiredAmount + "requiere");
         }
 
         protected void FinishMissionStep()
@@ -33,12 +34,13 @@ namespace Assets.Scripts.MissionSystem
             }
         }
 
-        protected void ChangeState(string newState, string newStatus)
+        protected void ChangeState(string newState, string newStatus, int require, int current)
         {
+            //TODO add to this method require and current and also update manager
             GameEventsManager.instance.missionEvents.MissionStepStateChange(
                 missionId,
                 stepIndex,
-                new MissionStepState(newState, newStatus)
+                new MissionStepState(newState, newStatus, require, current)
             );
         }
 
