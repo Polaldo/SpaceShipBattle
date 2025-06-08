@@ -1,6 +1,3 @@
-using Assets.Scripts.BehaviourTree;
-using UnityEngine;
-
 namespace Assets.Scripts.BehaviourTree.Tasks
 {
     public class TaskUseAbility : Node

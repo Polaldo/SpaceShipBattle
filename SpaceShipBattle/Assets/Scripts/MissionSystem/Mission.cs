@@ -1,6 +1,4 @@
 using Assets.Scripts.ScriptableObjects.MissionInfo;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.MissionSystem
@@ -21,7 +19,7 @@ namespace Assets.Scripts.MissionSystem
             this.missionStepStates = new MissionStepState[missionInfo.steps.Length];
             for (int i = 0; i < missionStepStates.Length; i++)
             {
-                missionStepStates[i] = new MissionStepState("", "", missionInfo.requieredAmountToCopleteStep[i],  0);
+                missionStepStates[i] = new MissionStepState("", "", missionInfo.requieredAmountToCopleteStep[i], 0);
             }
         }
 

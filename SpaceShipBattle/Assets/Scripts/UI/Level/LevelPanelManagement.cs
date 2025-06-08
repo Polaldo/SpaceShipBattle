@@ -20,7 +20,7 @@ public class LevelPanelManagement : MonoBehaviour
     [Header("Stars")]
     public Image[] stars;
     public Sprite starComplete;
-    
+
 
     [Header("Rewards text")]
     public TextMeshProUGUI goldGainedText;
@@ -106,7 +106,7 @@ public class LevelPanelManagement : MonoBehaviour
         {
             goldGainedText.text = gold.ToString();
         }
-        
+
     }
 
     public void SetExpirienceGainedsliderValue(int expirienceGained)
@@ -115,7 +115,7 @@ public class LevelPanelManagement : MonoBehaviour
         {
             xpPointsGainedText.text = expirienceGained.ToString();
         }
-        
+
     }
 
     public void SetRankUpText(int currentLevel)

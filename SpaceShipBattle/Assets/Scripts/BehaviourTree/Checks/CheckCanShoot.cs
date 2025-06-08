@@ -1,6 +1,3 @@
-using Assets.Scripts.BehaviourTree;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.BehaviourTree.Checks
@@ -10,7 +7,8 @@ namespace Assets.Scripts.BehaviourTree.Checks
         private Transform _transform;
         private float distanceToBeTravelled;
 
-        public CheckCanShoot(float distanceToBeTravelled, Transform t) {
+        public CheckCanShoot(float distanceToBeTravelled, Transform t)
+        {
 
             this._transform = t;
             this.distanceToBeTravelled = distanceToBeTravelled;

@@ -1,5 +1,3 @@
-using Assets.Scripts.Gold;
-using Assets.Scripts.Rank;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour

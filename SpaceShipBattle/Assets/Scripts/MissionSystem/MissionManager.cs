@@ -1,6 +1,4 @@
 using Assets.Scripts.ScriptableObjects.MissionInfo;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,7 +38,7 @@ namespace Assets.Scripts.MissionSystem
             {
                 if (mission.missionState == MissionState.REQUIREMENTS_NOT_MET && CheckRequeirmentsMet(mission))
                 {
-                    StartMission(mission.missionInfo.id);                    
+                    StartMission(mission.missionInfo.id);
                 }
             }
         }
@@ -153,7 +151,7 @@ namespace Assets.Scripts.MissionSystem
             if (mission == null)
             {
                 Debug.LogWarning("Next mission id couldn't be found " + id);
-            } 
+            }
             return mission;
         }
 

@@ -1,7 +1,4 @@
-using Newtonsoft.Json;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Rank
@@ -63,7 +60,7 @@ namespace Assets.Scripts.Rank
                 Debug.Log("Rank up to: " + PlayerManager.Instance.shipData.currentRank);
                 Debug.Log("Exp to Rank up: " + PlayerManager.Instance.shipData.experienceToRanklUp);
             }
-            
+
         }
 
         private int CalculateNextLevelExpirienceToRankUp(int currentRank)

@@ -1,7 +1,5 @@
 using Assets.Scripts.MissionSystem;
 using Assets.Scripts.ScriptableObjects.MissionInfo;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -32,7 +30,7 @@ public class MissionLogUI : MonoBehaviour
     {
         //ShowUI();
     }
-        
+
     private void OnDisable()
     {
         GameEventsManager.instance.missionEvents.onMissionStateChange -= MissionStateChange;
@@ -60,7 +58,8 @@ public class MissionLogUI : MonoBehaviour
     private void MissionStateChange(Mission mission)
     {
         // add the button to the scrolling list if not already added
-        MissionLogButton missionLogButton = missionLog.CreateButtonIfNoExists(mission, () => {
+        MissionLogButton missionLogButton = missionLog.CreateButtonIfNoExists(mission, () =>
+        {
             if (mission.missionState.Equals(MissionState.CAN_FINISH))
             {
                 //TODO make a panel to appear the rewards of the mission
@@ -95,7 +94,7 @@ public class MissionLogUI : MonoBehaviour
 
     private void ShowUI()
     {
-        contentParent.SetActive(true);   
+        contentParent.SetActive(true);
     }
 
     private void HideUI()

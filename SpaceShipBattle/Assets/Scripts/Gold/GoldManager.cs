@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Gold
 {
     public class GoldManager : MonoBehaviour
     {
-        public static GoldManager Instance { get; private set;}
+        public static GoldManager Instance { get; private set; }
 
         [Header("Configuration")]
         [SerializeField] private int startingGold = 5;

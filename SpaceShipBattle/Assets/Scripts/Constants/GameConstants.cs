@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public static class GameConstants 
+public static class GameConstants
 {
     //Resources
     public const string galacticalCoinsText = "GC";

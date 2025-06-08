@@ -1,20 +1,17 @@
-using System.Collections;
+using Assets.Scripts.MissionSystem;
 using System.Collections.Generic;
 using UnityEngine;
-using Assets.Scripts.MissionSystem;
 using UnityEngine.Events;
-using Assets.Scripts.ScriptableObjects.MissionInfo;
-using System.Reflection;
 
 public class MissionLogList : MonoBehaviour
-    {
-        [Header("Components")]
-        [SerializeField] private GameObject contentParent;
+{
+    [Header("Components")]
+    [SerializeField] private GameObject contentParent;
 
-        [Header("Button Mission")]
-        [SerializeField] private GameObject buttonMissionLogPreFab;
+    [Header("Button Mission")]
+    [SerializeField] private GameObject buttonMissionLogPreFab;
 
-        private Dictionary<string, MissionLogButton> idToButtonMap = new Dictionary<string, MissionLogButton>();
+    private Dictionary<string, MissionLogButton> idToButtonMap = new Dictionary<string, MissionLogButton>();
 
     private void Start()
     {
@@ -27,29 +24,29 @@ public class MissionLogList : MonoBehaviour
     }
 
     public MissionLogButton CreateButtonIfNoExists(Mission mission, UnityAction selectAction)
-        {
-            MissionLogButton button = null;
+    {
+        MissionLogButton button = null;
         if (!idToButtonMap.ContainsKey(mission.missionInfo.id))
-            {
-                button = InstantiateMissionLogButton(mission, selectAction);
-            }
-            else
-            {
-                button = idToButtonMap[mission.missionInfo.id];
-            }
-            return button;
-        }
-
-        private MissionLogButton InstantiateMissionLogButton(Mission mission, UnityAction selectAction)
         {
+            button = InstantiateMissionLogButton(mission, selectAction);
+        }
+        else
+        {
+            button = idToButtonMap[mission.missionInfo.id];
+        }
+        return button;
+    }
+
+    private MissionLogButton InstantiateMissionLogButton(Mission mission, UnityAction selectAction)
+    {
 
         MissionLogButton missionLogButton = Instantiate(buttonMissionLogPreFab, contentParent.transform).GetComponent<MissionLogButton>();
 
-            missionLogButton.gameObject.name = mission.missionInfo.id + "_button";
+        missionLogButton.gameObject.name = mission.missionInfo.id + "_button";
         Debug.Log(mission.missionState == MissionState.FINISHED);
         missionLogButton.Initialize(mission.missionInfo.displayName, selectAction, mission.GetRequiredStepState(), mission.GetCurrentStepState(), mission.missionState == MissionState.FINISHED);
-            idToButtonMap[mission.missionInfo.id] = missionLogButton;
-            return missionLogButton;
+        idToButtonMap[mission.missionInfo.id] = missionLogButton;
+        return missionLogButton;
     }
 
     private void changeStateButton(Mission mission)
@@ -63,4 +60,4 @@ public class MissionLogList : MonoBehaviour
             }
         }
     }
-    }
+}

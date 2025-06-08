@@ -59,7 +59,7 @@ public class LevelManager : MonoBehaviour
         //TODO give rewards to the player 
         GiveRewards();
         GameObject.Find("HUD").GetComponent<LevelPanelManagement>().ActiveResultsPanel(numberStars);
-        
+
     }
 
     public int CalculateStars()

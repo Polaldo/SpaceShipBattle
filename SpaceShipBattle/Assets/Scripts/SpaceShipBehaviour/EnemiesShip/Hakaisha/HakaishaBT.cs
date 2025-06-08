@@ -24,7 +24,7 @@ public class HakaishaBT : EnemyBT<EnemyData>
     {
         Node root = new Selector(new List<Node>
         {
-           
+
             new Sequence (new List<Node>
             {
                 new CheckCanShoot(targetToGo.position.y, transform),
@@ -32,7 +32,7 @@ public class HakaishaBT : EnemyBT<EnemyData>
                 new Sequence (new List<Node> {
                     new CheckCanUseAbility(cooldownAbility),
                     new TaskUseAbility(ability),
-                }),              
+                }),
             }),
              new TaskMoveToTarget(transform, _rb, speed, targetToGo.position.y)
         });
