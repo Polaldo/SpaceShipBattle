@@ -15,7 +15,7 @@ public class MissionLogButton : MonoBehaviour, ISelectHandler
 
         private UnityAction onSelectAction;
 
-        public void Initialize(string displayName, UnityAction selectAction, int requiere, int current)
+        public void Initialize(string displayName, UnityAction selectAction, int requiere, int current, bool isInteractable)
         {
             this.button = this.GetComponent<Button>();
             this.buttonText = this.GetComponentInChildren<TextMeshProUGUI>();
@@ -26,10 +26,16 @@ public class MissionLogButton : MonoBehaviour, ISelectHandler
         slider.value = current;
         this.sliderText = this.slider.GetComponentInChildren<TextMeshProUGUI>();
         this.sliderText.text = current + "/" + requiere;
+        this.button.interactable = !isInteractable;
         }
 
         public void OnSelect(BaseEventData eventData)
         {
             onSelectAction();
         }
+
+    public void changeButtonState(bool isInteractable)
+    {
+        button.interactable = isInteractable;
+    }
     }

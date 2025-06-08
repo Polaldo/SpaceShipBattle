@@ -12,14 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b88f839ae1d02e41837b4debb124652, type: 3}
   m_Name: Complete2Time(s)AnyLevel
   m_EditorClassIdentifier: 
-  <id>k__BackingField: Complete5Time(s)AnyLevel
-  displayName: Complete 5 Time(s) Any Level
+  <id>k__BackingField: Complete2Time(s)AnyLevel
+  displayName: Complete 2 Time(s) Any Level
   description: 'Complete any level '
-  rankRequirment: 5
-  missionRequierment:
-  - {fileID: 11400000, guid: 4d58c4575f5c1044b826c8b4e00ab591, type: 2}
+  rankRequirment: 1
+  missionRequierment: []
   steps:
   - {fileID: 3687396669821012610, guid: 25b47cb6a4cff2a459cc5ed6e10770f7, type: 3}
-  requieredAmountToCopleteStep: 05000000
+  requieredAmountToCopleteStep: 02000000
   galacticalCoins: 333
   expPoints: 33
