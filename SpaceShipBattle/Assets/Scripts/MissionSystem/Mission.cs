@@ -104,7 +104,6 @@ namespace Assets.Scripts.MissionSystem
                 if (CurrentStepExists())
                 {
                     fullStatus += missionStepStates[currentStepMissionIndex].status;
-                    fullStatus += "aaaa";
                 }
                 else if (missionState == MissionState.FINISHED)
                 {

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b88f839ae1d02e41837b4debb124652, type: 3}
+  m_Name: Gain1000coins
+  m_EditorClassIdentifier: 
+  <id>k__BackingField: Gain1000coins
+  displayName: Collect 1000 galactical coins
+  description: Collect coins by clearing level and missions
+  rankRequirment: 0
+  missionRequierment: []
+  steps:
+  - {fileID: 7400307317462110169, guid: 877c7ad8dc2481544ac761bfcc227872, type: 3}
+  requieredAmountToCopleteStep: 10270000
+  galacticalCoins: 0
+  expPoints: 500

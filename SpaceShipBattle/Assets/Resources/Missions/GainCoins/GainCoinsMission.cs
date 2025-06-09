@@ -1,37 +1,36 @@
 using Assets.Scripts.MissionSystem;
 
-
-public class CompleteXTimesLevelMissionStep : MissionStep
+public class GainCoinsMission : MissionStep
 {
-
     private void Start()
     {
-        GameEventsManager.instance.levelEvents.onLevelCompleted += LevelCompleted;
+        GameEventsManager.instance.economyEvents.onGalacticalCoinsGained += GalacticalCoinsGained;
         UpdateState();
     }
 
     private void OnDisable()
     {
-        GameEventsManager.instance.levelEvents.onLevelCompleted -= LevelCompleted;
+        GameEventsManager.instance.economyEvents.onGalacticalCoinsGained -= GalacticalCoinsGained;
     }
 
-    private void LevelCompleted(LevelData levelData)
+    private void GalacticalCoinsGained(int coins)
     {
         if (currentAmount < requiredAmount)
         {
-            currentAmount++;
+            currentAmount += coins;
             UpdateState();
         }
 
-        if (currentAmount >= requiredAmount)
+        if (requiredAmount >= currentAmount)
         {
             FinishMissionStep();
         }
     }
+
     protected override void UpdateState()
     {
         string state = currentAmount.ToString();
-        string status = "Level completed " + currentAmount + " / " + requiredAmount + ".";
+        string status = "Coins gained " + currentAmount + " / " + requiredAmount + ".";
         ChangeState(state, status, requiredAmount, currentAmount);
     }
 

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b88f839ae1d02e41837b4debb124652, type: 3}
-  m_Name: Complete1Time(s)AnyLevel
+  m_Name: RankUpToRank005
   m_EditorClassIdentifier: 
-  <id>k__BackingField: Complete1Time(s)AnyLevel
-  displayName: Complete 1 Time(s) Any Level
-  description: 'Complete any level '
-  rankRequirment: 1
+  <id>k__BackingField: RankUpToRank005
+  displayName: Rank up to rank 5
+  description: Rank up your rank clearing missions and levels
+  rankRequirment: 0
   missionRequierment: []
   steps:
-  - {fileID: 3687396669821012610, guid: 25b47cb6a4cff2a459cc5ed6e10770f7, type: 3}
-  requieredAmountToCopleteStep: 01000000
-  galacticalCoins: 100
-  expPoints: 10
+  - {fileID: 3470980590606361364, guid: 68ea7bc3b1e706848b59a695f1b3e6d3, type: 3}
+  requieredAmountToCopleteStep: 05000000
+  galacticalCoins: 3000
+  expPoints: 0

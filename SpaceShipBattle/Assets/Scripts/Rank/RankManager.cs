@@ -56,7 +56,7 @@ namespace Assets.Scripts.Rank
                 PlayerManager.Instance.shipData.experienceToRanklUp = CalculateNextLevelExpirienceToRankUp(PlayerManager.Instance.shipData.currentRank);
                 currentLevel++;
                 PlayerManager.Instance.shipData.currentRank++;
-                GameEventsManager.instance.rankEvents.RankUpChange(currentLevel);
+                GameEventsManager.instance.rankEvents.RankUpChange(PlayerManager.Instance.shipData.currentRank);
                 Debug.Log("Rank up to: " + PlayerManager.Instance.shipData.currentRank);
                 Debug.Log("Exp to Rank up: " + PlayerManager.Instance.shipData.experienceToRanklUp);
             }

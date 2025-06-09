@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b88f839ae1d02e41837b4debb124652, type: 3}
-  m_Name: Complete10Time(s)AnyLevel
+  m_Name: Complete030Time(s)AnyLevel
   m_EditorClassIdentifier: 
-  <id>k__BackingField: Complete10Time(s)AnyLevel
-  displayName: Complete 10 Time(s) Any Level
+  <id>k__BackingField: Complete030Time(s)AnyLevel
+  displayName: Complete 30 Time(s) Any Level
   description: 'Complete any level '
-  rankRequirment: 10
+  rankRequirment: 20
   missionRequierment:
-  - {fileID: 11400000, guid: 437c099c83fadb749be0f84a76dee076, type: 2}
+  - {fileID: 11400000, guid: 55b034adbfe366742b339c563e3b5fd5, type: 2}
   steps:
   - {fileID: 3687396669821012610, guid: 25b47cb6a4cff2a459cc5ed6e10770f7, type: 3}
-  requieredAmountToCopleteStep: 0a000000
-  galacticalCoins: 1000
-  expPoints: 100
+  requieredAmountToCopleteStep: 1e000000
+  galacticalCoins: 3000
+  expPoints: 300

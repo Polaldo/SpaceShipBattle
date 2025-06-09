@@ -1,25 +1,24 @@
 using Assets.Scripts.MissionSystem;
 
-
-public class CompleteXTimesLevelMissionStep : MissionStep
+public class ReachXRank : MissionStep
 {
-
     private void Start()
     {
-        GameEventsManager.instance.levelEvents.onLevelCompleted += LevelCompleted;
+        GameEventsManager.instance.rankEvents.onRankUpChange += GalacticalCoinsGained;
+        currentAmount = PlayerManager.Instance.shipData.currentRank;
         UpdateState();
     }
 
     private void OnDisable()
     {
-        GameEventsManager.instance.levelEvents.onLevelCompleted -= LevelCompleted;
+        GameEventsManager.instance.rankEvents.onRankUpChange -= GalacticalCoinsGained;
     }
 
-    private void LevelCompleted(LevelData levelData)
+    private void GalacticalCoinsGained(int level)
     {
+        currentAmount = level;
         if (currentAmount < requiredAmount)
         {
-            currentAmount++;
             UpdateState();
         }
 
@@ -28,10 +27,11 @@ public class CompleteXTimesLevelMissionStep : MissionStep
             FinishMissionStep();
         }
     }
+
     protected override void UpdateState()
     {
         string state = currentAmount.ToString();
-        string status = "Level completed " + currentAmount + " / " + requiredAmount + ".";
+        string status = "Rank up to: " + currentAmount + " / " + requiredAmount + ".";
         ChangeState(state, status, requiredAmount, currentAmount);
     }
 

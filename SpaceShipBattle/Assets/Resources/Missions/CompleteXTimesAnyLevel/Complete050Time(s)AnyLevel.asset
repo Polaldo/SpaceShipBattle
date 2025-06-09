@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b88f839ae1d02e41837b4debb124652, type: 3}
+  m_Name: Complete050Time(s)AnyLevel
+  m_EditorClassIdentifier: 
+  <id>k__BackingField: Complete050Time(s)AnyLevel
+  displayName: Complete 50 Time(s) Any Level
+  description: 'Complete any level '
+  rankRequirment: 30
+  missionRequierment:
+  - {fileID: 11400000, guid: 4eb4d377be1a2e149a8cc925ec26e978, type: 2}
+  steps:
+  - {fileID: 3687396669821012610, guid: 25b47cb6a4cff2a459cc5ed6e10770f7, type: 3}
+  requieredAmountToCopleteStep: 32000000
+  galacticalCoins: 5000
+  expPoints: 500

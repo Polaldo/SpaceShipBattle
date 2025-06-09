@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b88f839ae1d02e41837b4debb124652, type: 3}
-  m_Name: Complete5Time(s)AnyLevel
+  m_Name: Complete005Time(s)AnyLevel
   m_EditorClassIdentifier: 
-  <id>k__BackingField: Complete5Time(s)AnyLevel
+  <id>k__BackingField: Complete005Time(s)AnyLevel
   displayName: Complete 5 Time(s) Any Level
   description: 'Complete any level '
   rankRequirment: 5

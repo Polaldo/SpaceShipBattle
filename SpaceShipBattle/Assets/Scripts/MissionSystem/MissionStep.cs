@@ -43,5 +43,7 @@ namespace Assets.Scripts.MissionSystem
         }
 
         protected abstract void SetMissionStepState(string state);
+
+        protected abstract void UpdateState();
     }
 }
