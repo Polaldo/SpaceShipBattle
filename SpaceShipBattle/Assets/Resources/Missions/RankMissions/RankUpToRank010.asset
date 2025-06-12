@@ -15,9 +15,8 @@ MonoBehaviour:
   <id>k__BackingField: RankUpToRank010
   displayName: Rank up to rank 10
   description: Rank up your rank clearing missions and levels
-  rankRequirment: 0
-  missionRequierment:
-  - {fileID: 11400000, guid: fa003e583845a2c41baa2baae024a8ea, type: 2}
+  rankRequirment: 1
+  missionRequierment: []
   steps:
   - {fileID: 3470980590606361364, guid: 68ea7bc3b1e706848b59a695f1b3e6d3, type: 3}
   requieredAmountToCopleteStep: 0a000000

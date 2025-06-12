@@ -8,6 +8,7 @@ public class MissionLogButton : MonoBehaviour, ISelectHandler
 {
     private TextMeshProUGUI buttonText;
     private TextMeshProUGUI sliderText;
+    private int requiere;
     public Button button { get; private set; }
     public Slider slider { get; private set; }
 
@@ -23,6 +24,7 @@ public class MissionLogButton : MonoBehaviour, ISelectHandler
         slider.maxValue = requiere;
         slider.value = current;
         this.sliderText = this.slider.GetComponentInChildren<TextMeshProUGUI>();
+        this.requiere = requiere;
         this.sliderText.text = current + "/" + requiere;
         this.button.interactable = !isInteractable;
     }
@@ -35,5 +37,11 @@ public class MissionLogButton : MonoBehaviour, ISelectHandler
     public void changeButtonState(bool isInteractable)
     {
         button.interactable = isInteractable;
+    }
+
+    public void changeCurrentSliderValue(int currentValue)
+    {
+        slider.value = currentValue;
+        sliderText.text = currentValue + "/" + requiere;
     }
 }

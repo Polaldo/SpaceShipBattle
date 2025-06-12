@@ -13,6 +13,17 @@ namespace Assets.Scripts.MissionSystem
 
         protected int requiredAmount;
 
+        protected void Start()
+        {
+            GameEventsManager.instance.sceneEvents.onSceneLoaded += SceneLoaded;
+            UpdateState();
+        }
+
+        protected void OnDisable()
+        {
+            GameEventsManager.instance.sceneEvents.onSceneLoaded -= SceneLoaded;
+        }
+
         public void InitializeMissionStep(string id, int stepIndex, int requiredToComplete)
         {
             this.missionId = id;
@@ -28,18 +39,23 @@ namespace Assets.Scripts.MissionSystem
             {
                 isFinished = true;
                 GameEventsManager.instance.missionEvents.AdvancedMission(missionId);
-                Destroy(gameObject);
+                //Destroy(gameObject);
             }
         }
 
         protected void ChangeState(string newState, string newStatus, int require, int current)
         {
-            //TODO add to this method require and current and also update manager
+            Debug.Log("Change state");
             GameEventsManager.instance.missionEvents.MissionStepStateChange(
                 missionId,
                 stepIndex,
                 new MissionStepState(newState, newStatus, require, current)
             );
+        }
+
+        private void SceneLoaded(string sceneName)
+        {
+            UpdateState();
         }
 
         protected abstract void SetMissionStepState(string state);

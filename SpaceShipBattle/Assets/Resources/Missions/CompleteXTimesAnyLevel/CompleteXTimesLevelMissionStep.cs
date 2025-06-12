@@ -4,14 +4,16 @@ using Assets.Scripts.MissionSystem;
 public class CompleteXTimesLevelMissionStep : MissionStep
 {
 
-    private void Start()
+    protected void Start()
     {
+        base.Start();
         GameEventsManager.instance.levelEvents.onLevelCompleted += LevelCompleted;
         UpdateState();
     }
 
-    private void OnDisable()
+    protected void OnDisable()
     {
+        base.OnDisable();
         GameEventsManager.instance.levelEvents.onLevelCompleted -= LevelCompleted;
     }
 

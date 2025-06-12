@@ -23,6 +23,15 @@ public class LevelManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void Start()
+    {
+        GameEventsManager.instance.playerEvents.onKillPlayer += GameOver;
+    }
+
+    private void OnDisable()
+    {
+        GameEventsManager.instance.playerEvents.onKillPlayer -= GameOver;
+    }
 
     public void LoadLevel(LevelData levelData)
     {
@@ -55,8 +64,7 @@ public class LevelManager : MonoBehaviour
         //    Debug.Log("This " + actualLevel.name + "has been completed " + actualLevel.state);
         //    UpdateLevelsStates(); //Update all states of the levels that are in the same world
         //}
-
-        //TODO give rewards to the player 
+        GameEventsManager.instance.levelEvents.LevelCompleted(actualLevel);
         GiveRewards();
         GameObject.Find("HUD").GetComponent<LevelPanelManagement>().ActiveResultsPanel(numberStars);
 
@@ -72,7 +80,7 @@ public class LevelManager : MonoBehaviour
 
     public void GameOver()
     {
-        GameObject.Find("Pannels").GetComponent<LevelPanelManagement>().ActiveGameOverPanel();
+        GameObject.Find("HUD").GetComponent<LevelPanelManagement>().ActiveGameOverPanel();
     }
 
     public void GiveRewards()

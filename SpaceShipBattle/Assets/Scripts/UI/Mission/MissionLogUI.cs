@@ -23,7 +23,13 @@ public class MissionLogUI : MonoBehaviour
 
     private void Start()
     {
+        //TODO: make here to create all buttons mission can take through manager mission
+        foreach (Mission mission in MissionManager.Instance.missionMap.Values)
+        {
+            MissionStateChange(mission);
+        }
         GameEventsManager.instance.missionEvents.onMissionStateChange += MissionStateChange;
+        GameEventsManager.instance.missionEvents.onMissionStepStateChange += UpdateStateSliderButtonLog;
     }
 
     private void OnEnable()
@@ -34,6 +40,7 @@ public class MissionLogUI : MonoBehaviour
     private void OnDisable()
     {
         GameEventsManager.instance.missionEvents.onMissionStateChange -= MissionStateChange;
+        GameEventsManager.instance.missionEvents.onMissionStepStateChange -= UpdateStateSliderButtonLog;
         //HideUI();
     }
 
@@ -93,7 +100,7 @@ public class MissionLogUI : MonoBehaviour
     }
 
     private void ShowUI()
-    {
+    {  
         contentParent.SetActive(true);
     }
 
@@ -101,5 +108,17 @@ public class MissionLogUI : MonoBehaviour
     {
         contentParent.SetActive(false);
         EventSystem.current.SetSelectedGameObject(null);
+    }
+
+    private void UpdateStateSliderButtonLog(string id, int stepIndex, MissionStepState missionStepState)
+    {
+        MissionLogButton missionLogButton = missionLog.idToButtonMap[id];
+        Debug.Log(missionLogButton + "hola");
+        if (missionLogButton != null)
+        {
+            Debug.Log("updateSlider");
+            missionLogButton.changeCurrentSliderValue(missionStepState.current);
+            missionLogButton.slider.value = missionStepState.current;
+        }
     }
 }

@@ -1,5 +1,6 @@
 using Assets.Scripts.MissionSystem;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,16 +12,18 @@ public class MissionLogList : MonoBehaviour
     [Header("Button Mission")]
     [SerializeField] private GameObject buttonMissionLogPreFab;
 
-    private Dictionary<string, MissionLogButton> idToButtonMap = new Dictionary<string, MissionLogButton>();
+    public Dictionary<string, MissionLogButton> idToButtonMap = new Dictionary<string, MissionLogButton>();
 
     private void Start()
     {
         GameEventsManager.instance.missionEvents.onMissionStateChange += changeStateButton;
+        GameEventsManager.instance.missionEvents.onMissionStepStateChange += UpdateStateSliderButtonLog;
     }
 
     private void OnDisable()
     {
         GameEventsManager.instance.missionEvents.onMissionStateChange -= changeStateButton;
+        GameEventsManager.instance.missionEvents.onMissionStepStateChange -= UpdateStateSliderButtonLog;
     }
 
     public MissionLogButton CreateButtonIfNoExists(Mission mission, UnityAction selectAction)
@@ -58,6 +61,18 @@ public class MissionLogList : MonoBehaviour
             {
                 missionLogButton.changeButtonState(false); //TODO make apear something that says its been completed
             }
+        }
+    }
+
+    private void UpdateStateSliderButtonLog(string id, int stepIndex, MissionStepState missionStepState)
+    {
+        MissionLogButton missionLogButton = idToButtonMap[id];
+        Debug.Log(missionLogButton + "hola");
+        if (missionLogButton != null)
+        {
+            Debug.Log("updateSlider");
+            missionLogButton.changeCurrentSliderValue(missionStepState.current);
+            //missionLogButton.slider.value = missionStepState.current;
         }
     }
 }

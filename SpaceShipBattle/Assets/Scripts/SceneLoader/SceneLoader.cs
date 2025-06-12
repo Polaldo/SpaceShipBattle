@@ -47,6 +47,6 @@ public class SceneLoader : MonoBehaviour
             loadScreen.SetActive(false);
             yield return null;
         }
-
+        GameEventsManager.instance.sceneEvents.SceneLoaded(sceneName);
     }
 }

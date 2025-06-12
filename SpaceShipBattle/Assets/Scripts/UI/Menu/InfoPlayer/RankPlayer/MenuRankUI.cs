@@ -13,20 +13,15 @@ namespace Assets.Scripts.UI.Menu.InfoPlayer.RankPlayer
 
         private void Start()
         {
-            GameEventsManager.instance.rankEvents.onExperiencePointsChanged += setRankInfo;
+            setRankInfo();
         }
 
-        private void OnDisable()
-        {
-            GameEventsManager.instance.rankEvents.onExperiencePointsChanged -= setRankInfo;
-        }
-
-        private void setRankInfo(int currentExp)
+        private void setRankInfo()
         {
             rankText.text = PlayerManager.Instance.shipData.currentRank.ToString();
             experienceReamingText.text = GameConstants.toRankUpText + " " + PlayerManager.Instance.shipData.experienceToRanklUp.ToString();
             sliderRank.maxValue = PlayerManager.Instance.shipData.experienceToRanklUp;
-            sliderRank.value = currentExp;
+            sliderRank.value = PlayerManager.Instance.shipData.currentExperience; 
         }
     }
 }

@@ -6,13 +6,24 @@ namespace Assets.Scripts.MissionSystem
 {
     public class MissionManager : MonoBehaviour
     {
-        Dictionary<string, Mission> missionMap;
+        public Dictionary<string, Mission> missionMap;
 
         private int currentRankPlayer;
+        public static MissionManager Instance;
 
         private void Awake()
         {
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject); // Prevent this object from being destroyed on scene load
+            }
+            else
+            {
+                Destroy(gameObject); // Destroy duplicates
+            }
             missionMap = CreateMissionMap();
+            
         }
 
         private void Start()

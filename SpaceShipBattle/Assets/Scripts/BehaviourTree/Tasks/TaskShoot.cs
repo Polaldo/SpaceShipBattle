@@ -14,7 +14,6 @@ namespace Assets.Scripts.BehaviourTree.Tasks
         public override NodeState Evaluate()
         {
             enemyWeapon.Shoot();
-            Debug.Log("Shooting");
             state = NodeState.SUCCESS;
             return state;
         }

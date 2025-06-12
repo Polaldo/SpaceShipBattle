@@ -1,20 +1,23 @@
 using Assets.Scripts.MissionSystem;
+using UnityEngine;
 
 public class ReachXRank : MissionStep
 {
-    private void Start()
+    protected new void Start()
     {
-        GameEventsManager.instance.rankEvents.onRankUpChange += GalacticalCoinsGained;
+        base.Start();
+        GameEventsManager.instance.rankEvents.onRankUpChange += ChangeRank;
         currentAmount = PlayerManager.Instance.shipData.currentRank;
         UpdateState();
     }
 
-    private void OnDisable()
+    protected new void OnDisable()
     {
-        GameEventsManager.instance.rankEvents.onRankUpChange -= GalacticalCoinsGained;
+        base.OnDisable();
+        GameEventsManager.instance.rankEvents.onRankUpChange -= ChangeRank;
     }
 
-    private void GalacticalCoinsGained(int level)
+    private void ChangeRank(int level)
     {
         currentAmount = level;
         if (currentAmount < requiredAmount)

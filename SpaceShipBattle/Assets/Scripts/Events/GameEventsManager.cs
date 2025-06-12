@@ -9,12 +9,14 @@ public class GameEventsManager : MonoBehaviour
     public RankEvents rankEvents;
     public LevelEvents levelEvents;
     public MissionEvents missionEvents;
+    public PlayerEvents playerEvents;
+    public SceneEvents sceneEvents;
 
     private void Awake()
     {
         if (instance != null)
         {
-            Debug.LogError("Found more than one Game Events Manager in the scene.");
+            Debug.LogWarning("Found more than one Game Events Manager in the scene.");
             Destroy(gameObject);
         }
         instance = this;
@@ -24,5 +26,7 @@ public class GameEventsManager : MonoBehaviour
         rankEvents = new RankEvents();
         levelEvents = new LevelEvents();
         missionEvents = new MissionEvents();
+        playerEvents = new PlayerEvents();
+        sceneEvents = new SceneEvents();
     }
 }

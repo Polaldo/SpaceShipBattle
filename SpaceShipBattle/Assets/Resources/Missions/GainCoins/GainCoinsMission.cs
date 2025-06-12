@@ -2,14 +2,16 @@ using Assets.Scripts.MissionSystem;
 
 public class GainCoinsMission : MissionStep
 {
-    private void Start()
+    protected void Start()
     {
+        base.Start();
         GameEventsManager.instance.economyEvents.onGalacticalCoinsGained += GalacticalCoinsGained;
         UpdateState();
     }
 
-    private void OnDisable()
+    protected void OnDisable()
     {
+        base.OnDisable();
         GameEventsManager.instance.economyEvents.onGalacticalCoinsGained -= GalacticalCoinsGained;
     }
 
@@ -21,7 +23,7 @@ public class GainCoinsMission : MissionStep
             UpdateState();
         }
 
-        if (requiredAmount >= currentAmount)
+        if (currentAmount >= requiredAmount)
         {
             FinishMissionStep();
         }
