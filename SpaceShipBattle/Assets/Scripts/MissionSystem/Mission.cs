@@ -75,13 +75,11 @@ namespace Assets.Scripts.MissionSystem
 
         public int GetRequiredStepState()
         {
-            Debug.Log(missionStepStates[currentStepMissionIndex].required + " mission id" + missionInfo.id);
             return missionStepStates[currentStepMissionIndex].required;
         }
 
         public int GetCurrentStepState()
         {
-            Debug.Log(missionStepStates[currentStepMissionIndex].current + " mission id" + missionInfo.id);
             return missionStepStates[currentStepMissionIndex].current;
         }
 

@@ -45,7 +45,6 @@ namespace Assets.Scripts.MissionSystem
 
         protected void ChangeState(string newState, string newStatus, int require, int current)
         {
-            Debug.Log("Change state");
             GameEventsManager.instance.missionEvents.MissionStepStateChange(
                 missionId,
                 stepIndex,

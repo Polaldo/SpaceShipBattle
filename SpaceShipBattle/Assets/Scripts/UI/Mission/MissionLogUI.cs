@@ -65,26 +65,30 @@ public class MissionLogUI : MonoBehaviour
     private void MissionStateChange(Mission mission)
     {
         // add the button to the scrolling list if not already added
-        MissionLogButton missionLogButton = missionLog.CreateButtonIfNoExists(mission, () =>
+        if (!mission.missionState.Equals(MissionState.REQUIREMENTS_NOT_MET))
         {
-            if (mission.missionState.Equals(MissionState.CAN_FINISH))
-            {
-                //TODO make a panel to appear the rewards of the mission
-                GameEventsManager.instance.missionEvents.FinishMission(mission.missionInfo.id);
-            }
-            missionInfoPanel.SetActive(true);
-            SetMissionLogInfo(mission);
-        });
+            MissionLogButton missionLogButton = missionLog.CreateButtonIfNoExists(mission, () =>
+                    {
+                        if (mission.missionState.Equals(MissionState.CAN_FINISH))
+                        {
+                            //TODO make a panel to appear the rewards of the mission
+                            GameEventsManager.instance.missionEvents.FinishMission(mission.missionInfo.id);
+                        }
+                        missionInfoPanel.SetActive(true);
+                        SetMissionLogInfo(mission);
+                    });
 
-        // initialize the first selected button if not already so that it's
-        // always the top button
-        if (firstButton == null)
-        {
-            firstButton = missionLogButton.button;
+            // initialize the first selected button if not already so that it's
+            // always the top button
+            if (firstButton == null)
+            {
+                firstButton = missionLogButton.button;
+            }
+
+            // set the button color based on quest state
+            //questLogButton.SetState(quest.state);
         }
 
-        // set the button color based on quest state
-        //questLogButton.SetState(quest.state);
     }
 
     public void MissionLogToggleButtonPressed()
@@ -100,7 +104,7 @@ public class MissionLogUI : MonoBehaviour
     }
 
     private void ShowUI()
-    {  
+    {
         contentParent.SetActive(true);
     }
 
@@ -112,13 +116,6 @@ public class MissionLogUI : MonoBehaviour
 
     private void UpdateStateSliderButtonLog(string id, int stepIndex, MissionStepState missionStepState)
     {
-        MissionLogButton missionLogButton = missionLog.idToButtonMap[id];
-        Debug.Log(missionLogButton + "hola");
-        if (missionLogButton != null)
-        {
-            Debug.Log("updateSlider");
-            missionLogButton.changeCurrentSliderValue(missionStepState.current);
-            missionLogButton.slider.value = missionStepState.current;
-        }
+        missionLog.UpdateStateSliderButtonLog(id, missionStepState);
     }
 }

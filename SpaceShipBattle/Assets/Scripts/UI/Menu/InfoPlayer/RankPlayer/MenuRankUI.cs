@@ -21,7 +21,7 @@ namespace Assets.Scripts.UI.Menu.InfoPlayer.RankPlayer
             rankText.text = PlayerManager.Instance.shipData.currentRank.ToString();
             experienceReamingText.text = GameConstants.toRankUpText + " " + PlayerManager.Instance.shipData.experienceToRanklUp.ToString();
             sliderRank.maxValue = PlayerManager.Instance.shipData.experienceToRanklUp;
-            sliderRank.value = PlayerManager.Instance.shipData.currentExperience; 
+            sliderRank.value = PlayerManager.Instance.shipData.currentExperience;
         }
     }
 }

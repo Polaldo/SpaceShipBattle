@@ -23,7 +23,7 @@ namespace Assets.Scripts.MissionSystem
                 Destroy(gameObject); // Destroy duplicates
             }
             missionMap = CreateMissionMap();
-            
+
         }
 
         private void Start()

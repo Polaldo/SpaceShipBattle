@@ -1,6 +1,5 @@
 using Assets.Scripts.MissionSystem;
 using System.Collections.Generic;
-using System.Reflection;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -17,13 +16,11 @@ public class MissionLogList : MonoBehaviour
     private void Start()
     {
         GameEventsManager.instance.missionEvents.onMissionStateChange += changeStateButton;
-        GameEventsManager.instance.missionEvents.onMissionStepStateChange += UpdateStateSliderButtonLog;
     }
 
     private void OnDisable()
     {
         GameEventsManager.instance.missionEvents.onMissionStateChange -= changeStateButton;
-        GameEventsManager.instance.missionEvents.onMissionStepStateChange -= UpdateStateSliderButtonLog;
     }
 
     public MissionLogButton CreateButtonIfNoExists(Mission mission, UnityAction selectAction)
@@ -64,15 +61,12 @@ public class MissionLogList : MonoBehaviour
         }
     }
 
-    private void UpdateStateSliderButtonLog(string id, int stepIndex, MissionStepState missionStepState)
+    public void UpdateStateSliderButtonLog(string id, MissionStepState missionStepState)
     {
         MissionLogButton missionLogButton = idToButtonMap[id];
-        Debug.Log(missionLogButton + "hola");
         if (missionLogButton != null)
         {
-            Debug.Log("updateSlider");
             missionLogButton.changeCurrentSliderValue(missionStepState.current);
-            //missionLogButton.slider.value = missionStepState.current;
         }
     }
 }

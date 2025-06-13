@@ -1,5 +1,4 @@
 using Assets.Scripts.MissionSystem;
-using UnityEngine;
 
 public class ReachXRank : MissionStep
 {

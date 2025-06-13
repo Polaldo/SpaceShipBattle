@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace Assets.Scripts.BehaviourTree.Tasks
 {
     public class TaskShoot : Node
