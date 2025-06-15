@@ -24,8 +24,8 @@ MonoBehaviour:
   primaryWeaponData: {fileID: 11400000, guid: df5e31ee9296b37499556687b767c7c2, type: 2}
   abilityWeaponData: {fileID: 11400000, guid: 1c0684182caf6e54a875c20c9c3ed3ff, type: 2}
   engineData: {fileID: 11400000, guid: e78ecb9a62f1da649a3d8dc0419f63c8, type: 2}
-  currentRank: 5
+  currentRank: 10
   experienceToRanklUp: 100
   currentExperience: 0
-  galacticalCoins: 18000
+  galacticalCoins: 0
   darkShards: 0
