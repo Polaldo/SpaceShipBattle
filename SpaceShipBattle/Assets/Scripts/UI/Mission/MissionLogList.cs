@@ -2,6 +2,7 @@ using Assets.Scripts.MissionSystem;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class MissionLogList : MonoBehaviour
 {
@@ -43,13 +44,13 @@ public class MissionLogList : MonoBehaviour
         MissionLogButton missionLogButton = Instantiate(buttonMissionLogPreFab, contentParent.transform).GetComponent<MissionLogButton>();
 
         missionLogButton.gameObject.name = mission.missionInfo.id + "_button";
-        Debug.Log(mission.missionState == MissionState.FINISHED);
-        missionLogButton.Initialize(mission.missionInfo.displayName, selectAction, mission.GetRequiredStepState(), mission.GetCurrentStepState(), mission.missionState == MissionState.FINISHED);
+        missionLogButton.gameObject.GetComponent<Image>().color = ChangeColorButtonLog(mission.missionState);
+        missionLogButton.Initialize(mission.missionInfo.displayName, selectAction, mission.GetRequiredStepState(), mission.GetCurrentStepState(), mission.missionState != MissionState.FINISHED);
         idToButtonMap[mission.missionInfo.id] = missionLogButton;
         return missionLogButton;
     }
 
-    private void changeStateButton(Mission mission)
+    public void changeStateButton(Mission mission)
     {
         MissionLogButton missionLogButton = idToButtonMap[mission.missionInfo.id];
         if (missionLogButton != null)
@@ -58,6 +59,7 @@ public class MissionLogList : MonoBehaviour
             {
                 missionLogButton.changeButtonState(false); //TODO make apear something that says its been completed
             }
+            missionLogButton.GetComponent<Image>().color = ChangeColorButtonLog(mission.missionState);
         }
     }
 
@@ -67,6 +69,19 @@ public class MissionLogList : MonoBehaviour
         if (missionLogButton != null)
         {
             missionLogButton.changeCurrentSliderValue(missionStepState.current);
+        }
+    }
+
+    public Color ChangeColorButtonLog(MissionState missionState)
+    {
+        switch (missionState)
+        {
+            case MissionState.FINISHED:
+                return Color.grey;
+            case MissionState.CAN_FINISH:
+                return Color.green;
+            default:
+                return Color.white;
         }
     }
 }

@@ -29,6 +29,7 @@ public class MissionLogUI : MonoBehaviour
             MissionStateChange(mission);
         }
         GameEventsManager.instance.missionEvents.onMissionStateChange += MissionStateChange;
+        GameEventsManager.instance.missionEvents.onMissionStateChange += ChangeStateButtonLog;
         GameEventsManager.instance.missionEvents.onMissionStepStateChange += UpdateStateSliderButtonLog;
     }
 
@@ -40,6 +41,7 @@ public class MissionLogUI : MonoBehaviour
     private void OnDisable()
     {
         GameEventsManager.instance.missionEvents.onMissionStateChange -= MissionStateChange;
+        GameEventsManager.instance.missionEvents.onMissionStateChange -= ChangeStateButtonLog;
         GameEventsManager.instance.missionEvents.onMissionStepStateChange -= UpdateStateSliderButtonLog;
         //HideUI();
     }
@@ -72,10 +74,13 @@ public class MissionLogUI : MonoBehaviour
                         if (mission.missionState.Equals(MissionState.CAN_FINISH))
                         {
                             //TODO make a panel to appear the rewards of the mission
-                            GameEventsManager.instance.missionEvents.FinishMission(mission.missionInfo.id);
+                            GameEventsManager.instance.missionEvents.FinishMission(mission.missionInfo.id);                          
                         }
-                        missionInfoPanel.SetActive(true);
-                        SetMissionLogInfo(mission);
+                        else
+                        {
+                            missionInfoPanel.SetActive(true);
+                            SetMissionLogInfo(mission);
+                        }                    
                     });
 
             // initialize the first selected button if not already so that it's
@@ -89,6 +94,11 @@ public class MissionLogUI : MonoBehaviour
             //questLogButton.SetState(quest.state);
         }
 
+    }
+
+    private void ChangeStateButtonLog(Mission mission)
+    {
+        missionLog.changeStateButton(mission);
     }
 
     public void MissionLogToggleButtonPressed()

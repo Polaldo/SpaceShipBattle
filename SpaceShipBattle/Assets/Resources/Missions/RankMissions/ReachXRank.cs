@@ -8,6 +8,7 @@ public class ReachXRank : MissionStep
         GameEventsManager.instance.rankEvents.onRankUpChange += ChangeRank;
         currentAmount = PlayerManager.Instance.shipData.currentRank;
         UpdateState();
+        ChangeRank(PlayerManager.Instance.shipData.currentRank);
     }
 
     protected new void OnDisable()
@@ -19,7 +20,7 @@ public class ReachXRank : MissionStep
     private void ChangeRank(int level)
     {
         currentAmount = level;
-        if (currentAmount < requiredAmount)
+        if (currentAmount <= requiredAmount)
         {
             UpdateState();
         }
@@ -27,6 +28,7 @@ public class ReachXRank : MissionStep
         if (currentAmount >= requiredAmount)
         {
             FinishMissionStep();
+            Destroy(gameObject);
         }
     }
 

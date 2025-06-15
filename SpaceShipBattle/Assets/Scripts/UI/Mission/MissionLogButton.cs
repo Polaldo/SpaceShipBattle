@@ -26,7 +26,7 @@ public class MissionLogButton : MonoBehaviour, ISelectHandler
         this.sliderText = this.slider.GetComponentInChildren<TextMeshProUGUI>();
         this.requiere = requiere;
         this.sliderText.text = current + "/" + requiere;
-        this.button.interactable = !isInteractable;
+        this.button.interactable = isInteractable;
     }
 
     public void OnSelect(BaseEventData eventData)
