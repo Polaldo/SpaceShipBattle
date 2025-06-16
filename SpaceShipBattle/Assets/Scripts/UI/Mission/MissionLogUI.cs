@@ -76,13 +76,13 @@ public class MissionLogUI : MonoBehaviour
                         {
                             missionRewardsUI.ShowRewardsUI(mission);
                             GameEventsManager.instance.missionEvents.FinishMission(mission.missionInfo.id);
-                            
+
                         }
                         else
                         {
                             missionInfoPanel.SetActive(true);
                             SetMissionLogInfo(mission);
-                        }                    
+                        }
                     });
 
             // initialize the first selected button if not already so that it's

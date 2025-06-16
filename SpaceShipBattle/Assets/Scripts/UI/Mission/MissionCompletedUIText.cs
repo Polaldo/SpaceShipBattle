@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using static UnityEngine.Rendering.DebugUI;
 
 public class MissionCompletedUIText : MonoBehaviour
 {
@@ -17,7 +15,7 @@ public class MissionCompletedUIText : MonoBehaviour
     [SerializeField] private int displayTime;
     [SerializeField] private int animationTime;
 
-    private Queue<string> missionCompletedQueue = new Queue<string>();  
+    private Queue<string> missionCompletedQueue = new Queue<string>();
     private Coroutine queueCoroutine;
 
     void Start()
@@ -37,13 +35,13 @@ public class MissionCompletedUIText : MonoBehaviour
             missionCompletedQueue.Enqueue(mission.missionInfo.displayName);
             if (queueCoroutine == null)
             {
-               queueCoroutine = StartCoroutine(ProcessQueue());
+                queueCoroutine = StartCoroutine(ProcessQueue());
             }
         }
     }
     private IEnumerator ProcessQueue()
     {
-        
+
         while (missionCompletedQueue.Count > 0)
         {
             canvasGroup.alpha = 1;
