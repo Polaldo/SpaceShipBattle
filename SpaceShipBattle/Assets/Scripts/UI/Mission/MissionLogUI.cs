@@ -11,6 +11,7 @@ public class MissionLogUI : MonoBehaviour
     [SerializeField] private GameObject contentParent;
     [SerializeField] private GameObject missionInfoPanel;
     [SerializeField] private MissionLogList missionLog;
+    [SerializeField] private MissionRewardsUI missionRewardsUI;
     [SerializeField] private TextMeshProUGUI missionDisplayNameText;
     [SerializeField] private TextMeshProUGUI missionDescriptionText;
     [SerializeField] private TextMeshProUGUI missionStatusText;
@@ -73,8 +74,9 @@ public class MissionLogUI : MonoBehaviour
                     {
                         if (mission.missionState.Equals(MissionState.CAN_FINISH))
                         {
-                            //TODO make a panel to appear the rewards of the mission
-                            GameEventsManager.instance.missionEvents.FinishMission(mission.missionInfo.id);                          
+                            missionRewardsUI.ShowRewardsUI(mission);
+                            GameEventsManager.instance.missionEvents.FinishMission(mission.missionInfo.id);
+                            
                         }
                         else
                         {

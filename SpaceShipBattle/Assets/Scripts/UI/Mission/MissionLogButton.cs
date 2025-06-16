@@ -36,6 +36,7 @@ public class MissionLogButton : MonoBehaviour, ISelectHandler
 
     public void changeButtonState(bool isInteractable)
     {
+        EventSystem.current.SetSelectedGameObject(null);
         button.interactable = isInteractable;
     }
 
