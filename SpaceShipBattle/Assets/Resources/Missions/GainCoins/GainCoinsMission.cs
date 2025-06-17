@@ -17,15 +17,15 @@ public class GainCoinsMission : MissionStep
 
     private void GalacticalCoinsGained(int coins)
     {
-        if (currentAmount < requiredAmount)
-        {
-            currentAmount += coins;
-            UpdateState();
-        }
+        currentAmount += coins;
+        UpdateState();
 
         if (currentAmount >= requiredAmount)
         {
+            currentAmount = requiredAmount;
+            UpdateState();
             FinishMissionStep();
+            Destroy(gameObject);
         }
     }
 

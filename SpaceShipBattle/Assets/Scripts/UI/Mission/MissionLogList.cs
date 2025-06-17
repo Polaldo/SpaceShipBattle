@@ -52,14 +52,17 @@ public class MissionLogList : MonoBehaviour
 
     public void changeStateButton(Mission mission)
     {
-        MissionLogButton missionLogButton = idToButtonMap[mission.missionInfo.id];
-        if (missionLogButton != null)
+        if (idToButtonMap.ContainsKey(mission.missionInfo.id))
         {
-            if (mission.missionState == MissionState.FINISHED)
+            MissionLogButton missionLogButton = idToButtonMap[mission.missionInfo.id];
+            if (missionLogButton != null)
             {
-                missionLogButton.changeButtonState(false); //TODO make apear something that says its been completed
+                if (mission.missionState == MissionState.FINISHED)
+                {
+                    missionLogButton.changeButtonState(false); //TODO make apear something that says its been completed
+                }
+                missionLogButton.GetComponent<Image>().color = ChangeColorButtonLog(mission.missionState);
             }
-            missionLogButton.GetComponent<Image>().color = ChangeColorButtonLog(mission.missionState);
         }
     }
 

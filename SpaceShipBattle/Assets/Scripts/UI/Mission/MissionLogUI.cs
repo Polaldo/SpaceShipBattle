@@ -25,13 +25,14 @@ public class MissionLogUI : MonoBehaviour
     private void Start()
     {
         //TODO: make here to create all buttons mission can take through manager mission
+
+        GameEventsManager.instance.missionEvents.onMissionStateChange += MissionStateChange;
+        GameEventsManager.instance.missionEvents.onMissionStateChange += ChangeStateButtonLog;
+        GameEventsManager.instance.missionEvents.onMissionStepStateChange += UpdateStateSliderButtonLog;
         foreach (Mission mission in MissionManager.Instance.missionMap.Values)
         {
             MissionStateChange(mission);
         }
-        GameEventsManager.instance.missionEvents.onMissionStateChange += MissionStateChange;
-        GameEventsManager.instance.missionEvents.onMissionStateChange += ChangeStateButtonLog;
-        GameEventsManager.instance.missionEvents.onMissionStepStateChange += UpdateStateSliderButtonLog;
     }
 
     private void OnEnable()
@@ -67,7 +68,6 @@ public class MissionLogUI : MonoBehaviour
 
     private void MissionStateChange(Mission mission)
     {
-        // add the button to the scrolling list if not already added
         if (!mission.missionState.Equals(MissionState.REQUIREMENTS_NOT_MET))
         {
             MissionLogButton missionLogButton = missionLog.CreateButtonIfNoExists(mission, () =>

@@ -16,7 +16,6 @@ namespace Assets.Scripts.MissionSystem
             if (Instance == null)
             {
                 Instance = this;
-                DontDestroyOnLoad(gameObject); // Prevent this object from being destroyed on scene load
             }
             else
             {
@@ -91,6 +90,7 @@ namespace Assets.Scripts.MissionSystem
                 if (GetMissionById(preRequirmentMissionInfo.id).missionState != MissionState.FINISHED)
                 {
                     meetsRequirments = false;
+                    break;
                 }
             }
 

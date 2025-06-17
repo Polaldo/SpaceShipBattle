@@ -8,8 +8,19 @@ public class EconomyUI : MonoBehaviour
 
     void Start()
     {
-        galacticalCoinsText.text = PlayerManager.Instance.shipData.galacticalCoins.ToString();
+        GameEventsManager.instance.economyEvents.onGalacticalCoinChange += ChangeGalacticalCoinsText;
+
         //darkShardText.text = PlayerManager.Instance.shipData.darkShards.ToString();
     }
 
+    private void OnDisable()
+    {
+        GameEventsManager.instance.economyEvents.onGalacticalCoinChange -= ChangeGalacticalCoinsText;
+    }
+
+    void ChangeGalacticalCoinsText(int coins)
+    {
+        //galacticalCoinsText.text = PlayerManager.Instance.shipData.galacticalCoins.ToString();
+        galacticalCoinsText.text = coins.ToString();
+    }
 }

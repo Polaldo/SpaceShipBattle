@@ -19,15 +19,12 @@ public class CompleteXTimesLevelMissionStep : MissionStep
 
     private void LevelCompleted(LevelData levelData)
     {
-        if (currentAmount < requiredAmount)
-        {
-            currentAmount++;
-            UpdateState();
-        }
-
+        currentAmount++;
+        UpdateState();
         if (currentAmount >= requiredAmount)
         {
             FinishMissionStep();
+            Destroy(gameObject);
         }
     }
     protected override void UpdateState()

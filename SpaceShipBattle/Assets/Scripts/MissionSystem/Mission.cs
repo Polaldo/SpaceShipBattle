@@ -75,12 +75,12 @@ namespace Assets.Scripts.MissionSystem
 
         public int GetRequiredStepState()
         {
-            return missionStepStates[currentStepMissionIndex].required;
+            return CurrentStepExists() ? missionStepStates[currentStepMissionIndex].required : 0;
         }
 
         public int GetCurrentStepState()
         {
-            return missionStepStates[currentStepMissionIndex].current;
+            return CurrentStepExists() ? missionStepStates[currentStepMissionIndex].current : 0;
         }
 
         public string GetFullStatusText()

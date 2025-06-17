@@ -32,16 +32,16 @@ namespace Assets.Scripts.Gold
         private void Start()
         {
             GameEventsManager.instance.economyEvents.onGalacticalCoinsGained += GoldGained;
-            GameEventsManager.instance.economyEvents.GalacticalCoinsChange(currentGold);
+            GameEventsManager.instance.economyEvents.GalacticalCoinsChange(PlayerManager.Instance.shipData.galacticalCoins);
         }
 
         private void GoldGained(int gold)
         {
             currentGold += gold;
             PlayerManager.Instance.shipData.galacticalCoins += gold;
-            Debug.Log(PlayerManager.Instance.shipData.galacticalCoins + " gold gained");
+            //Debug.Log(PlayerManager.Instance.shipData.galacticalCoins + " gold gained");
             Debug.Log(currentGold + " current gold");
-            GameEventsManager.instance.economyEvents.GalacticalCoinsChange(currentGold);
+            GameEventsManager.instance.economyEvents.GalacticalCoinsChange(PlayerManager.Instance.shipData.galacticalCoins);
         }
     }
 }

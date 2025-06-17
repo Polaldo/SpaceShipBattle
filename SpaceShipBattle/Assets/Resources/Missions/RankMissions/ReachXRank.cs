@@ -20,13 +20,12 @@ public class ReachXRank : MissionStep
     private void ChangeRank(int level)
     {
         currentAmount = level;
-        if (currentAmount <= requiredAmount)
-        {
-            UpdateState();
-        }
+        UpdateState();
 
         if (currentAmount >= requiredAmount)
         {
+            currentAmount = requiredAmount;
+            UpdateState();
             FinishMissionStep();
             Destroy(gameObject);
         }
