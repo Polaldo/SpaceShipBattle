@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -36,12 +37,18 @@ public class MissionLogButton : MonoBehaviour, ISelectHandler
 
     public void changeButtonState(bool isInteractable)
     {
-        button.interactable = isInteractable;
+        StartCoroutine(DisableButtonNextFrame());
     }
 
     public void changeCurrentSliderValue(int currentValue)
     {
         slider.value = currentValue;
         sliderText.text = currentValue + "/" + requiere;
+    }
+
+    private IEnumerator DisableButtonNextFrame()
+    {
+        yield return null;
+        button.interactable = false;
     }
 }
