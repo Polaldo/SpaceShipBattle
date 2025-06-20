@@ -19,7 +19,7 @@ namespace Assets.Scripts.MissionSystem
             this.missionStepStates = new MissionStepState[missionInfo.steps.Length];
             for (int i = 0; i < missionStepStates.Length; i++)
             {
-                missionStepStates[i] = new MissionStepState("", "", missionInfo.requieredAmountToCopleteStep[i], 0);
+                missionStepStates[i] = new MissionStepState("", "", missionInfo.requieredAmountToCompleteStep[i], 0);
             }
         }
 
@@ -39,7 +39,7 @@ namespace Assets.Scripts.MissionSystem
             if (missionStepPrefab != null)
             {
                 MissionStep missionStep = Object.Instantiate<GameObject>(missionStepPrefab, parentTransform).GetComponent<MissionStep>();
-                missionStep.InitializeMissionStep(missionInfo.id, currentStepMissionIndex, missionInfo.requieredAmountToCopleteStep[currentStepMissionIndex]);
+                missionStep.InitializeMissionStep(missionInfo.id, currentStepMissionIndex, missionInfo.requieredAmountToCompleteStep[currentStepMissionIndex]);
             }
         }
 
@@ -75,12 +75,12 @@ namespace Assets.Scripts.MissionSystem
 
         public int GetRequiredStepState()
         {
-            return CurrentStepExists() ? missionStepStates[currentStepMissionIndex].required : 0;
+            return CurrentStepExists() ? missionStepStates[currentStepMissionIndex].required : missionStepStates[0].required;
         }
 
         public int GetCurrentStepState()
         {
-            return CurrentStepExists() ? missionStepStates[currentStepMissionIndex].current : 0;
+            return CurrentStepExists() ? missionStepStates[currentStepMissionIndex].current : missionStepStates[0].current;
         }
 
         public string GetFullStatusText()

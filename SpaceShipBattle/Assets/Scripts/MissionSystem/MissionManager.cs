@@ -127,7 +127,7 @@ namespace Assets.Scripts.MissionSystem
             mission.MoveToNextStep();
 
             if (mission.CurrentStepExists())
-            {
+            {              
                 mission.InstantiateCurrentMissionStep(this.transform);
             }
             else

@@ -15,7 +15,7 @@ MonoBehaviour:
   levelName: World-1 Level-1
   levelNumber: 1
   state: 1
-  highScore: 3600
+  highScore: 0
   scoreForOneStar: 100
   scoreForTwoStar: 500
   scoreForThreeStar: 1000

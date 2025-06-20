@@ -19,6 +19,6 @@ MonoBehaviour:
   missionRequierment: []
   steps:
   - {fileID: 7400307317462110169, guid: 877c7ad8dc2481544ac761bfcc227872, type: 3}
-  requieredAmountToCopleteStep: 10270000
+  requieredAmountToCompleteStep: e8030000
   galacticalCoins: 0
   expPoints: 500

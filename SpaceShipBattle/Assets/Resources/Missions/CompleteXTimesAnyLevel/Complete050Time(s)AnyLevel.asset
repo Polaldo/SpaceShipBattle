@@ -20,6 +20,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4eb4d377be1a2e149a8cc925ec26e978, type: 2}
   steps:
   - {fileID: 3687396669821012610, guid: 25b47cb6a4cff2a459cc5ed6e10770f7, type: 3}
-  requieredAmountToCopleteStep: 32000000
+  requieredAmountToCompleteStep: 32000000
   galacticalCoins: 5000
   expPoints: 500

@@ -17,7 +17,7 @@ namespace Assets.Scripts.ScriptableObjects.MissionInfo
 
         [Header("Steps")]
         public GameObject[] steps;
-        public int[] requieredAmountToCopleteStep;
+        public int[] requieredAmountToCompleteStep;
 
         [Header("Rewards")]
         public int galacticalCoins;
