@@ -1,0 +1,28 @@
+# Archivos de código
+*.cs text diff
+*.shader text
+*.cginc text
+*.compute text
+
+# Archivos de Unity
+*.unity merge=unityyamlmerge eol=lf
+*.prefab merge=unityyamlmerge eol=lf
+*.mat merge=unityyamlmerge eol=lf
+*.asset merge=unityyamlmerge eol=lf
+
+# Normalizar texto
+* text=auto
+
+# Archivos de audio (FMOD .bank) usando Git LFS
+*.bank filter=lfs diff=lfs merge=lfs -text
+
+# Imágenes
+*.png binary
+*.jpg binary
+
+# Archivos binarios
+*.dll binary
+*.exe binary
+
+Assets/Plugins/FMOD/**/*.bundle text eol=lf
+Assets/Plugins/FMOD/**/Info.plist text eol=lf
