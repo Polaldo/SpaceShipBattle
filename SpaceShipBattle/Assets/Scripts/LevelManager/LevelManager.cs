@@ -37,7 +37,7 @@ public class LevelManager : MonoBehaviour
     {
         this.actualLevel = levelData;
         actualScore = 0;
-        SceneLoader.Instance.LoadAsyncScene("World-1", GameObject.Find("MenuUI"));
+        StartCoroutine(SceneLoader.Instance.AsyncLoadScene("World-1", () => AudioManager.instance.InitializeMusic(levelData.musicLevel)));
     }
 
     public void ResetLevel()

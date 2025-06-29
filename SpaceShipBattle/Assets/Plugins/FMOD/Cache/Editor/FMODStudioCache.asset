@@ -1,5 +1,173 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5557695870686646416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../FmodProjects/SpaceShipBattleAudioSystem/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638864870190983740
+  FileSizes:
+  - Name: Desktop
+    Value: 1162
+  Exists: 1
+--- !u!114 &-3781026515864938713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MusicLevels/DangerInSpace#3
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MusicLevels/DangerInSpace#3
+  Guid:
+    Data1: 1632875268
+    Data2: 1156252330
+    Data3: 2023801257
+    Data4: -602277767
+  Banks:
+  - {fileID: -3428061108080166503}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 126007
+--- !u!114 &-3428061108080166503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../FmodProjects/SpaceShipBattleAudioSystem/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638864870191423480
+  FileSizes:
+  - Name: Desktop
+    Value: 10877504
+  Exists: 1
+--- !u!114 &-1732191910118678922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MusicLevels/DangerInSpace#4
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MusicLevels/DangerInSpace#4
+  Guid:
+    Data1: -1429327330
+    Data2: 1319478952
+    Data3: 1677917631
+    Data4: -439420198
+  Banks:
+  - {fileID: -3428061108080166503}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 144006
+--- !u!114 &-1518179879722659326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../FmodProjects/SpaceShipBattleAudioSystem/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638864870190973734
+  FileSizes:
+  - Name: Desktop
+    Value: 1074
+  Exists: 1
+--- !u!114 &-1186996525810663712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI/ButtonClicked
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI/ButtonClicked
+  Guid:
+    Data1: -1933569825
+    Data2: 1263052425
+    Data3: 1428640651
+    Data4: -1735124019
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-901435054880035573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Menus/DarkSpace#5
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Menus/DarkSpace#5
+  Guid:
+    Data1: -1933605827
+    Data2: 1268778230
+    Data3: 1759160963
+    Data4: -1915261372
+  Banks:
+  - {fileID: -3428061108080166503}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 229723
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,11 +180,139 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
+  EditorBanks:
+  - {fileID: -5557695870686646416}
+  - {fileID: -1518179879722659326}
+  - {fileID: -3428061108080166503}
+  - {fileID: 391952526281003981}
+  EditorEvents:
+  - {fileID: -3781026515864938713}
+  - {fileID: -1732191910118678922}
+  - {fileID: 2256114586671929602}
+  - {fileID: -901435054880035573}
+  - {fileID: 4712836618448577480}
+  - {fileID: 6719937438397477449}
+  - {fileID: -1186996525810663712}
   EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
+  MasterBanks:
+  - {fileID: -1518179879722659326}
+  StringsBanks:
+  - {fileID: -5557695870686646416}
   cacheVersion: 131848
-  cacheTime: 0
-  SerializableEventsDict: []
+  cacheTime: 638864870191423480
+  SerializableEventsDict:
+  - key: event:/Music/MusicLevels/DangerInSpace#3
+    index: 0
+  - key: event:/Music/MusicLevels/DangerInSpace#4
+    index: 1
+  - key: event:/Music/MusicLevels/DangerInSpace#2
+    index: 2
+  - key: event:/Music/Menus/DarkSpace#5
+    index: 3
+  - key: event:/Music/Menus/DarkSpace#4
+    index: 4
+  - key: event:/Music/MusicLevels/DangerInSpace#5
+    index: 5
+  - key: event:/SFX/UI/ButtonClicked
+    index: 6
+--- !u!114 &391952526281003981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../FmodProjects/SpaceShipBattleAudioSystem/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638864869632483561
+  FileSizes:
+  - Name: Desktop
+    Value: 10016
+  Exists: 1
+--- !u!114 &2256114586671929602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MusicLevels/DangerInSpace#2
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MusicLevels/DangerInSpace#2
+  Guid:
+    Data1: 48862266
+    Data2: 1291038657
+    Data3: 1163246989
+    Data4: 1922689277
+  Banks:
+  - {fileID: -3428061108080166503}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 111606
+--- !u!114 &4712836618448577480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Menus/DarkSpace#4
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Menus/DarkSpace#4
+  Guid:
+    Data1: 1469386366
+    Data2: 1171025420
+    Data3: -329522526
+    Data4: 131269446
+  Banks:
+  - {fileID: -3428061108080166503}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 189007
+--- !u!114 &6719937438397477449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MusicLevels/DangerInSpace#5
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MusicLevels/DangerInSpace#5
+  Guid:
+    Data1: -66932013
+    Data2: 1297785809
+    Data3: -338453376
+    Data4: 1972852916
+  Banks:
+  - {fileID: -3428061108080166503}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 91206

@@ -8,6 +8,7 @@ public class MenuUIController : MonoBehaviour
     private void Start()
     {
         //StartPannel();
+        AudioManager.instance.InitializeMusic(FMODEvents.instance.mainMenuMusic);
     }
 
     public void StartPannel()

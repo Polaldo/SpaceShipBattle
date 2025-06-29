@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -37,8 +38,9 @@ public class SceneLoader : MonoBehaviour
         StartCoroutine(AsyncLoadScene(sceneName));
     }
 
-    private IEnumerator AsyncLoadScene(string sceneName)
+    public IEnumerator AsyncLoadScene(string sceneName)
     {
+        loadScreen.SetActive(true);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
 
         while (!asyncLoad.isDone)
@@ -48,5 +50,20 @@ public class SceneLoader : MonoBehaviour
             yield return null;
         }
         GameEventsManager.instance.sceneEvents.SceneLoaded(sceneName);
+    }
+
+    public IEnumerator AsyncLoadScene(string sceneName, Action onComplete)
+    {
+        loadScreen.SetActive(true);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+
+        while (!asyncLoad.isDone)
+        {
+            loadingSlider.value = Mathf.Clamp01(asyncLoad.progress / 0.09f);
+            loadScreen.SetActive(false);
+            yield return null;
+        }
+        GameEventsManager.instance.sceneEvents.SceneLoaded(sceneName);
+        onComplete?.Invoke();
     }
 }

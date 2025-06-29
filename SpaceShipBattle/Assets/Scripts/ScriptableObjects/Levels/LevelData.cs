@@ -1,4 +1,6 @@
 using Assets.Scripts.States.Level;
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -33,4 +35,6 @@ public class LevelData : ScriptableObject
     [Header("Requirements")]
     public LevelData[] levelsNeededToBeCompleted;
 
+    [Header("Music")]
+    public EventReference musicLevel;
 }
