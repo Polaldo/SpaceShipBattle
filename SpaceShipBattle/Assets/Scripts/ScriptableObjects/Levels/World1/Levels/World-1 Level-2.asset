@@ -37,6 +37,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 69166166cd97524448b0b19fceef6a98, type: 2}
   - {fileID: 11400000, guid: 0a7aaeab0aa17b34db2bfb2c15e90a82, type: 2}
   coins: 0
-  Experience: 0
+  experience: 0
   levelsNeededToBeCompleted:
   - {fileID: 11400000, guid: 7417c6f69be67a34a844ae92968a8f59, type: 2}
+  musicLevel:
+    Guid:
+      Data1: 1632875268
+      Data2: 1156252330
+      Data3: 2023801257
+      Data4: -602277767
+    Path: event:/Music/MusicLevels/DangerInSpace#3
