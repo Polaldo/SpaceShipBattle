@@ -36,3 +36,10 @@ MonoBehaviour:
   coins: 100
   experience: 50
   levelsNeededToBeCompleted: []
+  musicLevel:
+    Guid:
+      Data1: 48862266
+      Data2: 1291038657
+      Data3: 1163246989
+      Data4: 1922689277
+    Path: event:/Music/MusicLevels/DangerInSpace#2

@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 3472491330544414780}
   - component: {fileID: 4464947834822340556}
   - component: {fileID: 8437855229667094255}
+  - component: {fileID: -313815470450696969}
   m_Layer: 5
   m_Name: MissionLogButton
   m_TagString: Untagged
@@ -517,6 +518,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67476bcdc935e144783880c7c1607920, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-313815470450696969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3905737838127590571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ed8a3c8d0dbab458ff596394f1e5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4213524269219674945
