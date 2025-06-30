@@ -56,18 +56,10 @@ public class LevelManager : MonoBehaviour
             actualLevel.highScore = actualScore;
             actualLevel.numberOfStars = numberStars;
         }
-
-        //if (actualLevel.state.Equals(LevelState.UNLOCKED) && numberStars > 0)
-        //{
-        //    actualLevel.state = LevelState.COMPLETED;
-        //    //TODO give rewards to the player x2 bc first time completed 
-        //    Debug.Log("This " + actualLevel.name + "has been completed " + actualLevel.state);
-        //    UpdateLevelsStates(); //Update all states of the levels that are in the same world
-        //}
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.levelComplete);
+        GameObject.Find("HUD").GetComponent<LevelPanelManagement>().ActiveResultsPanel(numberStars);
         GameEventsManager.instance.levelEvents.LevelCompleted(actualLevel);
         GiveRewards();
-        GameObject.Find("HUD").GetComponent<LevelPanelManagement>().ActiveResultsPanel(numberStars);
-
     }
 
     public int CalculateStars()

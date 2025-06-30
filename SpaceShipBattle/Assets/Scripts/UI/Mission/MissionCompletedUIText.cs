@@ -41,9 +41,9 @@ public class MissionCompletedUIText : MonoBehaviour
     }
     private IEnumerator ProcessQueue()
     {
-
         while (missionCompletedQueue.Count > 0)
         {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.missionComplete);
             canvasGroup.alpha = 1;
             missionNameText.text = missionCompletedQueue.Dequeue();
             completeMissionMessagePanel.SetActive(true);

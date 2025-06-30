@@ -52,6 +52,7 @@ namespace Assets.Scripts.Rank
             // check if we're ready to level up
             while (PlayerManager.Instance.shipData.currentExperience >= PlayerManager.Instance.shipData.experienceToRanklUp)
             {
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.rankUp);
                 PlayerManager.Instance.shipData.currentExperience = 0;
                 PlayerManager.Instance.shipData.experienceToRanklUp = CalculateNextLevelExpirienceToRankUp(PlayerManager.Instance.shipData.currentRank);
                 currentLevel++;
