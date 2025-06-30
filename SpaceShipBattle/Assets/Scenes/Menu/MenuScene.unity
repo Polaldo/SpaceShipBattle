@@ -12339,11 +12339,39 @@ MonoBehaviour:
     Path: event:/SFX/UI/ButtonClicked
   <missionComplete>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 414153452
+      Data2: 1334204835
+      Data3: -774831980
+      Data4: -54802702
+    Path: event:/SFX/Event/MissionComplete/MissionComplete
+  <rankUp>k__BackingField:
+    Guid:
+      Data1: -1648966244
+      Data2: 1138927873
+      Data3: 607759514
+      Data4: -2133053315
+    Path: event:/SFX/Event/RankUp/RankUp
+  <levelComplete>k__BackingField:
+    Guid:
+      Data1: -425492786
+      Data2: 1143536753
+      Data3: 1018922657
+      Data4: -208846039
+    Path: event:/SFX/Event/LevelComplete/LevelComplete
+  <getGalacticalCoin>k__BackingField:
+    Guid:
+      Data1: -592157315
+      Data2: 1229458245
+      Data3: -904460898
+      Data4: 63843174
+    Path: event:/SFX/GetGalacticalCoin/GetGalacticalCoin
+  <getPowerUp>k__BackingField:
+    Guid:
+      Data1: 195418920
+      Data2: 1163832263
+      Data3: 2007702955
+      Data4: 504396278
+    Path: event:/SFX/GetPowerUp/GetPowerUp
 --- !u!1 &1218023361
 GameObject:
   m_ObjectHideFlags: 0

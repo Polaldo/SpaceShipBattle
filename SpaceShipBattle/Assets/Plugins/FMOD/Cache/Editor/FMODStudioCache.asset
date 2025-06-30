@@ -15,11 +15,146 @@ MonoBehaviour:
   Path: ../../../FmodProjects/SpaceShipBattleAudioSystem/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638864870190983740
+  lastModified: 638869114102813167
   FileSizes:
   - Name: Desktop
-    Value: 1162
+    Value: 2030
   Exists: 1
+--- !u!114 &-5523122440901579320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Bullets/BulletLaser#4
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Bullets/BulletLaser#4
+  Guid:
+    Data1: 1288899606
+    Data2: 1255320683
+    Data3: -2103258218
+    Data4: -1322716610
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4974432449918918401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Explosion/Explossion#2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Explosion/Explossion#2
+  Guid:
+    Data1: 2069954079
+    Data2: 1289833326
+    Data3: 800670356
+    Data4: 11204099
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4931191160564734208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/GetGalacticalCoin/GetGalacticalCoin
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/GetGalacticalCoin/GetGalacticalCoin
+  Guid:
+    Data1: -592157315
+    Data2: 1229458245
+    Data3: -904460898
+    Data4: 63843174
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4819660659087702043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/GetPowerUp/GetPowerUp
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/GetPowerUp/GetPowerUp
+  Guid:
+    Data1: 195418920
+    Data2: 1163832263
+    Data3: 2007702955
+    Data4: 504396278
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4256313243335875214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Bullets/BulletLaser#3
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Bullets/BulletLaser#3
+  Guid:
+    Data1: 650026005
+    Data2: 1129134728
+    Data3: -1280312932
+    Data4: -1651827385
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3781026515864938713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,6 +182,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 126007
+--- !u!114 &-3448310612771812700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Impact/Impact#1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Impact/Impact#1
+  Guid:
+    Data1: 1502345353
+    Data2: 1208760905
+    Data3: -1862205519
+    Data4: 1638226614
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3428061108080166503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +229,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 10877504
   Exists: 1
+--- !u!114 &-3303310924021508655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Bullets/BulletLaser#6
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Bullets/BulletLaser#6
+  Guid:
+    Data1: 1350957877
+    Data2: 1324251292
+    Data3: 818309018
+    Data4: 474721600
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1732191910118678922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,6 +283,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 144006
+--- !u!114 &-1530067454604441025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Bullets/BulletLaser#1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Bullets/BulletLaser#1
+  Guid:
+    Data1: 896723731
+    Data2: 1218582035
+    Data3: -1009396576
+    Data4: 1216674731
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1518179879722659326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,11 +325,38 @@ MonoBehaviour:
   Path: ../../../FmodProjects/SpaceShipBattleAudioSystem/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638864870190973734
+  lastModified: 638869114102803178
   FileSizes:
   - Name: Desktop
     Value: 1074
   Exists: 1
+--- !u!114 &-1512905106202224468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Bullets/BulletLaser#5
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Bullets/BulletLaser#5
+  Guid:
+    Data1: 1069419931
+    Data2: 1150596722
+    Data3: -1782141553
+    Data4: 1878682170
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1186996525810663712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,13 +436,30 @@ MonoBehaviour:
   - {fileID: 4712836618448577480}
   - {fileID: 6719937438397477449}
   - {fileID: -1186996525810663712}
+  - {fileID: -1530067454604441025}
+  - {fileID: -4256313243335875214}
+  - {fileID: -5523122440901579320}
+  - {fileID: -4974432449918918401}
+  - {fileID: 2768944240979820828}
+  - {fileID: -4819660659087702043}
+  - {fileID: 5649893484648115777}
+  - {fileID: -3303310924021508655}
+  - {fileID: -4931191160564734208}
+  - {fileID: -3448310612771812700}
+  - {fileID: -1512905106202224468}
+  - {fileID: 6804728242552725811}
+  - {fileID: 54775585512452211}
+  - {fileID: 6720207326854249997}
+  - {fileID: 4551125748016384175}
+  - {fileID: 1671712480406686808}
+  - {fileID: 3606083746023860671}
   EditorParameters: []
   MasterBanks:
   - {fileID: -1518179879722659326}
   StringsBanks:
   - {fileID: -5557695870686646416}
   cacheVersion: 131848
-  cacheTime: 638864870191423480
+  cacheTime: 638869114104492744
   SerializableEventsDict:
   - key: event:/Music/MusicLevels/DangerInSpace#3
     index: 0
@@ -215,6 +475,67 @@ MonoBehaviour:
     index: 5
   - key: event:/SFX/UI/ButtonClicked
     index: 6
+  - key: event:/SFX/Bullets/BulletLaser#1
+    index: 7
+  - key: event:/SFX/Bullets/BulletLaser#3
+    index: 8
+  - key: event:/SFX/Bullets/BulletLaser#4
+    index: 9
+  - key: event:/SFX/Explosion/Explossion#2
+    index: 10
+  - key: event:/SFX/Abilities/MissileLaunch
+    index: 11
+  - key: event:/SFX/GetPowerUp/GetPowerUp
+    index: 12
+  - key: event:/SFX/Bullets/BulletLaser#2
+    index: 13
+  - key: event:/SFX/Bullets/BulletLaser#6
+    index: 14
+  - key: event:/SFX/GetGalacticalCoin/GetGalacticalCoin
+    index: 15
+  - key: event:/SFX/Impact/Impact#1
+    index: 16
+  - key: event:/SFX/Bullets/BulletLaser#5
+    index: 17
+  - key: event:/SFX/Event/RankUp/RankUp
+    index: 18
+  - key: event:/SFX/BossEnter/BossEnters
+    index: 19
+  - key: event:/SFX/Explosion/Explossion#1
+    index: 20
+  - key: event:/SFX/Event/LevelComplete/LevelComplete
+    index: 21
+  - key: event:/SFX/Event/MissionComplete/MissionComplete
+    index: 22
+  - key: event:/SFX/Bullets/BulletLaserGataling#1
+    index: 23
+--- !u!114 &54775585512452211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/BossEnter/BossEnters
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/BossEnter/BossEnters
+  Guid:
+    Data1: 1565396384
+    Data2: 1284896205
+    Data3: -1439833196
+    Data4: -1360576107
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &391952526281003981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,11 +551,38 @@ MonoBehaviour:
   Path: ../../../FmodProjects/SpaceShipBattleAudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638864869632483561
+  lastModified: 638869114104492744
   FileSizes:
   - Name: Desktop
-    Value: 10016
+    Value: 380704
   Exists: 1
+--- !u!114 &1671712480406686808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Event/MissionComplete/MissionComplete
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Event/MissionComplete/MissionComplete
+  Guid:
+    Data1: 414153452
+    Data2: 1334204835
+    Data3: -774831980
+    Data4: -54802702
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2256114586671929602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,6 +610,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 111606
+--- !u!114 &2768944240979820828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Abilities/MissileLaunch
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Abilities/MissileLaunch
+  Guid:
+    Data1: -1490114779
+    Data2: 1082890056
+    Data3: 1446307773
+    Data4: 2049063359
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3606083746023860671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Bullets/BulletLaserGataling#1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Bullets/BulletLaserGataling#1
+  Guid:
+    Data1: 943124716
+    Data2: 1153435143
+    Data3: 966380984
+    Data4: -487468728
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4551125748016384175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Event/LevelComplete/LevelComplete
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Event/LevelComplete/LevelComplete
+  Guid:
+    Data1: -425492786
+    Data2: 1143536753
+    Data3: 1018922657
+    Data4: -208846039
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4712836618448577480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,6 +718,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 189007
+--- !u!114 &5649893484648115777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Bullets/BulletLaser#2
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Bullets/BulletLaser#2
+  Guid:
+    Data1: 1109040431
+    Data2: 1304794888
+    Data3: 1664714912
+    Data4: 753027392
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6719937438397477449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,3 +772,57 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 91206
+--- !u!114 &6720207326854249997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Explosion/Explossion#1
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Explosion/Explossion#1
+  Guid:
+    Data1: 2065965480
+    Data2: 1109713534
+    Data3: -979645566
+    Data4: -2104332099
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6804728242552725811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Event/RankUp/RankUp
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Event/RankUp/RankUp
+  Guid:
+    Data1: -1648966244
+    Data2: 1138927873
+    Data3: 607759514
+    Data4: -2133053315
+  Banks:
+  - {fileID: 391952526281003981}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

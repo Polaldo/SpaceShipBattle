@@ -29,6 +29,18 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Button click")]
     [field: SerializeField] public EventReference buttonClicked { get; private set; }
 
-    [field: Header("Mission Complete")]
+    [field: Header("Mission complete")]
     [field: SerializeField] public EventReference missionComplete { get; private set; }
+
+    [field: Header("Rank up")]
+    [field: SerializeField] public EventReference rankUp { get; private set; }
+
+    [field: Header("Level complete")]
+    [field: SerializeField] public EventReference levelComplete { get; private set; }
+
+    [field: Header("Get galactical coin")]
+    [field: SerializeField] public EventReference getGalacticalCoin { get; private set; }
+
+    [field: Header("Get power up")]
+    [field: SerializeField] public EventReference getPowerUp { get; private set; }
 }
