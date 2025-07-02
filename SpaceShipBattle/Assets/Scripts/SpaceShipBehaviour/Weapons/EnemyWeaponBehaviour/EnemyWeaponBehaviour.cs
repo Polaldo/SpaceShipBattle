@@ -15,6 +15,7 @@ public class EnemyWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
             if (tempBullet != null)
             {
                 SetBulletData(tempBullet, Vector2.down, this.transform.position);
+                AudioManager.instance.PlayOneShot(weaponData.sfxBullet);
             }
             time = 0;
         }
@@ -37,6 +38,7 @@ public class EnemyWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
         behaviour.InitialPosition = transform.position;
         behaviour.BulletDistance = weaponData.bulletDistance;
         behaviour.damage = weaponData.damage;
+        behaviour.impactSound = weaponData.sfxImpact;
 
         tempBullet.SetActive(true);
     }

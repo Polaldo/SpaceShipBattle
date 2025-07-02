@@ -37,6 +37,7 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
             tempBullet.SetActive(true);
 
             SetBulletData(tempBullet);
+            AudioManager.instance.PlayOneShot(weaponData.sfxBullet);
         }
     }
 
@@ -55,5 +56,6 @@ public class PrimaryWeaponBehaviour : WeaponBehaviour<PrimaryWeaponData>
         behaviour.InitialPosition = transform.position;
         behaviour.BulletDistance = weaponData.bulletDistance;
         behaviour.damage = weaponData.damage;
+        behaviour.impactSound = weaponData.sfxImpact;
     }
 }

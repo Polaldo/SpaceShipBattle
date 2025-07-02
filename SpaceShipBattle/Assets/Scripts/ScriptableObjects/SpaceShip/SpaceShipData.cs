@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 
 public class SpaceShipData : ScriptableObject
@@ -12,4 +13,6 @@ public class SpaceShipData : ScriptableObject
     public int defense;
     public float speed;
 
+    [Header("Death sound")]
+    public EventReference sfxDeathSound;
 }

@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 
 public abstract class BulletBehaviour : MonoBehaviour, IBullet
@@ -6,6 +7,7 @@ public abstract class BulletBehaviour : MonoBehaviour, IBullet
     private Vector3 initialPosition;
     protected float currentDistance;
     public string tagNotToCollide;
+    public EventReference impactSound;
 
     protected Camera _camera;
 

@@ -14,6 +14,7 @@ public class HakaishaWeaponBehaviour : EnemyWeaponBehaviour
                 if (tempBullet != null)
                 {
                     SetBulletData(tempBullet, PlayerManager.Instance.GetPlayer().transform.position, spawnPoints[i].position);
+                    AudioManager.instance.PlayOneShot(weaponData.sfxBullet);
                 }
             }
             time = 0;
