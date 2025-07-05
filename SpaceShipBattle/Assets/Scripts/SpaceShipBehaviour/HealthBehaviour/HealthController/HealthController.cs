@@ -19,6 +19,7 @@ public abstract class HealthController<T> : MonoBehaviour, IDamageble where T : 
 
     protected virtual void Kill()
     {
+        AudioManager.instance.PlayOneShot(spaceShipData.sfxDeathSound);
         animator.SetTrigger("Death");
     }
 

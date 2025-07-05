@@ -23,6 +23,7 @@ public class PrimaryBulletBehaviour : BulletBehaviour
         IDamageble damageble = collision.gameObject.GetComponent<IDamageble>();
         if (damageble != null && !collision.gameObject.CompareTag(tagNotToCollide))
         {
+            AudioManager.instance.PlayOneShot(impactSound);
             damageble.ApplyDamage(damage);
             gameObject.SetActive(false);
         }
