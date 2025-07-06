@@ -24,6 +24,9 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Main menu music")]
     [field: SerializeField] public EventReference mainMenuMusic { get; private set; }
 
+    [field: Header("Boss music")]
+    [field: SerializeField] public EventReference bossMusic { get; private set; }
+
     [field: Header("SFX sounds")]
 
     [field: Header("Button click")]
@@ -43,4 +46,7 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("Get power up")]
     [field: SerializeField] public EventReference getPowerUp { get; private set; }
+
+    [field: Header("Boss enters")]
+    [field: SerializeField] public EventReference bossEnters { get; private set; }
 }

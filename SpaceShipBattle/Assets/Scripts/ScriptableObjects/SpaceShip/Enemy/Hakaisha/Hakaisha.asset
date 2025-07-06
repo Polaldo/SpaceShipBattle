@@ -18,4 +18,11 @@ MonoBehaviour:
   damage: 10
   defense: 10
   speed: 1
+  sfxDeathSound:
+    Guid:
+      Data1: 2069954079
+      Data2: 1289833326
+      Data3: 800670356
+      Data4: 11204099
+    Path: event:/SFX/Explosion/Explossion#2
   points: 500

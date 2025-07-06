@@ -17,6 +17,20 @@ MonoBehaviour:
   damage: 10
   defense: 0
   speed: 0
+  sfxBullet:
+    Guid:
+      Data1: 1288899606
+      Data2: 1255320683
+      Data3: -2103258218
+      Data4: -1322716610
+    Path: event:/SFX/Bullets/BulletLaser#4
+  sfxImpact:
+    Guid:
+      Data1: 1502345353
+      Data2: 1208760905
+      Data3: -1862205519
+      Data4: 1638226614
+    Path: event:/SFX/Impact/Impact#1
   bulletDistance: 10
   bulletSpeed: 5
   bullet: {fileID: 6172858993866792337, guid: 9878f8ddea87b6b4dae768fa7e05d383, type: 3}

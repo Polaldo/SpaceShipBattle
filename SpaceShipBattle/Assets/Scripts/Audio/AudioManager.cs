@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
     private Bus musicBus;
     private Bus sfxBus;
 
-    private List<EventInstance> eventInstances;
+    private Dictionary<EventReference, EventInstance> eventInstances;
 
     private EventInstance musicEventInstance;
 
@@ -37,7 +37,7 @@ public class AudioManager : MonoBehaviour
             instance = this;
         }
 
-        eventInstances = new List<EventInstance>();
+        eventInstances = new Dictionary<EventReference, EventInstance>();
 
         masterBus = RuntimeManager.GetBus("bus:/");
         musicBus = RuntimeManager.GetBus("bus:/Music");
@@ -54,7 +54,7 @@ public class AudioManager : MonoBehaviour
     public EventInstance CreateInstance(EventReference eventReference)
     {
         EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
-        eventInstances.Add(eventInstance);
+        eventInstances.Add(eventReference, eventInstance);
         return eventInstance;
     }
 
@@ -65,13 +65,30 @@ public class AudioManager : MonoBehaviour
 
     public void PlayOneShot(EventReference sound)
     {
+        CreateInstance(sound);
         RuntimeManager.PlayOneShot(sound);
+    }
+
+    public int GetLenght(EventReference eventReference)
+    {
+        if (!eventInstances.ContainsKey(eventReference))
+        {
+            EventInstance instance = CreateInstance(eventReference);
+            eventInstances.Add(eventReference, instance);
+        }
+
+        EventInstance eventInstance = eventInstances[eventReference];
+        eventInstance.getDescription(out EventDescription eventDescription);
+
+        eventDescription.getLength(out int lenght);
+
+        return lenght;
     }
 
     private void CleanUp()
     {
         // stop and release any created instances
-        foreach (EventInstance eventInstance in eventInstances)
+        foreach (EventInstance eventInstance in eventInstances.Values)
         {
             eventInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             eventInstance.release();

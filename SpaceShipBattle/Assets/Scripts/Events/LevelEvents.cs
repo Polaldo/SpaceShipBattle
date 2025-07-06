@@ -12,5 +12,14 @@ namespace Assets.Scripts.Events
                 onLevelCompleted(levelCompletedData);
             }
         }
+
+        public event Action onBossEnters;
+        public void BossEnters()
+        {
+            if (onBossEnters != null)
+            {
+                onBossEnters();
+            }
+        }
     }
 }

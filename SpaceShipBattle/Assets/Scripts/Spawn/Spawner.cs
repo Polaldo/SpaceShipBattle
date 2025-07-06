@@ -184,6 +184,10 @@ public class Spawner : MonoBehaviour
 
     GameObject SpwanBoss()
     {
+        GameEventsManager.instance.levelEvents.BossEnters();
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.bossEnters);
+        AudioManager.instance.InitializeMusic(FMODEvents.instance.bossMusic);
+
         float screenWidth = GetScreenWidth() / 2;
         Vector2 spawnPos = new Vector2(screenWidth, mainCamera.transform.position.y + mainCamera.orthographicSize);
         return Instantiate(levelData.bossEnemy, spawnPos, Quaternion.identity);

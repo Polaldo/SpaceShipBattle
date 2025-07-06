@@ -26,11 +26,11 @@ MonoBehaviour:
     Path: event:/SFX/Bullets/BulletLaser#1
   sfxImpact:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1502345353
+      Data2: 1208760905
+      Data3: -1862205519
+      Data4: 1638226614
+    Path: event:/SFX/Impact/Impact#1
   bulletDistance: 10
   bulletSpeed: 10
   bullet: {fileID: 5825352200676521032, guid: b4a3132721a764b42b8a14784e8f1275, type: 3}

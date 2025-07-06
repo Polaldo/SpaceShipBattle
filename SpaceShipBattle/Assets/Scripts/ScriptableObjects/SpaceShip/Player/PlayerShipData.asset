@@ -18,6 +18,13 @@ MonoBehaviour:
   damage: 151
   defense: 18
   speed: 8
+  sfxDeathSound:
+    Guid:
+      Data1: 2065965480
+      Data2: 1109713534
+      Data3: -979645566
+      Data4: -2104332099
+    Path: event:/SFX/Explosion/Explossion#1
   avatar: {fileID: 0}
   baseShip: {fileID: 21300000, guid: 6739996213f45c340b8a457e85f2509e, type: 3}
   baseShipData: {fileID: 11400000, guid: 0d2d4d78109143c4595d6f25c31da39c, type: 2}
