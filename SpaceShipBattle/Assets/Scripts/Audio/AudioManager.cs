@@ -54,7 +54,7 @@ public class AudioManager : MonoBehaviour
     public EventInstance CreateInstance(EventReference eventReference)
     {
         EventInstance eventInstance = RuntimeManager.CreateInstance(eventReference);
-        eventInstances.Add(eventReference, eventInstance);
+        eventInstances.TryAdd(eventReference, eventInstance);
         return eventInstance;
     }
 

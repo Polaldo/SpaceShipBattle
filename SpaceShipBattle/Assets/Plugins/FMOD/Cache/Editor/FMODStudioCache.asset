@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../../../FmodProjects/SpaceShipBattleAudioSystem/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638869114102813167
+  lastModified: 638875226945355469
   FileSizes:
   - Name: Desktop
-    Value: 2030
+    Value: 2100
   Exists: 1
 --- !u!114 &-5523122440901579320
 MonoBehaviour:
@@ -224,7 +224,7 @@ MonoBehaviour:
   Path: ../../../FmodProjects/SpaceShipBattleAudioSystem/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638864870191423480
+  lastModified: 638875226945756215
   FileSizes:
   - Name: Desktop
     Value: 10877504
@@ -325,10 +325,10 @@ MonoBehaviour:
   Path: ../../../FmodProjects/SpaceShipBattleAudioSystem/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638869114102803178
+  lastModified: 638875226945345476
   FileSizes:
   - Name: Desktop
-    Value: 1074
+    Value: 1378
   Exists: 1
 --- !u!114 &-1512905106202224468
 MonoBehaviour:
@@ -459,7 +459,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -5557695870686646416}
   cacheVersion: 131848
-  cacheTime: 638869114104492744
+  cacheTime: 638875226945982074
   SerializableEventsDict:
   - key: event:/Music/MusicLevels/DangerInSpace#3
     index: 0
@@ -551,7 +551,7 @@ MonoBehaviour:
   Path: ../../../FmodProjects/SpaceShipBattleAudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638869114104492744
+  lastModified: 638875226945982074
   FileSizes:
   - Name: Desktop
     Value: 380704
