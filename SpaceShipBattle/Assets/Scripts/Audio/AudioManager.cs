@@ -85,6 +85,21 @@ public class AudioManager : MonoBehaviour
         return lenght;
     }
 
+    public void SetMasterVolume(float volume)
+    {
+        masterBus.setVolume(volume); // 0.0 = mute, 1.0 = full volume
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        musicBus.setVolume(volume);
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        sfxBus.setVolume(volume);
+    }
+
     private void CleanUp()
     {
         // stop and release any created instances
