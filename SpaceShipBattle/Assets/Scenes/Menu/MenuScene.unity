@@ -13746,11 +13746,11 @@ MonoBehaviour:
     Path: event:/Music/Menus/DarkSpace#4
   <bossMusic>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -66932013
+      Data2: 1297785809
+      Data3: -338453376
+      Data4: 1972852916
+    Path: event:/Music/MusicLevels/DangerInSpace#5
   <buttonClicked>k__BackingField:
     Guid:
       Data1: -1933569825
@@ -13795,11 +13795,11 @@ MonoBehaviour:
     Path: event:/SFX/GetPowerUp/GetPowerUp
   <bossEnters>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1565396384
+      Data2: 1284896205
+      Data3: -1439833196
+      Data4: -1360576107
+    Path: event:/SFX/BossEnter/BossEnters
 --- !u!1 &1218023361
 GameObject:
   m_ObjectHideFlags: 0

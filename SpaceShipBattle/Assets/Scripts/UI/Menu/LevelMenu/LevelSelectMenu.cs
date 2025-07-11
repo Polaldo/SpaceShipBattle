@@ -26,7 +26,7 @@ public class LevelSelectMenu : MonoBehaviour
             if (worldData.levelsList[i] != null)
             {
                 GameObject buttonSelectLevelGO = Instantiate(levelButton);
-                buttonSelectLevelGO.transform.SetParent(levelButton.transform.parent, false);
+                buttonSelectLevelGO.transform.SetParent(this.transform, false);
                 buttonSelectLevelGO.transform.localScale = levelButton.transform.localScale;
                 SetDataButton(buttonSelectLevelGO, i, worldData.levelsList[i]);
                 buttonSelectLevelGO.SetActive(true);
@@ -70,9 +70,9 @@ public class LevelSelectMenu : MonoBehaviour
 
     void DeleteLevelButtonList()
     {
-        for (int i = 1; i < levelButton.transform.parent.childCount; i++)
+        for (int i = 1; i < this.transform.childCount; i++)
         {
-            Destroy(levelButton.transform.parent.GetChild(i).gameObject);
+            Destroy(this.transform.GetChild(i).gameObject);
         }
     }
     private void OnDisable()

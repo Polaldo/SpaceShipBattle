@@ -6,7 +6,7 @@ public class BossAlertUI : MonoBehaviour
 {
     [SerializeField] private GameObject bossAlertPanel;
 
-    void Start()
+    void OnEnable()
     {
         GameEventsManager.instance.levelEvents.onBossEnters += StartBossAlert;
     }
@@ -18,15 +18,9 @@ public class BossAlertUI : MonoBehaviour
 
     private IEnumerator ActivateBossAlert()
     {
-        int lenghtSoundBooss = AudioManager.instance.GetLenght(FMODEvents.instance.bossEnters);
-        int time = 0;
-        while (time < lenghtSoundBooss)
-        {
-            bossAlertPanel.SetActive(true);
-            time++;
-        }
+        bossAlertPanel.SetActive(true);
+        yield return new WaitForSeconds(5);//hardcoded for now dc there is a problem with the method getlength 
         bossAlertPanel.SetActive(false);
-        return null;
     }
 
     private void OnDisable()

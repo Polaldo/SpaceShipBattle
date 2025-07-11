@@ -69,7 +69,7 @@ public class AudioManager : MonoBehaviour
         RuntimeManager.PlayOneShot(sound);
     }
 
-    public int GetLenght(EventReference eventReference)
+    public int GetLength(EventReference eventReference)
     {
         if (!eventInstances.ContainsKey(eventReference))
         {
@@ -78,11 +78,28 @@ public class AudioManager : MonoBehaviour
         }
 
         EventInstance eventInstance = eventInstances[eventReference];
-        eventInstance.getDescription(out EventDescription eventDescription);
 
-        eventDescription.getLength(out int lenght);
+        if (eventInstance.isValid())
+        {
+            eventInstance.getDescription(out EventDescription eventDescription);
 
-        return lenght;
+            if (eventDescription.isValid())
+            {
+                eventDescription.getLength(out int length);
+                Debug.Log($"[FMOD] Event '{eventReference.Path}' length: {length} ms");
+                return length;
+            }
+            else
+            {
+                Debug.LogWarning($"[FMOD] EventDescription not valid for: {eventReference.Path}");
+            }
+        }
+        else
+        {
+            Debug.LogWarning($"[FMOD] EventInstance not valid for: {eventReference.Path}");
+        }
+        
+        return 0;
     }
 
     public void SetMasterVolume(float volume)

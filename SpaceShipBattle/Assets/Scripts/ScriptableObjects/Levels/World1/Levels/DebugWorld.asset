@@ -24,5 +24,12 @@ MonoBehaviour:
   bossEnemy: {fileID: 2227902102372291455, guid: c6f0655b90209434fb35e9d6139da86a, type: 3}
   enemies: []
   coins: 0
-  Experience: 0
+  experience: 0
   levelsNeededToBeCompleted: []
+  musicLevel:
+    Guid:
+      Data1: 1632875268
+      Data2: 1156252330
+      Data3: 2023801257
+      Data4: -602277767
+    Path: event:/Music/MusicLevels/DangerInSpace#3
