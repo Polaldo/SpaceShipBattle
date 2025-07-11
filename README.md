@@ -18,7 +18,7 @@ Behavior Tree AI – Enemy behavior driven by a custom BT system for flexible de
 
 Parallax Scrolling – Multi-layer background system for depth and motion.
 
-FMOD Integration – Complete audio system driven by FMOD Studio, enabling reactive sound design and dynamic music.
+FMOD Integration – Complete audio system driven by FMOD Studio, enabling reactive sound design and dynamic music. [🎧 Click here to go to the repo's FMod 🎧](https://github.com/Polaldo/SpaceShipBattleAudioSystemFMod)
 
 ### 🧪 Tech Stack
 Unity (URP) – Core engine used for rendering and 2D gameplay.
