@@ -1,8 +1,7 @@
-using System.Collections;
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections.Generic;
 using UnityEngine;
-using FMODUnity;
-using FMOD.Studio;
 
 public class AudioManager : MonoBehaviour
 {
@@ -98,7 +97,7 @@ public class AudioManager : MonoBehaviour
         {
             Debug.LogWarning($"[FMOD] EventInstance not valid for: {eventReference.Path}");
         }
-        
+
         return 0;
     }
 
