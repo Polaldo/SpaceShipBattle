@@ -85,17 +85,17 @@ public class AudioManager : MonoBehaviour
             if (eventDescription.isValid())
             {
                 eventDescription.getLength(out int length);
-                Debug.Log($"[FMOD] Event '{eventReference.Path}' length: {length} ms");
+                Debug.Log($"[FMOD] length: {length} ms");
                 return length;
             }
             else
             {
-                Debug.LogWarning($"[FMOD] EventDescription not valid for: {eventReference.Path}");
+                Debug.LogWarning($"[FMOD] EventDescription not valid");
             }
         }
         else
         {
-            Debug.LogWarning($"[FMOD] EventInstance not valid for: {eventReference.Path}");
+            Debug.LogWarning($"[FMOD] EventInstance not valid");
         }
 
         return 0;
