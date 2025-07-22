@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerShipData", menuName = "ScriptableObjects/SpaceShip/PlayerShipData", order = 1)]
@@ -22,4 +23,7 @@ public class PlayerShipData : SpaceShipData
     [Header("Economy")]
     public int galacticalCoins;
     public int darkShards;
+
+    [Header("Inventory")]
+    public List<ComponentShipData> inventory;
 }

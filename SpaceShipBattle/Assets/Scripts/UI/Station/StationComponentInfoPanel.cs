@@ -35,4 +35,9 @@ public class StationComponentInfoPanel : MonoBehaviour
     {
         componentInfoPanel.gameObject.SetActive(false);
     }
+
+    private void OpenListInventory()
+    {
+        
+    }
 }
