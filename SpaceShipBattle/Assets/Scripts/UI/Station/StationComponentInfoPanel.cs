@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class StationComponentInfoPanel : MonoBehaviour
 {
     [SerializeField] private GameObject componentInfoPanel;
+    [SerializeField] private InventoryListUI inventoryListUI;
 
     [Header("Info components UI")]
     [SerializeField] private Image sprite;
@@ -15,10 +16,14 @@ public class StationComponentInfoPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI attack;
     [SerializeField] private TextMeshProUGUI defense;
     [SerializeField] private TextMeshProUGUI speed;
+    [SerializeField] private Button changeEquipment;
+    [SerializeField] private Button close;
 
     public void OpenComponentInfoPanel(ComponentShipData componentShipData)
     {
         SetComponentInfo(componentShipData);
+        changeEquipment.onClick.AddListener(() => OpenListInventory(componentShipData));
+        close.onClick.AddListener(CloseComponent);
         componentInfoPanel.gameObject.SetActive(true);
     }
 
@@ -36,8 +41,8 @@ public class StationComponentInfoPanel : MonoBehaviour
         componentInfoPanel.gameObject.SetActive(false);
     }
 
-    private void OpenListInventory()
+    private void OpenListInventory(ComponentShipData componentShipData)
     {
-        
+        inventoryListUI.OpenInventoryWithFilter(componentShipData);
     }
 }
