@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 423acb30692ffab4099371f05cf01aa1, type: 3}
   m_Name: DefaultBaseShip
   m_EditorClassIdentifier: 
+  <id>k__BackingField: DefaultBaseShip
   sprite: {fileID: 21300000, guid: 6739996213f45c340b8a457e85f2509e, type: 3}
   health: 100
   damage: 1

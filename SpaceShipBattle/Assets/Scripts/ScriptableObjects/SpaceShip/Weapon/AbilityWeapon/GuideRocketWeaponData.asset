@@ -12,11 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca4c5facf05433f48b6954daa0e90884, type: 3}
   m_Name: GuideRocketWeaponData
   m_EditorClassIdentifier: 
+  <id>k__BackingField: GuideRocketWeaponData
   sprite: {fileID: 1673167152, guid: bdbd27950c3b2be478f12ed4c10be9c0, type: 3}
   health: 10
   damage: 40
   defense: 1
   speed: 0
+  sfxBullet:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  sfxImpact:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   bulletDistance: 7
   bulletSpeed: 4
   bullet: {fileID: 5825352200676521032, guid: bc9324a6af0b7844ca8f284271efe7d0, type: 3}

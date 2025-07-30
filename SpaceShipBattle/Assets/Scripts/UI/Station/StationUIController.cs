@@ -17,24 +17,14 @@ public class StationUIController : MonoBehaviour
     private void Start()
     {
         playerShipData = PlayerManager.Instance.shipData;
-        SetSpritesUI();
-        SetListenersToButtons();
+        SetStationComponent();
     }
 
-    private void SetSpritesUI()
+    private void SetStationComponent()
     {
-        //Hardcoded bc we want the child component and not the component of itself
-        baseShip.GetComponentsInChildren<Image>()[1].sprite = playerShipData.baseShipData.sprite;
-        weapon.GetComponentsInChildren<Image>()[1].sprite = playerShipData.primaryWeaponData.sprite;
-        abilityWeapon.GetComponentsInChildren<Image>()[1].sprite = playerShipData.abilityWeaponData.sprite;
-        engine.GetComponentsInChildren<Image>()[1].sprite = playerShipData.engineData.sprite;
-    }
-
-    private void SetListenersToButtons()
-    {
-        baseShip.GetComponent<Button>().onClick.AddListener(() => stationInfoPanel.OpenComponentInfoPanel(playerShipData.baseShipData));
-        weapon.GetComponent<Button>().onClick.AddListener(() => stationInfoPanel.OpenComponentInfoPanel(playerShipData.primaryWeaponData));
-        abilityWeapon.GetComponent<Button>().onClick.AddListener(() => stationInfoPanel.OpenComponentInfoPanel(playerShipData.abilityWeaponData));
-        engine.GetComponent<Button>().onClick.AddListener(() => stationInfoPanel.OpenComponentInfoPanel(playerShipData.engineData));
+        baseShip.GetComponent<StationComponent>().SetComponent(playerShipData.baseShipData, stationInfoPanel);
+        weapon.GetComponent<StationComponent>().SetComponent(playerShipData.primaryWeaponData, stationInfoPanel);
+        abilityWeapon.GetComponent<StationComponent>().SetComponent(playerShipData.abilityWeaponData, stationInfoPanel);
+        engine.GetComponent<StationComponent>().SetComponent(playerShipData.engineData, stationInfoPanel);
     }
 }

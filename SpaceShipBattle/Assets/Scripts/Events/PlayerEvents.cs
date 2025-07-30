@@ -10,4 +10,13 @@ public class PlayerEvents
             onKillPlayer();
         }
     }
+
+    public event Action<ComponentShipData> onEquipComponentShip;
+    public void EquipComponentShip(ComponentShipData componentShipData)
+    {
+        if (onEquipComponentShip != null)
+        {
+            onEquipComponentShip(componentShipData);
+        }
+    }
 }

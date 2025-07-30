@@ -38,6 +38,7 @@ public class StationComponentInfoPanel : MonoBehaviour
 
     public void CloseComponent()
     {
+        changeEquipment.onClick.RemoveAllListeners();
         componentInfoPanel.gameObject.SetActive(false);
     }
 

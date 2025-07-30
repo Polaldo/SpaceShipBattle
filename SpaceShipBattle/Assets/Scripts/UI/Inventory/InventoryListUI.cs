@@ -7,9 +7,10 @@ public class InventoryListUI : MonoBehaviour
 {
     [SerializeField] private GameObject inventoryItemPrefab;
     [SerializeField] private GameObject inventoryListPanel;
+    [SerializeField] private GameObject inventoryContent;
     [SerializeField] private List<ComponentShipData> inventory;
 
-    private List<GameObject> itemUICreated;
+    [SerializeField]  private List<GameObject> itemUICreated;
 
     private void Start()
     {
@@ -32,6 +33,7 @@ public class InventoryListUI : MonoBehaviour
         }
 
         var filterType = filterComponent.GetType();
+        Debug.Log($"Filtrando inventario por tipo: {filterType}");
         var filteredInventory = inventory.Where(item => item.GetType() == filterType).ToList();
         CreateItemUI(filteredInventory);
         inventoryListPanel.SetActive(true);
@@ -41,7 +43,7 @@ public class InventoryListUI : MonoBehaviour
     {
         foreach (var itemUI in item)
         {
-            GameObject itemUIInstantiated = Instantiate(inventoryItemPrefab, inventoryListPanel.transform);
+            GameObject itemUIInstantiated = Instantiate(inventoryItemPrefab, inventoryContent.transform);
             itemUIInstantiated.GetComponent<InventoryItemUI>().SetItemData(itemUI);
             itemUICreated.Add(itemUIInstantiated);
         }       
