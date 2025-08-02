@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -19,6 +20,11 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        GameEventsManager.instance.playerEvents.onEquipComponentShip += EquipComponentShip;
+    }
+
     public GameObject GetPlayer()
     {
         return GameObject.Find("Player");
@@ -27,11 +33,6 @@ public class PlayerManager : MonoBehaviour
     public GameObject GetPlayerWeaponAbility()
     {
         return GameObject.Find("WeaponAbility");
-    }
-
-    private void Start()
-    {
-        CalculateAllStats();//TODO: change this 
     }
 
     public void CalculateAllStats()
@@ -49,6 +50,30 @@ public class PlayerManager : MonoBehaviour
             shipData.defense += component.defense;
             shipData.speed += component.speed;
         }
+    }
+
+    private void EquipComponentShip(ComponentShipData component)
+    {
+        if (component == null) return;
+        switch (component)
+        {
+            case BaseShipData baseShipData:
+                shipData.baseShipData = baseShipData;
+                break;
+            case PrimaryWeaponData primaryWeaponData:
+                shipData.primaryWeaponData = primaryWeaponData;
+                break;
+            case AbilityWeaponData abilityWeaponData:
+                shipData.abilityWeaponData = abilityWeaponData;
+                break;
+            case EngineData engineData:
+                shipData.engineData = engineData;
+                break;
+            default:
+                Debug.LogWarning("Unknown component type: " + component.GetType());
+                return;
+        }
+        CalculateAllStats();
     }
 
     public void ResetStats()
@@ -75,5 +100,10 @@ public class PlayerManager : MonoBehaviour
         shipData.currentRank++;
         shipData.currentExperience = 0;
         shipData.experienceToRanklUp = (int)Mathf.Round(400 * Mathf.Log(shipData.currentRank + 1));
+    }
+
+    private void OnDisable()
+    {
+        GameEventsManager.instance.playerEvents.onEquipComponentShip -= EquipComponentShip;
     }
 }

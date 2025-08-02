@@ -20,7 +20,7 @@ public class InventoryListUI : MonoBehaviour
 
     public void OpenInventory()
     {
-        CreateItemUI(inventory);
+        //CreateItemUI(inventory);
         inventoryListPanel.SetActive(true);
     }
 
@@ -35,16 +35,16 @@ public class InventoryListUI : MonoBehaviour
         var filterType = filterComponent.GetType();
         Debug.Log($"Filtrando inventario por tipo: {filterType}");
         var filteredInventory = inventory.Where(item => item.GetType() == filterType).ToList();
-        CreateItemUI(filteredInventory);
+        CreateItemUI(filteredInventory,filterComponent.id);
         inventoryListPanel.SetActive(true);
     }
 
-    private void CreateItemUI(List<ComponentShipData> item)
+    private void CreateItemUI(List<ComponentShipData> inventory, string idComponentEquip)
     {
-        foreach (var itemUI in item)
+        foreach (var item in inventory)
         {
             GameObject itemUIInstantiated = Instantiate(inventoryItemPrefab, inventoryContent.transform);
-            itemUIInstantiated.GetComponent<InventoryItemUI>().SetItemData(itemUI);
+            itemUIInstantiated.GetComponent<InventoryItemUI>().SetItemData(item, item.id == idComponentEquip);
             itemUICreated.Add(itemUIInstantiated);
         }       
     }
