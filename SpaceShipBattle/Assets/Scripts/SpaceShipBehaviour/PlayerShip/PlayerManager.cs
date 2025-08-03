@@ -50,6 +50,8 @@ public class PlayerManager : MonoBehaviour
             shipData.defense += component.defense;
             shipData.speed += component.speed;
         }
+
+        GameEventsManager.instance.playerEvents.ChangeShipStats(shipData);
     }
 
     private void EquipComponentShip(ComponentShipData component)

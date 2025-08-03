@@ -19,4 +19,13 @@ public class PlayerEvents
             onEquipComponentShip(componentShipData);
         }
     }
+
+    public event Action<PlayerShipData> onChangeShipStats;
+    public void ChangeShipStats(PlayerShipData playerShipData)
+    {
+        if (onChangeShipStats != null)
+        {
+            onChangeShipStats(playerShipData);
+        }
+    }
 }
