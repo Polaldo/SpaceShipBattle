@@ -3,7 +3,7 @@ using Assets.Scripts.BehaviourTree.Tasks;
 using System.Collections.Generic;
 
 public class Zeta3BT : EnemyBT<EnemyData>
-{
+{   
     protected override Node SetupTree()
     {
         Node root = new Selector(new List<Node>
