@@ -10,6 +10,8 @@ public class ComponentShipData : ScriptableObject
     public int defense;
     public float speed;
 
+    [Header("Price")]
+    public int price;
     private void OnValidate()
     {
 #if UNITY_EDITOR

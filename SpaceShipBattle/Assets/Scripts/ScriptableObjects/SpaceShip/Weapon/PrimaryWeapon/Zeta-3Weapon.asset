@@ -18,6 +18,7 @@ MonoBehaviour:
   damage: 10
   defense: 0
   speed: 0
+  price: 0
   sfxBullet:
     Guid:
       Data1: 1288899606

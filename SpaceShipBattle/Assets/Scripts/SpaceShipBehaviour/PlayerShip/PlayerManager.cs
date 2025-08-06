@@ -23,6 +23,7 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
         GameEventsManager.instance.playerEvents.onEquipComponentShip += EquipComponentShip;
+        GameEventsManager.instance.playerEvents.onAddItemInventory += AddItemInventory;
     }
 
     public GameObject GetPlayer()
@@ -86,6 +87,20 @@ public class PlayerManager : MonoBehaviour
         shipData.speed = 0;
     }
 
+    private void AddItemInventory(ComponentShipData componentShipData)
+    {
+        if (componentShipData == null) return;
+        // Check if the component is already in the inventory
+        if (!shipData.inventory.Contains(componentShipData))
+        {
+            shipData.inventory.Add(componentShipData);
+        }
+        else
+        {
+            Debug.LogWarning("Component already exists in inventory: " + componentShipData.id);
+        }
+    }
+
     public void addExp(int exp)
     {
         shipData.currentExperience += exp;
@@ -107,5 +122,6 @@ public class PlayerManager : MonoBehaviour
     private void OnDisable()
     {
         GameEventsManager.instance.playerEvents.onEquipComponentShip -= EquipComponentShip;
+        GameEventsManager.instance.playerEvents.onAddItemInventory -= AddItemInventory;
     }
 }

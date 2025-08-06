@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Hakaisha
   description: 
-  health: 1000
+  health: 1500
   damage: 10
   defense: 10
   speed: 1

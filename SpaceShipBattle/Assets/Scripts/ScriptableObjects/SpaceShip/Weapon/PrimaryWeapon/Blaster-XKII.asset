@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12436469c5549394b917cd38addd3f2e, type: 3}
-  m_Name: PrimaryWeaponData
+  m_Name: Blaster-XKII
   m_EditorClassIdentifier: 
-  <id>k__BackingField: PrimaryWeaponData
-  sprite: {fileID: -1395490415, guid: 12282ba0913510146beeb93b9ee8517d, type: 3}
-  health: 10
-  damage: 20
-  defense: 5
-  speed: 1
-  price: 0
+  <id>k__BackingField: Blaster-XKII
+  sprite: {fileID: 869925057, guid: 50736924c6d2e844480b5d9ba2d73948, type: 3}
+  health: 50
+  damage: 80
+  defense: 15
+  speed: 2
+  price: 40000
   sfxBullet:
     Guid:
       Data1: 896723731
@@ -36,5 +36,5 @@ MonoBehaviour:
   bulletDistance: 10
   bulletSpeed: 10
   bullet: {fileID: 5825352200676521032, guid: b4a3132721a764b42b8a14784e8f1275, type: 3}
-  primaryWeaponSprite: {fileID: -1395490415, guid: 12282ba0913510146beeb93b9ee8517d, type: 3}
+  primaryWeaponSprite: {fileID: 869925057, guid: 50736924c6d2e844480b5d9ba2d73948, type: 3}
   fireRate: 0.1

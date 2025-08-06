@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 423acb30692ffab4099371f05cf01aa1, type: 3}
-  m_Name: DefaultBaseShip
+  m_Name: BlackTwin
   m_EditorClassIdentifier: 
-  <id>k__BackingField: DefaultBaseShip
-  sprite: {fileID: 21300000, guid: 6739996213f45c340b8a457e85f2509e, type: 3}
-  health: 100
-  damage: 1
-  defense: 5
+  <id>k__BackingField: BlackTwin
+  sprite: {fileID: 21300000, guid: f3e49dcbd3c09ff43b8cb2ae4eb2d4d6, type: 3}
+  health: 500
+  damage: 10
+  defense: 10
   speed: 1
-  price: 300
-  spriteBaseShip: {fileID: 21300000, guid: 6739996213f45c340b8a457e85f2509e, type: 3}
+  price: 20000
+  spriteBaseShip: {fileID: 21300000, guid: f3e49dcbd3c09ff43b8cb2ae4eb2d4d6, type: 3}
