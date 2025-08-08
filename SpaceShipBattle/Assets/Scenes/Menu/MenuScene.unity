@@ -21317,11 +21317,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelButton: {fileID: 8303654992231898726, guid: 43054a5c82764684fbdf41f8394a8039, type: 3}
   worldData: {fileID: 11400000, guid: 0f13abfef7e5c914fb7c33bb6a59cbdd, type: 2}
-  spriteBossLevelStars: {fileID: 21300000, guid: a8def4261b8674d49b8f1b16afc3bbf6, type: 3}
-  spriteWithNoStars: {fileID: 21300000, guid: a8397825166dac54d94a145eeb9f24e6, type: 3}
-  spriteWithOneStars: {fileID: 21300000, guid: a2b8a3cd7791ee04ab73cf4eeb8dd111, type: 3}
-  spriteWithTwoStars: {fileID: 21300000, guid: 45b6798142fc44f40b3bd226ba7f894d, type: 3}
-  spriteWithThreeStars: {fileID: 21300000, guid: 631ec892c5e7b3a4da9ef03c4acf6a41, type: 3}
+  spriteBossLevel: {fileID: 21300000, guid: a8def4261b8674d49b8f1b16afc3bbf6, type: 3}
+  spriteLevelStars: {fileID: 21300000, guid: a8397825166dac54d94a145eeb9f24e6, type: 3}
   spriteLevelBlocked: {fileID: 21300000, guid: 96705780d183b7142b462cb4acb41213, type: 3}
 --- !u!114 &1678421776
 MonoBehaviour:
